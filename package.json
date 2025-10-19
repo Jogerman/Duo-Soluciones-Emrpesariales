@@ -1,0 +1,80 @@
+{
+  "name": "duo-soluciones-empresariales",
+  "version": "1.0.0",
+  "description": "Plataforma web institucional para DUO Soluciones Empresariales, una consultora especializada en desarrollo organizacional, mejora de procesos, implementación ERP y gobernanza corporativa.",
+  "main": "index.js",
+  "scripts": {
+    "dev": "next dev",
+    "build": "next build",
+    "start": "next start",
+    "lint": "next lint",
+    "lint:fix": "next lint --fix",
+    "format": "prettier --write \"src/**/*.{js,jsx,ts,tsx,json,css,md}\"",
+    "format:check": "prettier --check \"src/**/*.{js,jsx,ts,tsx,json,css,md}\"",
+    "type-check": "tsc --noEmit",
+    "test": "vitest",
+    "test:ui": "vitest --ui",
+    "test:coverage": "vitest --coverage",
+    "prepare": "husky"
+  },
+  "lint-staged": {
+    "*.{js,jsx,ts,tsx}": [
+      "eslint --fix",
+      "prettier --write"
+    ],
+    "*.{json,css,md}": [
+      "prettier --write"
+    ]
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Jogerman/Duo-Soluciones-Emrpesariales.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "commonjs",
+  "bugs": {
+    "url": "https://github.com/Jogerman/Duo-Soluciones-Emrpesariales/issues"
+  },
+  "homepage": "https://github.com/Jogerman/Duo-Soluciones-Emrpesariales#readme",
+  "dependencies": {
+    "@radix-ui/react-dialog": "^1.1.15",
+    "@radix-ui/react-dropdown-menu": "^2.1.16",
+    "@radix-ui/react-slot": "^1.2.3",
+    "@radix-ui/react-toast": "^1.2.15",
+    "next": "^15.5.6",
+    "react": "^19.2.0",
+    "react-dom": "^19.2.0"
+  },
+  "devDependencies": {
+    "@eslint/eslintrc": "^3.3.1",
+    "@testing-library/jest-dom": "^6.9.1",
+    "@testing-library/react": "^16.3.0",
+    "@testing-library/user-event": "^14.6.1",
+    "@types/node": "^24.8.1",
+    "@types/react": "^19.2.2",
+    "@types/react-dom": "^19.2.2",
+    "@vitejs/plugin-react": "^5.0.4",
+    "@vitest/coverage-v8": "^3.2.4",
+    "@vitest/ui": "^3.2.4",
+    "autoprefixer": "^10.4.21",
+    "class-variance-authority": "^0.7.1",
+    "clsx": "^2.1.1",
+    "eslint": "^9.38.0",
+    "eslint-config-next": "^15.5.6",
+    "eslint-config-prettier": "^10.1.8",
+    "eslint-plugin-prettier": "^5.5.4",
+    "husky": "^9.1.7",
+    "jsdom": "^27.0.1",
+    "lint-staged": "^16.2.4",
+    "lucide-react": "^0.546.0",
+    "postcss": "^8.5.6",
+    "prettier": "^3.6.2",
+    "tailwind-merge": "^3.3.1",
+    "tailwindcss": "^4.1.14",
+    "tailwindcss-animate": "^1.0.7",
+    "typescript": "^5.9.3",
+    "vitest": "^3.2.4"
+  }
+}
