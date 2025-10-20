@@ -1,0 +1,27 @@
+[build]
+builder = "nixpacks"
+buildCommand = "npm run build"
+
+[deploy]
+startCommand = "npm run start"
+restartPolicyType = "on_failure"
+restartPolicyMaxRetries = 10
+
+[healthcheck]
+# Health check endpoint (Next.js provides this by default)
+path = "/"
+timeout = 100
+interval = 60
+
+[env]
+# Node environment - set to production for Railway
+NODE_ENV = "production"
+
+# Railway automatically provides PORT environment variable
+# Next.js will use this automatically
+
+# Node.js options for production optimization
+NODE_OPTIONS = "--max-old-space-size=4096"
+
+# Enable experimental features
+NEXT_TELEMETRY_DISABLED = "1"

@@ -1,0 +1,146 @@
+# Page snapshot
+
+```yaml
+- generic [active] [ref=e1]:
+    - banner [ref=e2]:
+        - generic [ref=e4]:
+            - link "DUO" [ref=e5] [cursor=pointer]:
+                - /url: /
+                - generic [ref=e7]: DUO
+            - button "Abrir menú" [ref=e8] [cursor=pointer]:
+                - generic [ref=e9]: Abrir menú
+                - img [ref=e10]
+    - main [ref=e11]:
+        - generic [ref=e18]:
+            - generic [ref=e19]:
+                - heading "Transformamos desafíos en oportunidades sostenibles" [level=1] [ref=e20]
+                - paragraph [ref=e21]: Consultoría estratégica en desarrollo organizacional, mejora de procesos, implementación ERP y gobernanza corporativa para empresas líderes en República Dominicana.
+            - list [ref=e22]:
+                - listitem [ref=e23]:
+                    - img [ref=e24]
+                    - generic [ref=e27]: Más de 28 años de experiencia
+                - listitem [ref=e28]:
+                    - img [ref=e29]
+                    - generic [ref=e32]: Expertos certificados
+                - listitem [ref=e33]:
+                    - img [ref=e34]
+                    - generic [ref=e37]: Resultados medibles
+                - listitem [ref=e38]:
+                    - img [ref=e39]
+                    - generic [ref=e42]: Compromiso con la excelencia
+            - generic [ref=e43]:
+                - link "Contáctanos" [ref=e44] [cursor=pointer]:
+                    - /url: /contacto
+                    - text: Contáctanos
+                    - img [ref=e45]
+                - link "Ver Servicios" [ref=e47] [cursor=pointer]:
+                    - /url: /servicios
+        - generic [ref=e49]:
+            - generic [ref=e50]:
+                - generic [ref=e51]: Nuestros Servicios
+                - heading "Soluciones Integrales para tu Empresa" [level=2] [ref=e52]
+                - paragraph [ref=e53]: Ofrecemos consultoría estratégica en cuatro áreas clave para impulsar el crecimiento sostenible de tu organización
+            - generic [ref=e54]:
+                - generic [ref=e55]:
+                    - generic [ref=e56]:
+                        - img [ref=e58]
+                        - heading "Desarrollo Organizacional" [level=3] [ref=e62]
+                    - paragraph [ref=e64]: Optimizamos la estructura y procesos de tu organización para maximizar el rendimiento
+                - generic [ref=e65]:
+                    - generic [ref=e66]:
+                        - img [ref=e68]
+                        - heading "Mejora de Procesos" [level=3] [ref=e71]
+                    - paragraph [ref=e73]: Eficiencia operativa y optimización de la cadena de abastecimiento
+                - generic [ref=e74]:
+                    - generic [ref=e75]:
+                        - img [ref=e77]
+                        - heading "Implementación ERP" [level=3] [ref=e79]
+                    - paragraph [ref=e81]: MS Dynamics, Power BI e inteligencia de negocio para transformación digital
+                - generic [ref=e82]:
+                    - generic [ref=e83]:
+                        - img [ref=e85]
+                        - heading "Gobernanza Corporativa" [level=3] [ref=e89]
+                    - paragraph [ref=e91]: Estructura de gobierno, compliance y mejores prácticas empresariales
+        - generic [ref=e94]:
+            - generic [ref=e99]: Next.js 15 + Shadcn/ui + TailwindCSS configurado exitosamente
+            - generic [ref=e100]:
+                - paragraph [ref=e101]: Powered by Next.js 15 • React 19 • TypeScript • TailwindCSS • Shadcn/ui
+                - paragraph [ref=e102]: 'Sprint 1: UI Foundation completado'
+    - contentinfo [ref=e103]:
+        - generic [ref=e104]:
+            - generic [ref=e105]:
+                - generic [ref=e106]:
+                    - heading "Servicios" [level=3] [ref=e107]
+                    - list [ref=e108]:
+                        - listitem [ref=e109]:
+                            - link "Desarrollo Organizacional" [ref=e110] [cursor=pointer]:
+                                - /url: /servicios/desarrollo-organizacional
+                        - listitem [ref=e111]:
+                            - link "Mejora de Procesos" [ref=e112] [cursor=pointer]:
+                                - /url: /servicios/mejora-procesos
+                        - listitem [ref=e113]:
+                            - link "Implementación ERP" [ref=e114] [cursor=pointer]:
+                                - /url: /servicios/implementacion-erp
+                        - listitem [ref=e115]:
+                            - link "Gobernanza Corporativa" [ref=e116] [cursor=pointer]:
+                                - /url: /servicios/gobernanza-corporativa
+                - generic [ref=e117]:
+                    - heading "Empresa" [level=3] [ref=e118]
+                    - list [ref=e119]:
+                        - listitem [ref=e120]:
+                            - link "Nosotros" [ref=e121] [cursor=pointer]:
+                                - /url: /nosotros
+                        - listitem [ref=e122]:
+                            - link "Equipo" [ref=e123] [cursor=pointer]:
+                                - /url: /equipo
+                        - listitem [ref=e124]:
+                            - link "Clientes" [ref=e125] [cursor=pointer]:
+                                - /url: /clientes
+                        - listitem [ref=e126]:
+                            - link "Blog" [ref=e127] [cursor=pointer]:
+                                - /url: /blog
+                - generic [ref=e128]:
+                    - heading "Legal" [level=3] [ref=e129]
+                    - list [ref=e130]:
+                        - listitem [ref=e131]:
+                            - link "Términos y Condiciones" [ref=e132] [cursor=pointer]:
+                                - /url: /terminos
+                        - listitem [ref=e133]:
+                            - link "Política de Privacidad" [ref=e134] [cursor=pointer]:
+                                - /url: /privacidad
+                        - listitem [ref=e135]:
+                            - link "Aviso Legal" [ref=e136] [cursor=pointer]:
+                                - /url: /aviso-legal
+                - generic [ref=e137]:
+                    - heading "Contacto" [level=3] [ref=e138]
+                    - list [ref=e139]:
+                        - listitem [ref=e140]:
+                            - img [ref=e141]
+                            - link "info@duosoluciones.com.do" [ref=e144] [cursor=pointer]:
+                                - /url: mailto:info@duosoluciones.com.do
+                        - listitem [ref=e145]:
+                            - img [ref=e146]
+                            - link "+1 (809) 555-1234" [ref=e148] [cursor=pointer]:
+                                - /url: tel:+18095551234
+                        - listitem [ref=e149]:
+                            - img [ref=e150]
+                            - generic [ref=e153]: Santo Domingo, República Dominicana
+                    - generic [ref=e154]:
+                        - link "LinkedIn" [ref=e155] [cursor=pointer]:
+                            - /url: https://linkedin.com
+                            - img [ref=e156]
+                        - link "Facebook" [ref=e160] [cursor=pointer]:
+                            - /url: https://facebook.com
+                            - img [ref=e161]
+                        - link "Instagram" [ref=e163] [cursor=pointer]:
+                            - /url: https://instagram.com
+                            - img [ref=e164]
+            - generic [ref=e168]:
+                - paragraph [ref=e169]: © 2025 DUO Soluciones Empresariales. Todos los derechos reservados.
+                - generic [ref=e170]:
+                    - generic [ref=e172]: DUO
+                    - generic [ref=e173]: Transformamos desafíos en oportunidades
+    - button "Open Next.js Dev Tools" [ref=e179] [cursor=pointer]:
+        - img [ref=e180]
+    - alert [ref=e183]
+```
