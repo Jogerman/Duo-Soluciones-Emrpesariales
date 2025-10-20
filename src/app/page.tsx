@@ -7,7 +7,6 @@ import {
   CTASection,
 } from '@/components/marketing'
 import type { ServiceItem, Stat, Testimonial } from '@/components/marketing'
-import { Target, Settings, Laptop, Building2, Users, Award, TrendingUp, Briefcase } from 'lucide-react'
 
 export const metadata: Metadata = {
   title: 'DUO Soluciones Empresariales | Consultoría Estratégica y Transformación Digital',
@@ -43,7 +42,8 @@ export const metadata: Metadata = {
   twitter: {
     card: 'summary_large_image',
     title: 'DUO Soluciones Empresariales | Consultoría Estratégica',
-    description: 'Transformamos desafíos organizacionales en oportunidades sostenibles. 15+ años de experiencia.',
+    description:
+      'Transformamos desafíos organizacionales en oportunidades sostenibles. 15+ años de experiencia.',
     images: ['/images/og-homepage.jpg'],
     creator: '@duosoluciones',
   },
@@ -63,7 +63,7 @@ const services: ServiceItem[] = [
       'Desarrollo de cultura y valores',
       'Gestión del cambio organizacional',
     ],
-    icon: Target,
+    icon: 'target',
     featured: true,
   },
   {
@@ -78,7 +78,7 @@ const services: ServiceItem[] = [
       'Automatización inteligente',
       'Reducción de costos operativos',
     ],
-    icon: Settings,
+    icon: 'settings',
   },
   {
     id: '3',
@@ -92,7 +92,7 @@ const services: ServiceItem[] = [
       'Integración de sistemas',
       'Capacitación y soporte',
     ],
-    icon: Laptop,
+    icon: 'laptop',
   },
   {
     id: '4',
@@ -106,7 +106,7 @@ const services: ServiceItem[] = [
       'Compliance y riesgos',
       'Juntas directivas efectivas',
     ],
-    icon: Building2,
+    icon: 'building2',
   },
 ]
 
@@ -117,28 +117,28 @@ const stats: Stat[] = [
     value: '200+',
     label: 'Proyectos Exitosos',
     description: 'Implementaciones completadas en toda la región',
-    icon: Briefcase,
+    icon: 'briefcase',
   },
   {
     id: '2',
     value: '15+',
     label: 'Años de Experiencia',
     description: 'Liderando transformación organizacional',
-    icon: Award,
+    icon: 'award',
   },
   {
     id: '3',
     value: '98%',
     label: 'Satisfacción de Clientes',
     description: 'Comprometidos con la excelencia',
-    icon: TrendingUp,
+    icon: 'trendingUp',
   },
   {
     id: '4',
     value: '50+',
     label: 'Empresas Transformadas',
     description: 'Desde startups hasta Fortune 500',
-    icon: Users,
+    icon: 'users',
   },
 ]
 

@@ -3,7 +3,7 @@ import { ServiceGrid, CTASection } from '@/components/marketing'
 import type { ServiceItem } from '@/components/marketing'
 import { Container } from '@/components/ui/Container'
 import { Card, CardContent } from '@/components/ui/Card'
-import { Target, Settings, Laptop, Building2, CheckCircle, HelpCircle } from 'lucide-react'
+import { HelpCircle } from 'lucide-react'
 
 export const metadata: Metadata = {
   title: 'Servicios de Consultoría Empresarial | DUO Soluciones',
@@ -59,7 +59,7 @@ const services: ServiceItem[] = [
       'Desarrollo de cultura y valores',
       'Gestión del cambio organizacional',
     ],
-    icon: Target,
+    icon: 'target',
     featured: true,
   },
   {
@@ -74,7 +74,7 @@ const services: ServiceItem[] = [
       'Automatización inteligente',
       'Reducción de costos operativos',
     ],
-    icon: Settings,
+    icon: 'settings',
   },
   {
     id: '3',
@@ -88,7 +88,7 @@ const services: ServiceItem[] = [
       'Integración de sistemas',
       'Capacitación y soporte',
     ],
-    icon: Laptop,
+    icon: 'laptop',
   },
   {
     id: '4',
@@ -102,7 +102,7 @@ const services: ServiceItem[] = [
       'Compliance y riesgos',
       'Juntas directivas efectivas',
     ],
-    icon: Building2,
+    icon: 'building2',
   },
 ]
 
@@ -151,8 +151,8 @@ export default function ServicesPage() {
               Soluciones Integrales para cada Etapa de tu Transformación
             </h1>
             <p className="mt-6 text-lg leading-8 text-primary-100 sm:text-xl">
-              Desde el diagnóstico hasta la implementación y mejora continua, te acompañamos en
-              cada paso del camino.
+              Desde el diagnóstico hasta la implementación y mejora continua, te acompañamos en cada
+              paso del camino.
             </p>
           </div>
         </Container>
@@ -178,13 +178,9 @@ export default function ServicesPage() {
               <thead className="bg-primary-600 text-white">
                 <tr>
                   <th className="px-6 py-4 text-left text-sm font-semibold">Característica</th>
-                  <th className="px-6 py-4 text-left text-sm font-semibold">
-                    Desarrollo Org.
-                  </th>
+                  <th className="px-6 py-4 text-left text-sm font-semibold">Desarrollo Org.</th>
                   <th className="px-6 py-4 text-left text-sm font-semibold">Mejora Procesos</th>
-                  <th className="px-6 py-4 text-left text-sm font-semibold">
-                    Implementación ERP
-                  </th>
+                  <th className="px-6 py-4 text-left text-sm font-semibold">Implementación ERP</th>
                   <th className="px-6 py-4 text-left text-sm font-semibold">Gobernanza</th>
                 </tr>
               </thead>
@@ -253,9 +249,7 @@ export default function ServicesPage() {
                       </div>
                     </div>
                     <div className="flex-1">
-                      <h3 className="text-lg font-semibold text-gray-900 mb-2">
-                        {faq.question}
-                      </h3>
+                      <h3 className="text-lg font-semibold text-gray-900 mb-2">{faq.question}</h3>
                       <p className="text-gray-600 leading-relaxed">{faq.answer}</p>
                     </div>
                   </div>

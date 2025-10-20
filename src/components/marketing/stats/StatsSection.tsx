@@ -1,6 +1,7 @@
 'use client'
 
 import { Container } from '@/components/ui/Container'
+import * as Icons from 'lucide-react'
 import type { LucideIcon } from 'lucide-react'
 
 export interface Stat {
@@ -8,7 +9,7 @@ export interface Stat {
   value: string
   label: string
   description?: string
-  icon?: LucideIcon
+  icon?: string | LucideIcon // Support both string and component
 }
 
 interface StatsSectionProps {
@@ -71,8 +72,22 @@ export function StatsSection({
 
         {/* Stats Grid */}
         <div className="mt-12 grid gap-8 sm:grid-cols-2 lg:grid-cols-4">
-          {stats.map((stat) => {
-            const Icon = stat.icon
+          {stats.map(stat => {
+            // Support both string (icon name) and component (LucideIcon)
+            const getIconComponent = () => {
+              if (!stat.icon) return null
+
+              if (typeof stat.icon === 'string') {
+                // Convert string to PascalCase icon name (e.g., 'trendingUp' -> 'TrendingUp')
+                const iconName = stat.icon.charAt(0).toUpperCase() + stat.icon.slice(1)
+                const IconComponent = Icons[iconName as keyof typeof Icons] as LucideIcon
+                return IconComponent || null
+              }
+
+              return stat.icon
+            }
+
+            const Icon = getIconComponent()
 
             return (
               <div

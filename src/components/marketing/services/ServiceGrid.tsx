@@ -5,6 +5,7 @@ import { Button } from '@/components/ui/Button'
 import { Container } from '@/components/ui/Container'
 import { ArrowRight, CheckCircle } from 'lucide-react'
 import Link from 'next/link'
+import * as Icons from 'lucide-react'
 import type { LucideIcon } from 'lucide-react'
 
 export interface ServiceItem {
@@ -13,7 +14,7 @@ export interface ServiceItem {
   description: string
   slug: string
   benefits: string[]
-  icon?: LucideIcon
+  icon?: string | LucideIcon // Support both string and component
   featured?: boolean
 }
 
@@ -51,7 +52,7 @@ export function ServiceGrid({
 
         {/* Services Grid */}
         <div className={`mt-12 grid gap-8 ${gridClasses[variant]}`}>
-          {services.map((service) => (
+          {services.map(service => (
             <ServiceCard key={service.id} service={service} showBenefits={showBenefits} />
           ))}
         </div>
@@ -66,12 +67,28 @@ interface ServiceCardProps {
 }
 
 function ServiceCard({ service, showBenefits = true }: ServiceCardProps) {
-  const Icon = service.icon
+  // Support both string (icon name) and component (LucideIcon)
+  const getIconComponent = () => {
+    if (!service.icon) return null
+
+    if (typeof service.icon === 'string') {
+      // Convert string to PascalCase icon name (e.g., 'target' -> 'Target')
+      const iconName = service.icon.charAt(0).toUpperCase() + service.icon.slice(1)
+      const IconComponent = Icons[iconName as keyof typeof Icons] as LucideIcon
+      return IconComponent || null
+    }
+
+    return service.icon
+  }
+
+  const Icon = getIconComponent()
 
   return (
     <Card
       className={`group h-full transition-all duration-300 hover:shadow-xl ${
-        service.featured ? 'border-primary-300 bg-primary-50/30 ring-2 ring-primary-200' : 'hover:border-primary-200'
+        service.featured
+          ? 'border-primary-300 bg-primary-50/30 ring-2 ring-primary-200'
+          : 'hover:border-primary-200'
       }`}
     >
       <CardHeader>
