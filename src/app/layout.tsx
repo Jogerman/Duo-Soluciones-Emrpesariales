@@ -3,6 +3,8 @@ import { Poppins } from 'next/font/google'
 import './globals.css'
 import { Header } from '@/components/layout/Header'
 import { Footer } from '@/components/layout/Footer'
+import { GoogleAnalytics } from '@/components/seo/GoogleAnalytics'
+import { generateOrganizationSchema, generateStructuredDataScript, SITE_CONFIG } from '@/lib/seo'
 
 const poppins = Poppins({
   weight: ['300', '400', '500', '600', '700'],
@@ -12,22 +14,31 @@ const poppins = Poppins({
 })
 
 export const metadata: Metadata = {
+  metadataBase: new URL(SITE_CONFIG.url),
   title: {
-    default: 'DUO Soluciones Empresariales',
-    template: '%s | DUO Soluciones Empresariales',
+    default: 'DUO Soluciones Empresariales - Transformamos desafíos en oportunidades sostenibles',
+    template: '%s | DUO Soluciones',
   },
   description:
-    'Transformamos desafíos en oportunidades sostenibles. Consultora especializada en desarrollo organizacional, mejora de procesos, implementación ERP y gobernanza corporativa.',
+    'Consultora especializada en desarrollo organizacional, mejora de procesos, implementación ERP y gobernanza corporativa en República Dominicana. Transformamos desafíos organizacionales en oportunidades sostenibles.',
   keywords: [
     'desarrollo organizacional',
     'mejora de procesos',
     'gobernanza corporativa',
-    'ERP implementation',
+    'ERP',
     'MS Dynamics',
+    'Microsoft Dynamics 365',
     'Power BI',
     'consultoría empresarial',
     'transformación digital',
     'República Dominicana',
+    'Santo Domingo',
+    'consultora empresarial',
+    'Business Process Improvement',
+    'implementación ERP',
+    'gestión de procesos',
+    'optimización de procesos',
+    'consultoría organizacional',
   ],
   authors: [{ name: 'DUO Soluciones Empresariales' }],
   creator: 'DUO Soluciones Empresariales',
@@ -46,13 +57,13 @@ export const metadata: Metadata = {
   openGraph: {
     type: 'website',
     locale: 'es_DO',
-    url: 'https://duosoluciones.com.do',
-    siteName: 'DUO Soluciones Empresariales',
-    title: 'DUO Soluciones Empresariales',
-    description: 'Transformamos desafíos en oportunidades sostenibles',
+    url: SITE_CONFIG.url,
+    siteName: SITE_CONFIG.name,
+    title: 'DUO Soluciones Empresariales - Transformamos desafíos en oportunidades sostenibles',
+    description: 'Consultora especializada en desarrollo organizacional, mejora de procesos, implementación ERP y gobernanza corporativa en República Dominicana.',
     images: [
       {
-        url: '/og-image.jpg',
+        url: SITE_CONFIG.defaultImage,
         width: 1200,
         height: 630,
         alt: 'DUO Soluciones Empresariales',
@@ -63,16 +74,23 @@ export const metadata: Metadata = {
     card: 'summary_large_image',
     title: 'DUO Soluciones Empresariales',
     description: 'Transformamos desafíos en oportunidades sostenibles',
-    images: ['/og-image.jpg'],
-    creator: '@duosoluciones',
+    images: [SITE_CONFIG.defaultImage],
+    creator: SITE_CONFIG.socialMedia.twitter,
   },
   alternates: {
-    canonical: 'https://duosoluciones.com.do',
+    canonical: SITE_CONFIG.url,
     languages: {
-      'es-DO': 'https://duosoluciones.com.do',
-      'en-US': 'https://duosoluciones.com.do/en',
+      'es-DO': SITE_CONFIG.url,
+      'en-US': `${SITE_CONFIG.url}/en`,
     },
   },
+  verification: {
+    google: process.env.NEXT_PUBLIC_GOOGLE_SITE_VERIFICATION || '',
+    // yandex: '',
+    // yahoo: '',
+    // other: '',
+  },
+  category: 'Business Consulting',
 }
 
 export default function RootLayout({
@@ -80,9 +98,23 @@ export default function RootLayout({
 }: Readonly<{
   children: React.ReactNode
 }>) {
+  // Generate Organization schema for the entire site
+  const organizationSchema = generateOrganizationSchema()
+
   return (
     <html lang="es" className={poppins.variable}>
+      <head>
+        {/* Organization JSON-LD Schema */}
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={generateStructuredDataScript(organizationSchema)}
+        />
+      </head>
       <body className="font-sans antialiased">
+        {/* Google Analytics */}
+        <GoogleAnalytics />
+
+        {/* Main Layout */}
         <Header />
         <main>{children}</main>
         <Footer />

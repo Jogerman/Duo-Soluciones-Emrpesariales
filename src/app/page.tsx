@@ -1,93 +1,213 @@
-import { Hero } from '@/components/sections/Hero'
-import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/Card'
-import { Container } from '@/components/ui/Container'
-import { Badge } from '@/components/ui/Badge'
-import { Target, Settings, Laptop, Building2 } from 'lucide-react'
+import type { Metadata } from 'next'
+import {
+  HeroSection,
+  ServiceGrid,
+  StatsSection,
+  TestimonialsCarousel,
+  CTASection,
+} from '@/components/marketing'
+import type { ServiceItem, Stat, Testimonial } from '@/components/marketing'
+import { Target, Settings, Laptop, Building2, Users, Award, TrendingUp, Briefcase } from 'lucide-react'
 
-const services = [
+export const metadata: Metadata = {
+  title: 'DUO Soluciones Empresariales | Consultoría Estratégica y Transformación Digital',
+  description:
+    'Transformamos desafíos organizacionales en oportunidades sostenibles. Especialistas en desarrollo organizacional, mejora de procesos, ERP y gobernanza. 15+ años de experiencia.',
+  keywords: [
+    'consultoría empresarial',
+    'desarrollo organizacional',
+    'mejora de procesos',
+    'implementación ERP',
+    'MS Dynamics',
+    'Power BI',
+    'gobernanza corporativa',
+    'transformación digital',
+    'República Dominicana',
+  ],
+  openGraph: {
+    title: 'DUO Soluciones Empresariales | Transformamos Desafíos en Oportunidades',
+    description:
+      'Consultoría estratégica en desarrollo organizacional, mejora de procesos, implementación ERP y gobernanza. 15+ años transformando empresas.',
+    url: 'https://duo-soluciones.com',
+    siteName: 'DUO Soluciones Empresariales',
+    type: 'website',
+    images: [
+      {
+        url: '/images/og-homepage.jpg',
+        width: 1200,
+        height: 630,
+        alt: 'DUO Soluciones Empresariales - Consultoría Estratégica',
+      },
+    ],
+  },
+  twitter: {
+    card: 'summary_large_image',
+    title: 'DUO Soluciones Empresariales | Consultoría Estratégica',
+    description: 'Transformamos desafíos organizacionales en oportunidades sostenibles. 15+ años de experiencia.',
+    images: ['/images/og-homepage.jpg'],
+    creator: '@duosoluciones',
+  },
+}
+
+// Services data
+const services: ServiceItem[] = [
   {
-    icon: Target,
+    id: '1',
     title: 'Desarrollo Organizacional',
     description:
-      'Optimizamos la estructura y procesos de tu organización para maximizar el rendimiento',
+      'Fortalece tu estructura organizacional y cultura empresarial para alcanzar objetivos estratégicos de manera sostenible.',
+    slug: 'desarrollo-organizacional',
+    benefits: [
+      'Diagnóstico organizacional profundo',
+      'Diseño de estructuras eficientes',
+      'Desarrollo de cultura y valores',
+      'Gestión del cambio organizacional',
+    ],
+    icon: Target,
+    featured: true,
   },
   {
-    icon: Settings,
+    id: '2',
     title: 'Mejora de Procesos',
-    description: 'Eficiencia operativa y optimización de la cadena de abastecimiento',
+    description:
+      'Optimiza tus operaciones eliminando ineficiencias y maximizando el valor entregado a tus clientes.',
+    slug: 'mejora-procesos',
+    benefits: [
+      'Mapeo y análisis de procesos',
+      'Implementación Lean y Six Sigma',
+      'Automatización inteligente',
+      'Reducción de costos operativos',
+    ],
+    icon: Settings,
   },
   {
-    icon: Laptop,
+    id: '3',
     title: 'Implementación ERP',
-    description: 'MS Dynamics, Power BI e inteligencia de negocio para transformación digital',
+    description:
+      'Integra tus sistemas y obtén visibilidad completa de tu negocio con tecnología Microsoft líder en la industria.',
+    slug: 'implementacion-erp',
+    benefits: [
+      'MS Dynamics 365 implementación',
+      'Dashboards Power BI',
+      'Integración de sistemas',
+      'Capacitación y soporte',
+    ],
+    icon: Laptop,
   },
   {
-    icon: Building2,
+    id: '4',
     title: 'Gobernanza Corporativa',
-    description: 'Estructura de gobierno, compliance y mejores prácticas empresariales',
+    description:
+      'Establece marcos de gobierno robustos que aseguren compliance, transparencia y toma de decisiones efectiva.',
+    slug: 'gobernanza-corporativa',
+    benefits: [
+      'Estructuras de gobierno',
+      'Políticas y procedimientos',
+      'Compliance y riesgos',
+      'Juntas directivas efectivas',
+    ],
+    icon: Building2,
+  },
+]
+
+// Stats data
+const stats: Stat[] = [
+  {
+    id: '1',
+    value: '200+',
+    label: 'Proyectos Exitosos',
+    description: 'Implementaciones completadas en toda la región',
+    icon: Briefcase,
+  },
+  {
+    id: '2',
+    value: '15+',
+    label: 'Años de Experiencia',
+    description: 'Liderando transformación organizacional',
+    icon: Award,
+  },
+  {
+    id: '3',
+    value: '98%',
+    label: 'Satisfacción de Clientes',
+    description: 'Comprometidos con la excelencia',
+    icon: TrendingUp,
+  },
+  {
+    id: '4',
+    value: '50+',
+    label: 'Empresas Transformadas',
+    description: 'Desde startups hasta Fortune 500',
+    icon: Users,
+  },
+]
+
+// Testimonials data
+const testimonials: Testimonial[] = [
+  {
+    id: '1',
+    content:
+      'DUO Soluciones transformó completamente nuestra operación. Su enfoque estratégico y metodología probada nos permitió reducir costos en 30% mientras mejorábamos la satisfacción del cliente. Un verdadero socio de confianza.',
+    clientName: 'María Fernández',
+    role: 'CEO',
+    company: 'Grupo Empresarial del Caribe',
+    rating: 5,
+  },
+  {
+    id: '2',
+    content:
+      'La implementación de MS Dynamics 365 con DUO fue impecable. Cumplieron cada milestone a tiempo y dentro del presupuesto. Ahora tenemos visibilidad real-time de toda nuestra operación. Altamente recomendados.',
+    clientName: 'Roberto Martínez',
+    role: 'Director de Operaciones',
+    company: 'Industrias Manufactureras RD',
+    rating: 5,
+  },
+  {
+    id: '3',
+    content:
+      'Su expertise en gobernanza corporativa nos ayudó a establecer controles robustos y cumplir con regulaciones internacionales. El equipo de DUO es profesional, conocedor y siempre disponible. Excelente inversión.',
+    clientName: 'Ana Rodríguez',
+    role: 'CFO',
+    company: 'Servicios Financieros Premium',
+    rating: 5,
   },
 ]
 
 export default function HomePage() {
   return (
-    <>
-      <Hero />
+    <main className="min-h-screen">
+      {/* Hero Section */}
+      <HeroSection
+        title="Transformamos Desafíos Organizacionales en Oportunidades Sostenibles"
+        subtitle="Soluciones integrales de desarrollo organizacional, mejora de procesos y gobernanza corporativa que impulsan el crecimiento sostenible de tu empresa."
+        description="Más de 15 años transformando organizaciones en República Dominicana y el Caribe. Expertos certificados en MS Dynamics, Power BI y metodologías ágiles."
+        variant="gradient"
+      />
 
-      {/* Services Section */}
-      <section className="section-duo bg-white">
-        <Container>
-          <div className="text-center mb-12">
-            <Badge variant="secondary" className="mb-4">
-              Nuestros Servicios
-            </Badge>
-            <h2 className="heading-lg mb-4">Soluciones Integrales para tu Empresa</h2>
-            <p className="body-lg max-w-2xl mx-auto">
-              Ofrecemos consultoría estratégica en cuatro áreas clave para impulsar el crecimiento
-              sostenible de tu organización
-            </p>
-          </div>
+      {/* Services Grid */}
+      <ServiceGrid services={services} variant="2-col" />
 
-          <div className="grid gap-8 md:grid-cols-2 lg:grid-cols-4">
-            {services.map((service, index) => {
-              const Icon = service.icon
-              return (
-                <Card key={index} className="text-center">
-                  <CardHeader>
-                    <div className="mx-auto mb-4 flex h-12 w-12 items-center justify-center rounded-lg bg-gradient-to-br from-primary-600 to-secondary-700">
-                      <Icon className="h-6 w-6 text-white" />
-                    </div>
-                    <CardTitle className="text-xl">{service.title}</CardTitle>
-                  </CardHeader>
-                  <CardContent>
-                    <CardDescription>{service.description}</CardDescription>
-                  </CardContent>
-                </Card>
-              )
-            })}
-          </div>
-        </Container>
-      </section>
+      {/* Stats Section */}
+      <StatsSection stats={stats} variant="gradient" />
 
-      {/* Status Section - Development only */}
-      <section className="section-duo bg-neutral-50">
-        <Container>
-          <div className="text-center">
-            <div className="inline-flex items-center gap-2 rounded-full border border-green-200 bg-green-50 px-4 py-2">
-              <span className="relative flex h-3 w-3">
-                <span className="absolute inline-flex h-full w-full animate-ping rounded-full bg-green-400 opacity-75"></span>
-                <span className="relative inline-flex h-3 w-3 rounded-full bg-green-500"></span>
-              </span>
-              <span className="text-sm font-medium text-green-800">
-                Next.js 15 + Shadcn/ui + TailwindCSS configurado exitosamente
-              </span>
-            </div>
-            <div className="mt-4 text-sm text-neutral-500">
-              <p>Powered by Next.js 15 • React 19 • TypeScript • TailwindCSS • Shadcn/ui</p>
-              <p className="mt-2">Sprint 1: UI Foundation completado</p>
-            </div>
-          </div>
-        </Container>
-      </section>
-    </>
+      {/* Testimonials Carousel */}
+      <TestimonialsCarousel testimonials={testimonials} />
+
+      {/* Final CTA */}
+      <CTASection
+        title="¿Listo para Transformar tu Organización?"
+        subtitle="Agenda una consulta gratuita de 30 minutos y descubre cómo podemos ayudarte a alcanzar tus objetivos."
+        variant="gradient"
+        primaryCTA={{
+          text: 'Agenda tu Consulta Gratuita',
+          href: '/contact',
+          icon: 'calendar',
+        }}
+        secondaryCTA={{
+          text: 'Conoce Nuestros Servicios',
+          href: '/services',
+        }}
+      />
+    </main>
   )
 }
