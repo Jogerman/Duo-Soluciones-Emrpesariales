@@ -2,6 +2,7 @@
 
 import * as React from 'react'
 import Link from 'next/link'
+import Image from 'next/image'
 import { Menu, X } from 'lucide-react'
 import { Container } from '@/components/ui/Container'
 import { Button } from '@/components/ui/Button'
@@ -19,13 +20,15 @@ export function Header() {
       <Container>
         <div className="flex h-16 items-center justify-between">
           {/* Logo */}
-          <Link href="/" className="flex items-center space-x-2">
-            <div className="flex h-10 w-10 items-center justify-center rounded-lg bg-gradient-to-br from-primary-600 to-secondary-700">
-              <span className="text-lg font-bold text-white">DUO</span>
-            </div>
-            <span className="hidden text-lg font-semibold text-neutral-900 sm:inline-block">
-              Soluciones Empresariales
-            </span>
+          <Link href="/" className="flex items-center">
+            <Image
+              src="/logo-duo.png"
+              alt="DUO Soluciones Empresariales"
+              width={240}
+              height={48}
+              className="h-10 w-auto sm:h-12"
+              priority
+            />
           </Link>
 
           {/* Desktop Navigation */}

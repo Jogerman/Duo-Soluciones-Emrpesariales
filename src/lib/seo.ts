@@ -67,8 +67,8 @@ const SITE_CONFIG = {
   description: 'Consultora especializada en desarrollo organizacional, mejora de procesos, implementación ERP y gobernanza corporativa en República Dominicana.',
   locale: 'es_DO',
   alternateLocale: 'en_US',
-  defaultImage: '/images/og-default.jpg',
-  logo: '/images/logo.png',
+  defaultImage: '/logo-duo.png',
+  logo: '/logo-duo.png',
   email: 'info@duo-soluciones.com',
   phone: '+1-809-XXX-XXXX', // To be updated
   address: {
