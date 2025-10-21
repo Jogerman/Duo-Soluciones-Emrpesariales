@@ -31,11 +31,16 @@ declare module 'next-auth' {
  */
 export const authConfig: NextAuthConfig = {
   // Database adapter for session storage
-  adapter: DrizzleAdapter(db, {
-    usersTable: users,
-    sessionsTable: sessions,
-    verificationTokensTable: verificationTokens,
-  }),
+  // Only use adapter if DATABASE_URL is available (skip during build)
+  ...(process.env.DATABASE_URL && db
+    ? {
+        adapter: DrizzleAdapter(db, {
+          usersTable: users,
+          sessionsTable: sessions,
+          verificationTokensTable: verificationTokens,
+        }),
+      }
+    : {}),
 
   // Session strategy (JWT for better scalability)
   session: {
@@ -61,6 +66,11 @@ export const authConfig: NextAuthConfig = {
       async authorize(credentials) {
         if (!credentials?.email || !credentials?.password) {
           throw new Error('Email and password are required')
+        }
+
+        // If no database connection, authentication is not available during build
+        if (!db) {
+          throw new Error('Database connection not available. Please configure DATABASE_URL.')
         }
 
         try {
