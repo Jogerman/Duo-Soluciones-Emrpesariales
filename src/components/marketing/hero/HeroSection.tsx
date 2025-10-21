@@ -4,6 +4,7 @@ import { Button } from '@/components/ui/Button'
 import { Container } from '@/components/ui/Container'
 import { ArrowRight, Calendar } from 'lucide-react'
 import Link from 'next/link'
+import Image from 'next/image'
 
 interface HeroSectionProps {
   title: string
@@ -42,9 +43,22 @@ export function HeroSection({
 
   return (
     <section className={`relative overflow-hidden ${gradientClasses[variant]} py-20 lg:py-32`}>
-      {/* Background Pattern - only for gradient/solid variants */}
+      {/* Background Image - only for gradient/solid variants */}
       {variant !== 'minimal' && (
-        <div className="absolute inset-0 bg-grid-white/[0.05] bg-[size:20px_20px]" />
+        <>
+          <div className="absolute inset-0">
+            <Image
+              src="/hero-background.jpg"
+              alt="DUO Soluciones Background"
+              fill
+              priority
+              className="object-cover object-center"
+              quality={85}
+            />
+            {/* Overlay to ensure text readability */}
+            <div className="absolute inset-0 bg-gradient-to-br from-primary-900/85 via-primary-800/80 to-secondary-900/85" />
+          </div>
+        </>
       )}
 
       {/* Content */}
@@ -91,7 +105,9 @@ export function HeroSection({
               asChild
               size="lg"
               variant={variant === 'minimal' ? 'outline' : 'outline'}
-              className={variant !== 'minimal' ? 'border-white/30 text-white hover:bg-white/10' : ''}
+              className={
+                variant !== 'minimal' ? 'border-white/30 text-white hover:bg-white/10' : ''
+              }
             >
               <Link href={secondaryCTA.href}>{secondaryCTA.text}</Link>
             </Button>
@@ -106,11 +122,12 @@ export function HeroSection({
         </div>
       </Container>
 
-      {/* Decorative Elements */}
+      {/* Decorative Gradient Overlays */}
       {variant !== 'minimal' && (
         <>
-          <div className="absolute left-0 top-0 h-full w-1/2 bg-gradient-to-r from-black/10 to-transparent" />
-          <div className="absolute right-0 top-0 h-full w-1/2 bg-gradient-to-l from-black/10 to-transparent" />
+          <div className="absolute left-0 top-0 h-full w-1/2 bg-gradient-to-r from-black/20 to-transparent" />
+          <div className="absolute right-0 top-0 h-full w-1/2 bg-gradient-to-l from-black/20 to-transparent" />
+          <div className="absolute bottom-0 left-0 right-0 h-32 bg-gradient-to-t from-black/30 to-transparent" />
         </>
       )}
     </section>

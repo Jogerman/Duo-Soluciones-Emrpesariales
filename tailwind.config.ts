@@ -10,32 +10,32 @@ const config: Config = {
   theme: {
     extend: {
       colors: {
-        // Brand colors basados en el logo DUO
+        // Brand colors basados en el logo DUO - Paleta Azul/Teal
         primary: {
-          50: '#f0f9f9',
-          100: '#d9f0f0',
-          200: '#b7e2e3',
-          300: '#86cccf',
-          400: '#4eacb3',
-          500: '#2d8b94',
-          600: '#1b5e5e', // Main brand color - Verde azulado del logo
-          700: '#1a5353',
-          800: '#1a4545',
-          900: '#1a3a3b',
-          950: '#0a2222',
+          50: '#f0f9ff',
+          100: '#e0f2fe',
+          200: '#b9e6fe',
+          300: '#7dd3fc',
+          400: '#38bdf8',
+          500: '#0ea5e9',
+          600: '#0284c7', // Azul principal
+          700: '#0369a1',
+          800: '#075985',
+          900: '#0c4a6e',
+          950: '#082f49',
         },
         secondary: {
-          50: '#eff6ff',
-          100: '#dbeafe',
-          200: '#bfdbfe',
-          300: '#93bbfd',
-          400: '#609afa',
-          500: '#3b75f6',
-          600: '#2554eb',
-          700: '#1e3a8a', // Main secondary color - Azul marino del logo
-          800: '#1e3a78',
-          900: '#1e326f',
-          950: '#172044',
+          50: '#ecfeff',
+          100: '#cffafe',
+          200: '#a5f3fc',
+          300: '#67e8f9',
+          400: '#22d3ee',
+          500: '#06b6d4',
+          600: '#0891b2', // Teal/Verde azulado del logo
+          700: '#0e7490',
+          800: '#155e75',
+          900: '#164e63',
+          950: '#083344',
         },
         neutral: {
           50: '#f8fafc',
