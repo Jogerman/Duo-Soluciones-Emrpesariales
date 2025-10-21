@@ -10,19 +10,19 @@ const config: Config = {
   theme: {
     extend: {
       colors: {
-        // Brand colors basados en el logo DUO - Paleta Azul/Teal
+        // Brand colors basados en el logo DUO - P 330 C
         primary: {
-          50: '#f0f9ff',
-          100: '#e0f2fe',
-          200: '#b9e6fe',
-          300: '#7dd3fc',
-          400: '#38bdf8',
-          500: '#0ea5e9',
-          600: '#0284c7', // Azul principal
-          700: '#0369a1',
-          800: '#075985',
-          900: '#0c4a6e',
-          950: '#082f49',
+          50: '#e6f0f7',
+          100: '#cce1ef',
+          200: '#99c3df',
+          300: '#66a5cf',
+          400: '#3387bf',
+          500: '#0069af',
+          600: '#003B70', // P 330 C - Azul principal
+          700: '#002d54',
+          800: '#001f38',
+          900: '#00101c',
+          950: '#00080e',
         },
         secondary: {
           50: '#ecfeff',
