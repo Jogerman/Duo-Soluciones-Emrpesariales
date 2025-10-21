@@ -1,0 +1,372 @@
+/**
+ * Mock client data for DUO Soluciones
+ * Portfolio of companies we've worked with in República Dominicana and the Caribbean
+ */
+
+export type IndustryType = 'Banca' | 'Salud' | 'Manufactura' | 'Retail' | 'Tecnología' | 'Gobierno'
+
+export interface Client {
+  id: string
+  name: string
+  logo: string
+  industry: IndustryType
+  description?: string
+  featured?: boolean
+}
+
+export interface Industry {
+  id: string
+  name: string
+  description: string
+  clientCount: number
+  icon: string // lucide-react icon name
+}
+
+export interface Testimonial {
+  id: string
+  quote: string
+  author: string
+  role: string
+  company: string
+  companyLogo?: string
+  rating: number
+  featured?: boolean
+}
+
+export interface CaseStudy {
+  id: string
+  clientName: string
+  industry: IndustryType
+  challenge: string
+  solution: string
+  result: string
+  resultMetric: string
+  image: string
+  featured?: boolean
+}
+
+// Client stats
+export const clientStats = {
+  totalClients: 50,
+  projectsCompleted: 200,
+  yearsExperience: 15,
+  satisfactionRate: 98,
+}
+
+// Clients portfolio - República Dominicana companies
+export const clients: Client[] = [
+  {
+    id: '1',
+    name: 'Banco Popular Dominicano',
+    logo: '/clients/banco-popular.svg',
+    industry: 'Banca',
+    description: 'Implementación de Dynamics 365 Finance & Operations',
+    featured: true,
+  },
+  {
+    id: '2',
+    name: 'Grupo Ramos',
+    logo: '/clients/grupo-ramos.svg',
+    industry: 'Retail',
+    description: 'Mejora de procesos en cadena de suministro',
+    featured: true,
+  },
+  {
+    id: '3',
+    name: 'Centro Médico Dominicano',
+    logo: '/clients/centro-medico.svg',
+    industry: 'Salud',
+    description: 'Transformación digital y optimización operacional',
+    featured: true,
+  },
+  {
+    id: '4',
+    name: 'Cervecería Nacional Dominicana',
+    logo: '/clients/cerveceria-nacional.svg',
+    industry: 'Manufactura',
+    description: 'Implementación Lean Six Sigma en producción',
+    featured: false,
+  },
+  {
+    id: '5',
+    name: 'Banco BHD León',
+    logo: '/clients/bhd-leon.svg',
+    industry: 'Banca',
+    description: 'Gobernanza corporativa y compliance',
+    featured: false,
+  },
+  {
+    id: '6',
+    name: 'La Sirena',
+    logo: '/clients/la-sirena.svg',
+    industry: 'Retail',
+    description: 'Power BI analytics y business intelligence',
+    featured: false,
+  },
+  {
+    id: '7',
+    name: 'Clínica Corazones Unidos',
+    logo: '/clients/corazones-unidos.svg',
+    industry: 'Salud',
+    description: 'Sistema ERP integrado para gestión hospitalaria',
+    featured: false,
+  },
+  {
+    id: '8',
+    name: 'Ingenio Azucarero del Este',
+    logo: '/clients/ingenio-este.svg',
+    industry: 'Manufactura',
+    description: 'Excelencia operacional y reducción de desperdicios',
+    featured: false,
+  },
+  {
+    id: '9',
+    name: 'Ministerio de Salud Pública',
+    logo: '/clients/ministerio-salud.svg',
+    industry: 'Gobierno',
+    description: 'Diseño organizacional y mejora de procesos',
+    featured: true,
+  },
+  {
+    id: '10',
+    name: 'Altice Dominicana',
+    logo: '/clients/altice.svg',
+    industry: 'Tecnología',
+    description: 'Transformación ágil y gestión de proyectos',
+    featured: false,
+  },
+  {
+    id: '11',
+    name: 'Grupo Punta Cana',
+    logo: '/clients/punta-cana.svg',
+    industry: 'Retail',
+    description: 'Customer experience y mejora de procesos',
+    featured: false,
+  },
+  {
+    id: '12',
+    name: 'Farmacia Carol',
+    logo: '/clients/farmacia-carol.svg',
+    industry: 'Retail',
+    description: 'Automatización de inventario con Power Apps',
+    featured: false,
+  },
+  {
+    id: '13',
+    name: 'Industrias San Miguel',
+    logo: '/clients/san-miguel.svg',
+    industry: 'Manufactura',
+    description: 'ISO 9001 certification y sistemas de calidad',
+    featured: false,
+  },
+  {
+    id: '14',
+    name: 'Seguros Banreservas',
+    logo: '/clients/seguros-banreservas.svg',
+    industry: 'Banca',
+    description: 'Desarrollo organizacional y cultura de innovación',
+    featured: false,
+  },
+  {
+    id: '15',
+    name: 'Hospital General Plaza de la Salud',
+    logo: '/clients/plaza-salud.svg',
+    industry: 'Salud',
+    description: 'Gestión del cambio organizacional',
+    featured: false,
+  },
+  {
+    id: '16',
+    name: 'Tech Solutions RD',
+    logo: '/clients/tech-solutions.svg',
+    industry: 'Tecnología',
+    description: 'Implementación de metodologías ágiles (Scrum)',
+    featured: false,
+  },
+]
+
+// Industries we serve
+export const industries: Industry[] = [
+  {
+    id: 'banca',
+    name: 'Banca y Finanzas',
+    description:
+      'Soluciones especializadas para instituciones financieras: gobernanza, compliance, transformación digital y gestión de riesgos.',
+    clientCount: 12,
+    icon: 'building-2',
+  },
+  {
+    id: 'salud',
+    name: 'Salud',
+    description:
+      'Optimización de procesos hospitalarios, sistemas ERP médicos, gestión del cambio y mejora de experiencia del paciente.',
+    clientCount: 8,
+    icon: 'heart-pulse',
+  },
+  {
+    id: 'manufactura',
+    name: 'Manufactura',
+    description:
+      'Lean Six Sigma, excelencia operacional, reducción de desperdicios, ISO certifications y optimización de producción.',
+    clientCount: 10,
+    icon: 'factory',
+  },
+  {
+    id: 'retail',
+    name: 'Retail',
+    description:
+      'Cadena de suministro, customer experience, business intelligence, automatización de inventario y omnichannel.',
+    clientCount: 14,
+    icon: 'shopping-cart',
+  },
+  {
+    id: 'tecnologia',
+    name: 'Tecnología',
+    description:
+      'Metodologías ágiles, gestión de proyectos de software, transformación digital y desarrollo de capacidades técnicas.',
+    clientCount: 4,
+    icon: 'laptop',
+  },
+  {
+    id: 'gobierno',
+    name: 'Gobierno',
+    description:
+      'Modernización del sector público, diseño organizacional, mejora de procesos administrativos y servicio al ciudadano.',
+    clientCount: 2,
+    icon: 'landmark',
+  },
+]
+
+// Featured testimonials
+export const testimonials: Testimonial[] = [
+  {
+    id: '1',
+    quote:
+      'DUO Soluciones transformó nuestra operación bancaria. La implementación de Dynamics 365 superó nuestras expectativas, reduciendo tiempos de proceso en 40% y mejorando significativamente la experiencia de nuestros clientes.',
+    author: 'Lic. María Rodríguez',
+    role: 'Vicepresidenta de Operaciones',
+    company: 'Banco Popular Dominicano',
+    companyLogo: '/clients/banco-popular.svg',
+    rating: 5,
+    featured: true,
+  },
+  {
+    id: '2',
+    quote:
+      'El equipo de DUO nos ayudó a implementar Lean Six Sigma en nuestra planta. En 6 meses redujimos desperdicios en 35% y aumentamos productividad en 28%. Su conocimiento y profesionalismo son excepcionales.',
+    author: 'Ing. Carlos Mejía',
+    role: 'Director de Operaciones',
+    company: 'Cervecería Nacional Dominicana',
+    companyLogo: '/clients/cerveceria-nacional.svg',
+    rating: 5,
+    featured: true,
+  },
+  {
+    id: '3',
+    quote:
+      'La transformación digital que logramos con DUO ha sido impresionante. Sus dashboards en Power BI nos dan visibilidad en tiempo real de todo el negocio. Ahora tomamos decisiones basadas en datos, no en intuición.',
+    author: 'Dr. Roberto Santana',
+    role: 'Director General',
+    company: 'Centro Médico Dominicano',
+    companyLogo: '/clients/centro-medico.svg',
+    rating: 5,
+    featured: true,
+  },
+  {
+    id: '4',
+    quote:
+      'Excelente trabajo en gobernanza corporativa. DUO nos ayudó a estructurar nuestra junta directiva y establecer procesos de compliance que cumplen con regulaciones internacionales. Altamente recomendados.',
+    author: 'Dra. Ana López',
+    role: 'CEO',
+    company: 'Seguros Banreservas',
+    companyLogo: '/clients/seguros-banreservas.svg',
+    rating: 5,
+    featured: false,
+  },
+]
+
+// Case studies
+export const caseStudies: CaseStudy[] = [
+  {
+    id: '1',
+    clientName: 'Banco Popular Dominicano',
+    industry: 'Banca',
+    challenge:
+      'Procesos manuales fragmentados generaban errores, tiempos de ciclo largos y experiencia deficiente del cliente',
+    solution:
+      'Implementación completa de Microsoft Dynamics 365 Finance & Operations con integración a sistemas core bancarios',
+    result:
+      'Reducción de 40% en tiempos de procesamiento, 95% menos errores operacionales, y mejora de 35 puntos en NPS',
+    resultMetric: '40% reducción de tiempos',
+    image: '/case-studies/banco-popular.jpg',
+    featured: true,
+  },
+  {
+    id: '2',
+    clientName: 'Cervecería Nacional Dominicana',
+    industry: 'Manufactura',
+    challenge:
+      'Alta variabilidad en procesos de producción causando desperdicios y costos elevados',
+    solution:
+      'Implementación Lean Six Sigma con 8 proyectos DMAIC y capacitación Black Belt a 12 líderes',
+    result:
+      'Reducción de 35% en desperdicios, aumento de 28% en productividad, ahorro anual de $2.4M',
+    resultMetric: '35% reducción de costos',
+    image: '/case-studies/cerveceria.jpg',
+    featured: true,
+  },
+  {
+    id: '3',
+    clientName: 'Ministerio de Salud Pública',
+    industry: 'Gobierno',
+    challenge:
+      'Estructura organizacional obsoleta con procesos burocráticos que retrasaban servicios al ciudadano',
+    solution:
+      'Rediseño organizacional completo, mapeo de 45 procesos críticos y programa de gestión del cambio',
+    result:
+      'Reducción de 50% en tiempos de respuesta, mejora de 60% en satisfacción ciudadana, estructura más ágil',
+    resultMetric: '50% más eficiente',
+    image: '/case-studies/ministerio.jpg',
+    featured: true,
+  },
+]
+
+// Trust indicators - certifications and partnerships
+export const certifications = [
+  {
+    id: '1',
+    name: 'Microsoft Gold Partner',
+    description: 'Business Applications',
+    logo: '/certifications/microsoft-gold.svg',
+  },
+  {
+    id: '2',
+    name: 'Lean Six Sigma',
+    description: 'Black Belt Certified',
+    logo: '/certifications/lean-six-sigma.svg',
+  },
+  {
+    id: '3',
+    name: 'ISO 9001:2015',
+    description: 'Quality Management',
+    logo: '/certifications/iso-9001.svg',
+  },
+  {
+    id: '4',
+    name: 'PMI',
+    description: 'Project Management Institute',
+    logo: '/certifications/pmi.svg',
+  },
+  {
+    id: '5',
+    name: 'SAFe 5 Agilist',
+    description: 'Scaled Agile Framework',
+    logo: '/certifications/safe.svg',
+  },
+  {
+    id: '6',
+    name: 'Scrum Alliance',
+    description: 'Certified ScrumMaster',
+    logo: '/certifications/scrum.svg',
+  },
+]

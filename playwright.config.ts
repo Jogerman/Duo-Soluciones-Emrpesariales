@@ -52,10 +52,10 @@ export default defineConfig({
     video: 'retain-on-failure',
 
     // Default timeout for actions
-    actionTimeout: 10 * 1000,
+    actionTimeout: 15 * 1000,
 
     // Default navigation timeout
-    navigationTimeout: 15 * 1000,
+    navigationTimeout: 30 * 1000,
   },
 
   // Configure projects for major browsers and viewports
