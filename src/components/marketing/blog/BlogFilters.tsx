@@ -46,7 +46,7 @@ export function BlogFilters({
         <Search className="absolute left-3 top-1/2 -translate-y-1/2 w-5 h-5 text-neutral-400" />
         <Input
           type="search"
-          placeholder="Buscar art�culos..."
+          placeholder="Buscar artículos..."
           value={search}
           onChange={e => handleSearchChange(e.target.value)}
           className="pl-10 pr-4"
@@ -56,7 +56,7 @@ export function BlogFilters({
       {/* Category Filters */}
       <div className="space-y-3">
         <div className="flex items-center justify-between">
-          <h3 className="text-sm font-semibold text-neutral-900">Categor�as</h3>
+          <h3 className="text-sm font-semibold text-neutral-900">Categorías</h3>
           {activeFiltersCount > 0 && (
             <Button variant="ghost" size="sm" onClick={handleClearFilters} className="text-xs">
               <X className="w-3 h-3 mr-1" />

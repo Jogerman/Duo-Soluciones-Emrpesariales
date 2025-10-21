@@ -101,7 +101,7 @@ export function BlogPostMeta({ post }: BlogPostMetaProps) {
 
       {/* Share Section */}
       <Card className="p-6">
-        <h3 className="text-lg font-bold text-neutral-900 mb-4">Compartir art�culo</h3>
+        <h3 className="text-lg font-bold text-neutral-900 mb-4">Compartir artículo</h3>
         <div className="grid grid-cols-2 gap-2">
           <Button
             variant="outline"
@@ -171,7 +171,7 @@ export function BlogPostMeta({ post }: BlogPostMetaProps) {
       {post.updatedAt && post.updatedAt !== post.publishedAt && (
         <Card className="p-4 bg-neutral-50">
           <p className="text-xs text-neutral-600">
-            <span className="font-medium">�ltima actualizaci�n:</span> {formatDate(post.updatedAt)}
+            <span className="font-medium">Última actualizaci�n:</span> {formatDate(post.updatedAt)}
           </p>
         </Card>
       )}

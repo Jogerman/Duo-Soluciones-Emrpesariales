@@ -24,10 +24,6 @@ const nextConfig: NextConfig = {
         source: '/:path*',
         headers: [
           {
-            key: 'Content-Type',
-            value: 'text/html; charset=utf-8',
-          },
-          {
             key: 'X-DNS-Prefetch-Control',
             value: 'on',
           },

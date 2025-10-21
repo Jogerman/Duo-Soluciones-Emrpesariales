@@ -21,7 +21,7 @@ export function BlogPagination({ currentPage, totalPages, onPageChange }: BlogPa
         size="sm"
         onClick={() => onPageChange(currentPage - 1)}
         disabled={currentPage === 1}
-        aria-label="P�gina anterior"
+        aria-label="Página anterior"
       >
         <ChevronLeft className="w-4 h-4" />
         <span className="hidden sm:inline ml-1">Anterior</span>
@@ -46,7 +46,7 @@ export function BlogPagination({ currentPage, totalPages, onPageChange }: BlogPa
               key={pageNum}
               onClick={() => onPageChange(pageNum)}
               disabled={isActive}
-              aria-label={`P�gina ${pageNum}`}
+              aria-label={`Página ${pageNum}`}
               aria-current={isActive ? 'page' : undefined}
               className={cn(
                 'min-w-[2.5rem] h-10 px-3 rounded-md text-sm font-medium',
@@ -68,7 +68,7 @@ export function BlogPagination({ currentPage, totalPages, onPageChange }: BlogPa
         size="sm"
         onClick={() => onPageChange(currentPage + 1)}
         disabled={currentPage === totalPages}
-        aria-label="P�gina siguiente"
+        aria-label="Página siguiente"
       >
         <span className="hidden sm:inline mr-1">Siguiente</span>
         <ChevronRight className="w-4 h-4" />
