@@ -8,7 +8,7 @@ import { generateOrganizationSchema, generateStructuredDataScript, SITE_CONFIG }
 
 const poppins = Poppins({
   weight: ['300', '400', '500', '600', '700'],
-  subsets: ['latin'],
+  subsets: ['latin', 'latin-ext'],
   display: 'swap',
   variable: '--font-poppins',
 })
@@ -64,7 +64,8 @@ export const metadata: Metadata = {
     url: SITE_CONFIG.url,
     siteName: SITE_CONFIG.name,
     title: 'DUO Soluciones Empresariales - Transformamos desafíos en oportunidades sostenibles',
-    description: 'Consultora especializada en desarrollo organizacional, mejora de procesos, implementación ERP y gobernanza corporativa en República Dominicana.',
+    description:
+      'Consultora especializada en desarrollo organizacional, mejora de procesos, implementación ERP y gobernanza corporativa en República Dominicana.',
     images: [
       {
         url: SITE_CONFIG.defaultImage,
@@ -108,6 +109,7 @@ export default function RootLayout({
   return (
     <html lang="es" className={poppins.variable}>
       <head>
+        <meta charSet="utf-8" />
         {/* Organization JSON-LD Schema */}
         <script
           type="application/ld+json"

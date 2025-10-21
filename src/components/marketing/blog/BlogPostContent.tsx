@@ -1,3 +1,7 @@
+'use client'
+
+import ReactMarkdown from 'react-markdown'
+import remarkGfm from 'remark-gfm'
 import { cn } from '@/lib/utils'
 
 interface BlogPostContentProps {
@@ -12,6 +16,7 @@ export function BlogPostContent({ content, className }: BlogPostContentProps) {
         'prose prose-lg max-w-none',
         // Headings
         'prose-headings:font-bold prose-headings:text-neutral-900 prose-headings:tracking-tight',
+        'prose-h1:text-4xl prose-h1:mt-0 prose-h1:mb-8',
         'prose-h2:text-3xl prose-h2:mt-12 prose-h2:mb-6',
         'prose-h3:text-2xl prose-h3:mt-10 prose-h3:mb-4',
         'prose-h4:text-xl prose-h4:mt-8 prose-h4:mb-3',
@@ -45,9 +50,14 @@ export function BlogPostContent({ content, className }: BlogPostContentProps) {
         'prose-hr:border-neutral-200 prose-hr:my-12',
         // Images
         'prose-img:rounded-lg prose-img:shadow-md prose-img:my-8',
+        // Tables
+        'prose-table:border-collapse prose-table:my-8',
+        'prose-th:bg-neutral-100 prose-th:font-semibold prose-th:p-3 prose-th:text-left',
+        'prose-td:p-3 prose-td:border-t prose-td:border-neutral-200',
         className
       )}
-      dangerouslySetInnerHTML={{ __html: content }}
-    />
+    >
+      <ReactMarkdown remarkPlugins={[remarkGfm]}>{content}</ReactMarkdown>
+    </article>
   )
 }

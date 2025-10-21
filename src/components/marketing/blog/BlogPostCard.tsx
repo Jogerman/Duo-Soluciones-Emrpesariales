@@ -40,6 +40,7 @@ export function BlogPostCard({ post, featured = false }: BlogPostCardProps) {
                 ? '(max-width: 768px) 100vw, 50vw'
                 : '(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw'
             }
+            priority={featured}
           />
 
           {/* Category Badge Overlay */}
@@ -113,7 +114,7 @@ export function BlogPostCard({ post, featured = false }: BlogPostCardProps) {
               size="sm"
               className="group-hover:text-primary-600 group-hover:translate-x-1 transition-transform"
             >
-              <span className="sr-only">Leer m�s</span>
+              <span className="sr-only">Leer más</span>
               <ArrowRight className="w-4 h-4" />
             </Button>
           </div>

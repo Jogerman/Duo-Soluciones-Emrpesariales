@@ -72,8 +72,8 @@ export default function BlogPage() {
             <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold mb-6">Insights y Recursos</h1>
 
             <p className="text-xl text-white/90 leading-relaxed">
-              Art�culos, gu�as y mejores pr�cticas sobre desarrollo organizacional, mejora de
-              procesos, implementaci�n de ERP, gobernanza corporativa y transformaci�n digital.
+              Artículos, guías y mejores prácticas sobre desarrollo organizacional, mejora de
+              procesos, implementación de ERP, gobernanza corporativa y transformación digital.
             </p>
           </div>
         </Container>
@@ -83,7 +83,7 @@ export default function BlogPage() {
       {currentPage === 1 && !filters.category && !filters.search && (
         <section className="py-16 bg-neutral-50">
           <Container>
-            <h2 className="text-3xl font-bold text-neutral-900 mb-8">Art�culos destacados</h2>
+            <h2 className="text-3xl font-bold text-neutral-900 mb-8">Artículos destacados</h2>
 
             <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
               {/* Main Featured Post */}

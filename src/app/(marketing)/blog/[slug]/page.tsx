@@ -23,13 +23,13 @@ export async function generateMetadata({ params }: BlogPostPageProps): Promise<M
 
   if (!post) {
     return {
-      title: 'Art�culo no encontrado | DUO Soluciones',
+      title: 'Artículo no encontrado | DUO Soluciones',
     }
   }
 
   const metaTitle = post.seo?.metaTitle || `${post.title} | Blog DUO Soluciones`
   const metaDescription =
-    post.seo?.metaDescription || post.excerpt || 'Art�culo del blog de DUO Soluciones Empresariales'
+    post.seo?.metaDescription || post.excerpt || 'Artículo del blog de DUO Soluciones Empresariales'
 
   return {
     title: metaTitle,
@@ -38,7 +38,7 @@ export async function generateMetadata({ params }: BlogPostPageProps): Promise<M
       post.category.name,
       ...post.tags.map(tag => tag.name),
       'DUO Soluciones',
-      'consultor�a empresarial',
+      'consultoría empresarial',
     ],
     authors: [{ name: post.author.name }],
     openGraph: {
@@ -85,15 +85,6 @@ export default async function BlogPostPage({ params }: BlogPostPageProps) {
   // Get related posts
   const relatedPosts = getRelatedPosts(post.id, post.category, blogPosts, 3)
 
-  // Convert markdown-like content to HTML (simple version)
-  // In production, you'd use a proper markdown parser like remark
-  const htmlContent = post.content
-    .replace(/\n/g, '<br />')
-    .replace(/#{1,6}\s(.+)/g, (match, content) => {
-      const level = match.indexOf(' ')
-      return `<h${level}>${content}</h${level}>`
-    })
-
   return (
     <div className="min-h-screen">
       {/* Hero Section */}
@@ -105,7 +96,7 @@ export default async function BlogPostPage({ params }: BlogPostPageProps) {
           <div className="grid grid-cols-1 lg:grid-cols-12 gap-12">
             {/* Article Content */}
             <div className="lg:col-span-8">
-              <BlogPostContent content={htmlContent} />
+              <BlogPostContent content={post.content} />
             </div>
 
             {/* Sidebar */}
@@ -126,17 +117,17 @@ export default async function BlogPostPage({ params }: BlogPostPageProps) {
         <Container>
           <div className="max-w-3xl mx-auto text-center">
             <h2 className="text-3xl md:text-4xl font-bold mb-4">
-              �Necesitas ayuda con tu proyecto?
+              ¿Necesitas ayuda con tu proyecto?
             </h2>
             <p className="text-xl text-white/90 mb-8">
-              Nuestro equipo de expertos est� listo para acompa�arte en tu proceso de transformaci�n
+              Nuestro equipo de expertos está listo para acompañarte en tu proceso de transformación
               empresarial.
             </p>
             <a
               href="/contact"
               className="inline-flex items-center justify-center px-8 py-3 rounded-md bg-white text-primary-600 font-semibold hover:bg-neutral-100 transition-colors"
             >
-              Cont�ctanos
+              Contáctanos
             </a>
           </div>
         </Container>
