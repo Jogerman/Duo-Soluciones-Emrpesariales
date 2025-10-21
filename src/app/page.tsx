@@ -181,10 +181,13 @@ export default function HomePage() {
     <main className="min-h-screen">
       {/* Hero Section */}
       <HeroSection
-        title="Transformamos Desafíos Organizacionales en Oportunidades Sostenibles"
-        subtitle="Soluciones integrales de desarrollo organizacional, mejora de procesos y gobernanza corporativa que impulsan el crecimiento sostenible de tu empresa."
-        description="Más de 15 años transformando organizaciones en República Dominicana y el Caribe. Expertos certificados en MS Dynamics, Power BI y metodologías ágiles."
-        variant="gradient"
+        title="Transformamos Desafíos en Oportunidades Sostenibles"
+        subtitle=""
+        variant="photo-focus"
+        primaryCTA={{
+          text: 'Conocer Más',
+          href: '/services',
+        }}
       />
 
       {/* Services Grid */}
