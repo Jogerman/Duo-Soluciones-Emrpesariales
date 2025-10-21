@@ -1,7 +1,7 @@
 'use client'
 
 import Script from 'next/script'
-import { useEffect } from 'react'
+import { useEffect, Suspense } from 'react'
 import { usePathname, useSearchParams } from 'next/navigation'
 import { GA_MEASUREMENT_ID, isAnalyticsEnabled, trackPageView } from '@/lib/analytics'
 
@@ -34,7 +34,7 @@ import { GA_MEASUREMENT_ID, isAnalyticsEnabled, trackPageView } from '@/lib/anal
  * }
  * ```
  */
-export function GoogleAnalytics() {
+function GoogleAnalyticsInner() {
   const pathname = usePathname()
   const searchParams = useSearchParams()
 
@@ -45,6 +45,10 @@ export function GoogleAnalytics() {
     }
   }, [pathname, searchParams])
 
+  return null
+}
+
+export function GoogleAnalytics() {
   // Don't render anything if analytics is disabled
   if (!isAnalyticsEnabled) {
     return null
@@ -52,6 +56,9 @@ export function GoogleAnalytics() {
 
   return (
     <>
+      <Suspense fallback={null}>
+        <GoogleAnalyticsInner />
+      </Suspense>
       {/* Global Site Tag (gtag.js) - Google Analytics */}
       <Script
         strategy="afterInteractive"

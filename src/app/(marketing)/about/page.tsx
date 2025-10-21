@@ -7,6 +7,9 @@ import { Badge } from '@/components/ui/Badge'
 import { CTASection } from '@/components/marketing/cta/CTASection'
 import { Award, Target, Heart, Users, Lightbulb, TrendingUp } from 'lucide-react'
 
+// Force dynamic rendering
+export const dynamic = 'force-dynamic'
+
 export const metadata: Metadata = {
   title: 'Sobre Nosotros | DUO Soluciones Empresariales',
   description:
