@@ -18,24 +18,24 @@ const navItems: NavItem[] = [
     children: [
       {
         title: 'Desarrollo Organizacional',
-        href: '/servicios/desarrollo-organizacional',
+        href: '/services/desarrollo-organizacional',
       },
       {
         title: 'Mejora de Procesos',
-        href: '/servicios/mejora-procesos',
+        href: '/services/mejora-procesos',
       },
       {
         title: 'Implementación ERP',
-        href: '/servicios/implementacion-erp',
+        href: '/services/implementacion-erp',
       },
       {
         title: 'Gobernanza Corporativa',
-        href: '/servicios/gobernanza-corporativa',
+        href: '/services/gobernanza-corporativa',
       },
     ],
   },
   { title: 'Clientes', href: '/clientes' },
-  { title: 'Nosotros', href: '/nosotros' },
+  { title: 'Nosotros', href: '/about' },
   { title: 'Blog', href: '/blog' },
   { title: 'Podcast', href: '/podcast' },
 ]
