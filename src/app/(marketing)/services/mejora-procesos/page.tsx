@@ -17,6 +17,9 @@ import {
 } from 'lucide-react'
 import Link from 'next/link'
 
+// Force dynamic rendering
+export const dynamic = 'force-dynamic'
+
 export const metadata: Metadata = {
   title: 'Mejora de Procesos | Lean Six Sigma | DUO Soluciones',
   description:
@@ -186,8 +189,7 @@ export default function MejoraProcesosPage() {
             </p>
             <p className="mt-4 text-lg text-primary-200">
               Aplicamos metodologías Lean, Six Sigma y BPM para identificar y eliminar
-              ineficiencias, reducir tiempos de ciclo y maximizar el valor entregado a tus
-              clientes.
+              ineficiencias, reducir tiempos de ciclo y maximizar el valor entregado a tus clientes.
             </p>
             <div className="mt-8 flex flex-wrap gap-4">
               <Button asChild size="lg">
@@ -388,9 +390,7 @@ export default function MejoraProcesosPage() {
             <h2 className="text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl">
               Resultados Comprobados
             </h2>
-            <p className="mt-4 text-lg text-gray-600">
-              Métricas reales de proyectos completados
-            </p>
+            <p className="mt-4 text-lg text-gray-600">Métricas reales de proyectos completados</p>
           </div>
 
           <div className="grid gap-8 md:grid-cols-4">
@@ -440,7 +440,11 @@ export default function MejoraProcesosPage() {
                 <CardContent className="p-6">
                   <h3 className="text-xl font-semibold text-gray-900 mb-2">{service.title}</h3>
                   <p className="text-gray-600 mb-4">{service.description}</p>
-                  <Button asChild variant="outline" className="w-full group-hover:border-primary-600">
+                  <Button
+                    asChild
+                    variant="outline"
+                    className="w-full group-hover:border-primary-600"
+                  >
                     <Link href={`/services/${service.slug}`}>
                       Ver Detalles
                       <ArrowRight className="ml-2 h-4 w-4 transition-transform group-hover:translate-x-1" />

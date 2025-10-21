@@ -48,6 +48,9 @@ next-env.d.ts
 /drizzle
 
 # IDE
+
+# Windows artifacts
+nul
 .vscode/*
 !.vscode/settings.json
 !.vscode/tasks.json
@@ -118,3 +121,11 @@ storybook-static
 # Temporary files
 tmp/
 temp/
+
+# Playwright
+.playwright-mcp/
+test-results/
+playwright-report/
+
+# Claude Code
+.claude/settings.local.json

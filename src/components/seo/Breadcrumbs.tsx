@@ -3,7 +3,8 @@
 import Link from 'next/link'
 import { usePathname } from 'next/navigation'
 import { ChevronRight, Home } from 'lucide-react'
-import { generateBreadcrumbSchema, generateStructuredDataScript } from '@/lib/seo'
+import { generateBreadcrumbSchema, generateStructuredDataScript } from '@/lib/seo/schemas'
+import type { BreadcrumbItem } from '@/lib/seo/schemas'
 
 /**
  * Breadcrumbs Component with JSON-LD Structured Data
@@ -35,11 +36,6 @@ interface BreadcrumbsProps {
   customLabels?: Record<string, string>
   className?: string
   showHome?: boolean
-}
-
-interface BreadcrumbItem {
-  name: string
-  url: string
 }
 
 // Default labels for common routes
@@ -83,7 +79,7 @@ function slugToTitle(slug: string, customLabels?: Record<string, string>): strin
   // Fallback: capitalize and replace hyphens with spaces
   return slug
     .split('-')
-    .map((word) => word.charAt(0).toUpperCase() + word.slice(1))
+    .map(word => word.charAt(0).toUpperCase() + word.slice(1))
     .join(' ')
 }
 
@@ -98,7 +94,7 @@ function generateBreadcrumbs(
   const pathSegments = pathname.replace(/^\/|\/$/g, '').split('/')
 
   // Filter out empty segments
-  const validSegments = pathSegments.filter((segment) => segment.length > 0)
+  const validSegments = pathSegments.filter(segment => segment.length > 0)
 
   // Build breadcrumb items
   const breadcrumbs: BreadcrumbItem[] = []
@@ -115,11 +111,7 @@ function generateBreadcrumbs(
   return breadcrumbs
 }
 
-export function Breadcrumbs({
-  customLabels,
-  className = '',
-  showHome = true,
-}: BreadcrumbsProps) {
+export function Breadcrumbs({ customLabels, className = '', showHome = true }: BreadcrumbsProps) {
   const pathname = usePathname()
 
   // Don't show breadcrumbs on homepage
@@ -152,10 +144,7 @@ export function Breadcrumbs({
       />
 
       {/* Visual Breadcrumbs */}
-      <nav
-        aria-label="Breadcrumb"
-        className={`py-4 ${className}`}
-      >
+      <nav aria-label="Breadcrumb" className={`py-4 ${className}`}>
         <ol className="flex items-center space-x-2 text-sm">
           {/* Home link */}
           {showHome && (
@@ -180,10 +169,7 @@ export function Breadcrumbs({
               <li key={item.url} className="flex items-center">
                 {isLast ? (
                   // Last item - current page (no link)
-                  <span
-                    className="text-gray-900 font-medium"
-                    aria-current="page"
-                  >
+                  <span className="text-gray-900 font-medium" aria-current="page">
                     {item.name}
                   </span>
                 ) : (

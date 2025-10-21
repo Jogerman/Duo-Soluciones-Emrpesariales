@@ -16,6 +16,9 @@ import {
 } from 'lucide-react'
 import Link from 'next/link'
 
+// Force dynamic rendering
+export const dynamic = 'force-dynamic'
+
 export const metadata: Metadata = {
   title: 'Contacto | Agenda tu Consulta Gratuita | DUO Soluciones',
   description:
@@ -110,8 +113,8 @@ export default function ContactPage() {
               Comencemos la Conversación
             </h1>
             <p className="mt-6 text-lg leading-8 text-primary-100 sm:text-xl">
-              Cuéntanos sobre tus desafíos y descubre cómo podemos ayudarte a alcanzar tus
-              objetivos organizacionales.
+              Cuéntanos sobre tus desafíos y descubre cómo podemos ayudarte a alcanzar tus objetivos
+              organizacionales.
             </p>
           </div>
         </Container>
@@ -210,14 +213,13 @@ export default function ContactPage() {
               <Card className="bg-gradient-to-br from-green-50 to-green-100 border-green-200">
                 <CardContent className="p-6 text-center">
                   <MessageCircle className="mx-auto h-12 w-12 text-green-600 mb-4" />
-                  <h3 className="text-lg font-bold text-gray-900 mb-2">¿Necesitas ayuda inmediata?</h3>
+                  <h3 className="text-lg font-bold text-gray-900 mb-2">
+                    ¿Necesitas ayuda inmediata?
+                  </h3>
                   <p className="text-sm text-gray-600 mb-4">
                     Chatea con nosotros por WhatsApp y te responderemos lo antes posible
                   </p>
-                  <Button
-                    asChild
-                    className="w-full bg-green-600 hover:bg-green-700"
-                  >
+                  <Button asChild className="w-full bg-green-600 hover:bg-green-700">
                     <a
                       href="https://wa.me/18095550100?text=Hola,%20me%20gustaría%20obtener%20más%20información%20sobre%20los%20servicios%20de%20DUO%20Soluciones.%20¿Podrían%20ayudarme?"
                       target="_blank"
@@ -331,7 +333,9 @@ export default function ContactPage() {
                   <div className="mb-4 inline-flex rounded-lg bg-primary-600 p-3 text-white">
                     <span className="text-2xl font-bold">3</span>
                   </div>
-                  <h3 className="text-lg font-semibold text-gray-900 mb-2">Propuesta Personalizada</h3>
+                  <h3 className="text-lg font-semibold text-gray-900 mb-2">
+                    Propuesta Personalizada
+                  </h3>
                   <p className="text-sm text-gray-600">
                     Recibe un plan de acción adaptado a tus necesidades específicas
                   </p>

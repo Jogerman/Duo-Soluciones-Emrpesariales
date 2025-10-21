@@ -15,8 +15,11 @@ import {
 } from 'lucide-react'
 import Link from 'next/link'
 
+// Force dynamic rendering
+export const dynamic = 'force-dynamic'
+
 export const metadata: Metadata = {
-  title: 'Desarrollo Organizacional | DUO Soluciones',
+  title: 'Desarrollo Organizacional | Transformación Cultural | DUO Soluciones',
   description:
     'Construye una organización resiliente, ágil y preparada para el futuro. Servicios de diagnóstico organizacional, diseño de estructuras, desarrollo de cultura y gestión del cambio.',
   keywords: [
@@ -173,7 +176,12 @@ export default function DesarrolloOrganizacionalPage() {
               <Button asChild size="lg">
                 <Link href="/contact">Solicitar Consulta</Link>
               </Button>
-              <Button asChild size="lg" variant="outline" className="bg-white text-primary-700 hover:bg-primary-50">
+              <Button
+                asChild
+                size="lg"
+                variant="outline"
+                className="bg-white text-primary-700 hover:bg-primary-50"
+              >
                 <a href="#que-hacemos">Conocer Más</a>
               </Button>
             </div>
@@ -188,9 +196,7 @@ export default function DesarrolloOrganizacionalPage() {
             <h2 className="text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl">
               Beneficios Clave
             </h2>
-            <p className="mt-4 text-lg text-gray-600">
-              Impacto real y medible en tu organización
-            </p>
+            <p className="mt-4 text-lg text-gray-600">Impacto real y medible en tu organización</p>
           </div>
 
           <div className="grid gap-8 md:grid-cols-2 lg:grid-cols-3">
@@ -339,9 +345,7 @@ export default function DesarrolloOrganizacionalPage() {
             <h2 className="text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl">
               Resultados Típicos
             </h2>
-            <p className="mt-4 text-lg text-gray-600">
-              Métricas reales de proyectos completados
-            </p>
+            <p className="mt-4 text-lg text-gray-600">Métricas reales de proyectos completados</p>
           </div>
 
           <div className="grid gap-8 md:grid-cols-3">
@@ -385,7 +389,11 @@ export default function DesarrolloOrganizacionalPage() {
                 <CardContent className="p-6">
                   <h3 className="text-xl font-semibold text-gray-900 mb-2">{service.title}</h3>
                   <p className="text-gray-600 mb-4">{service.description}</p>
-                  <Button asChild variant="outline" className="w-full group-hover:border-primary-600">
+                  <Button
+                    asChild
+                    variant="outline"
+                    className="w-full group-hover:border-primary-600"
+                  >
                     <Link href={`/services/${service.slug}`}>
                       Ver Detalles
                       <ArrowRight className="ml-2 h-4 w-4 transition-transform group-hover:translate-x-1" />

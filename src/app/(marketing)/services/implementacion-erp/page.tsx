@@ -18,6 +18,9 @@ import {
 } from 'lucide-react'
 import Link from 'next/link'
 
+// Force dynamic rendering
+export const dynamic = 'force-dynamic'
+
 export const metadata: Metadata = {
   title: 'Implementación ERP | MS Dynamics 365 & Power BI | DUO Soluciones',
   description:
@@ -213,8 +216,8 @@ export default function ImplementacionERPPage() {
               Visibilidad completa, decisiones inteligentes, crecimiento acelerado
             </p>
             <p className="mt-4 text-lg text-primary-200">
-              Implementamos Microsoft Dynamics 365 y Power BI para integrar tus sistemas, automatizar
-              operaciones y obtener insights en tiempo real que impulsan el crecimiento.
+              Implementamos Microsoft Dynamics 365 y Power BI para integrar tus sistemas,
+              automatizar operaciones y obtener insights en tiempo real que impulsan el crecimiento.
             </p>
             <div className="mt-8 flex flex-wrap gap-4">
               <Button asChild size="lg">
@@ -274,9 +277,7 @@ export default function ImplementacionERPPage() {
             <h2 className="text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl">
               Qué Hacemos
             </h2>
-            <p className="mt-4 text-lg text-gray-600">
-              De la estrategia a la ejecución
-            </p>
+            <p className="mt-4 text-lg text-gray-600">De la estrategia a la ejecución</p>
           </div>
 
           <div className="grid gap-6 lg:grid-cols-2">
@@ -299,9 +300,7 @@ export default function ImplementacionERPPage() {
             <h2 className="text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl">
               Módulos y Tecnologías
             </h2>
-            <p className="mt-4 text-lg text-gray-600">
-              Soluciones Microsoft que implementamos
-            </p>
+            <p className="mt-4 text-lg text-gray-600">Soluciones Microsoft que implementamos</p>
           </div>
 
           <div className="grid gap-4 md:grid-cols-2 lg:grid-cols-4">
@@ -420,9 +419,7 @@ export default function ImplementacionERPPage() {
             <h2 className="text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl">
               Resultados Comprobados
             </h2>
-            <p className="mt-4 text-lg text-gray-600">
-              Impacto real de nuestras implementaciones
-            </p>
+            <p className="mt-4 text-lg text-gray-600">Impacto real de nuestras implementaciones</p>
           </div>
 
           <div className="grid gap-8 md:grid-cols-4">
@@ -461,9 +458,7 @@ export default function ImplementacionERPPage() {
             <h2 className="text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl">
               Servicios Complementarios
             </h2>
-            <p className="mt-4 text-lg text-gray-600">
-              Maximiza el valor de tu implementación ERP
-            </p>
+            <p className="mt-4 text-lg text-gray-600">Maximiza el valor de tu implementación ERP</p>
           </div>
 
           <div className="grid gap-6 md:grid-cols-2 max-w-4xl mx-auto">
@@ -472,7 +467,11 @@ export default function ImplementacionERPPage() {
                 <CardContent className="p-6">
                   <h3 className="text-xl font-semibold text-gray-900 mb-2">{service.title}</h3>
                   <p className="text-gray-600 mb-4">{service.description}</p>
-                  <Button asChild variant="outline" className="w-full group-hover:border-primary-600">
+                  <Button
+                    asChild
+                    variant="outline"
+                    className="w-full group-hover:border-primary-600"
+                  >
                     <Link href={`/services/${service.slug}`}>
                       Ver Detalles
                       <ArrowRight className="ml-2 h-4 w-4 transition-transform group-hover:translate-x-1" />

@@ -8,8 +8,11 @@ export const metadata = {
   description: 'An error occurred during authentication',
 }
 
-function ErrorContent({ searchParams }: { searchParams: { error?: string } }) {
-  const error = searchParams.error || 'Unknown'
+// Force dynamic rendering for this page
+export const dynamic = 'force-dynamic'
+
+function ErrorContent({ error }: { error: string }) {
+  const errorParam = error || 'Unknown'
 
   const errorMessages: Record<string, { title: string; description: string }> = {
     Configuration: {
@@ -34,7 +37,7 @@ function ErrorContent({ searchParams }: { searchParams: { error?: string } }) {
     },
   }
 
-  const errorInfo = errorMessages[error] || errorMessages.Default
+  const errorInfo = errorMessages[errorParam] || errorMessages.Default
 
   return (
     <div className="flex min-h-screen items-center justify-center bg-gray-50 px-4 py-12 sm:px-6 lg:px-8">
@@ -67,17 +70,26 @@ function ErrorContent({ searchParams }: { searchParams: { error?: string } }) {
             </Button>
           </div>
 
-          {error !== 'Unknown' && <p className="mt-4 text-xs text-gray-500">Error code: {error}</p>}
+          {errorParam !== 'Unknown' && (
+            <p className="mt-4 text-xs text-gray-500">Error code: {errorParam}</p>
+          )}
         </div>
       </Card>
     </div>
   )
 }
 
-export default function AuthErrorPage({ searchParams }: { searchParams: { error?: string } }) {
+export default async function AuthErrorPage({
+  searchParams,
+}: {
+  searchParams: Promise<{ error?: string }>
+}) {
+  const params = await searchParams
+  const error = params.error || 'Unknown'
+
   return (
     <Suspense fallback={<div>Loading...</div>}>
-      <ErrorContent searchParams={searchParams} />
+      <ErrorContent error={error} />
     </Suspense>
   )
 }

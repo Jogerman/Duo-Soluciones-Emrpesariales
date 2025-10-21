@@ -6,6 +6,9 @@ export const metadata = {
   description: 'Sign in to access the DUO Soluciones admin panel',
 }
 
+// Force dynamic rendering
+export const dynamic = 'force-dynamic'
+
 export default function SignInPage() {
   return (
     <div className="flex min-h-screen items-center justify-center bg-gray-50 px-4 py-12 sm:px-6 lg:px-8">

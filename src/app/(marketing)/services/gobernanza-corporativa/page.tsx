@@ -17,6 +17,9 @@ import {
 } from 'lucide-react'
 import Link from 'next/link'
 
+// Force dynamic rendering
+export const dynamic = 'force-dynamic'
+
 export const metadata: Metadata = {
   title: 'Gobernanza Corporativa | Compliance & Risk Management | DUO Soluciones',
   description:
@@ -208,8 +211,8 @@ export default function GobernanzaCorporativaPage() {
               Marcos de gobierno que aseguran transparencia, compliance y sostenibilidad
             </p>
             <p className="mt-4 text-lg text-primary-200">
-              Diseñamos e implementamos estructuras de gobernanza robustas que fortalecen la toma
-              de decisiones, aseguran compliance y generan confianza con stakeholders.
+              Diseñamos e implementamos estructuras de gobernanza robustas que fortalecen la toma de
+              decisiones, aseguran compliance y generan confianza con stakeholders.
             </p>
             <div className="mt-8 flex flex-wrap gap-4">
               <Button asChild size="lg">
@@ -464,7 +467,11 @@ export default function GobernanzaCorporativaPage() {
                 <CardContent className="p-6">
                   <h3 className="text-xl font-semibold text-gray-900 mb-2">{service.title}</h3>
                   <p className="text-gray-600 mb-4">{service.description}</p>
-                  <Button asChild variant="outline" className="w-full group-hover:border-primary-600">
+                  <Button
+                    asChild
+                    variant="outline"
+                    className="w-full group-hover:border-primary-600"
+                  >
                     <Link href={`/services/${service.slug}`}>
                       Ver Detalles
                       <ArrowRight className="ml-2 h-4 w-4 transition-transform group-hover:translate-x-1" />

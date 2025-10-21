@@ -1,4 +1,6 @@
 import { MetadataRoute } from 'next'
+import { getAllBlogPosts } from '@/lib/mock-data/blog-posts'
+import { getAllPodcastEpisodes } from '@/lib/mock-data/podcast-episodes'
 
 /**
  * Dynamic Sitemap Generation for DUO Soluciones Empresariales
@@ -126,31 +128,32 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
   // ============================================================================
   // DYNAMIC ROUTES FROM CMS
   // ============================================================================
-  // TODO: Once Payload CMS is connected, fetch dynamic content
+  // Using mock data until Payload CMS is connected
 
-  const blogPosts: MetadataRoute.Sitemap = []
-  const podcastEpisodes: MetadataRoute.Sitemap = []
+  let blogPosts: MetadataRoute.Sitemap = []
+  let podcastEpisodes: MetadataRoute.Sitemap = []
   const projects: MetadataRoute.Sitemap = []
 
   try {
-    // Fetch blog posts from CMS
-    // Example: const posts = await fetch(`${SITE_URL}/api/blog`).then(r => r.json())
-    // blogPosts = posts.map((post: any) => ({
-    //   url: `${SITE_URL}/blog/${post.slug}`,
-    //   lastModified: new Date(post.updatedAt),
-    //   changeFrequency: 'monthly' as const,
-    //   priority: 0.6,
-    // }))
+    // Fetch blog posts (using mock data for now)
+    const posts = getAllBlogPosts()
+    blogPosts = posts.map(post => ({
+      url: `${SITE_URL}/blog/${post.slug}`,
+      lastModified: new Date(post.updatedAt || post.publishedAt),
+      changeFrequency: 'weekly' as const,
+      priority: 0.7,
+    }))
 
-    // Fetch podcast episodes from CMS
-    // podcastEpisodes = episodes.map((episode: any) => ({
-    //   url: `${SITE_URL}/podcast/${episode.slug}`,
-    //   lastModified: new Date(episode.publishedAt),
-    //   changeFrequency: 'yearly' as const,
-    //   priority: 0.5,
-    // }))
+    // Fetch podcast episodes (using mock data for now)
+    const episodes = getAllPodcastEpisodes()
+    podcastEpisodes = episodes.map(episode => ({
+      url: `${SITE_URL}/podcast/${episode.slug}`,
+      lastModified: new Date(episode.publishedAt),
+      changeFrequency: 'weekly' as const,
+      priority: 0.7,
+    }))
 
-    // Fetch case studies/projects from CMS
+    // Fetch case studies/projects from CMS (to be implemented)
     // projects = projectsList.map((project: any) => ({
     //   url: `${SITE_URL}/projects/${project.slug}`,
     //   lastModified: new Date(project.updatedAt),
@@ -159,7 +162,7 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
     // }))
   } catch (error) {
     console.error('Error fetching dynamic routes for sitemap:', error)
-    // If CMS is not available, continue with static routes only
+    // If data is not available, continue with static routes only
   }
 
   // ============================================================================

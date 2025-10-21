@@ -6,6 +6,8 @@ buildCommand = "npm run build"
 startCommand = "npm run start"
 restartPolicyType = "on_failure"
 restartPolicyMaxRetries = 10
+# Number of replicas (Railway handles scaling)
+numReplicas = 1
 
 [healthcheck]
 # Health check endpoint (Next.js provides this by default)
@@ -17,11 +19,19 @@ interval = 60
 # Node environment - set to production for Railway
 NODE_ENV = "production"
 
-# Railway automatically provides PORT environment variable
-# Next.js will use this automatically
-
 # Node.js options for production optimization
+# Increase memory allocation for larger builds
 NODE_OPTIONS = "--max-old-space-size=4096"
 
-# Enable experimental features
+# Disable Next.js telemetry in production
 NEXT_TELEMETRY_DISABLED = "1"
+
+# Railway automatically provides these variables:
+# - PORT (Next.js will use this automatically)
+# - RAILWAY_STATIC_URL
+# - RAILWAY_ENVIRONMENT
+# - RAILWAY_PROJECT_ID
+# - RAILWAY_SERVICE_ID
+
+# Note: All other environment variables should be set in Railway Dashboard
+# See .env.production.example for required variables

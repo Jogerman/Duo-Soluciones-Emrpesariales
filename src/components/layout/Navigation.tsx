@@ -37,6 +37,7 @@ const navItems: NavItem[] = [
   { title: 'Clientes', href: '/clientes' },
   { title: 'Nosotros', href: '/nosotros' },
   { title: 'Blog', href: '/blog' },
+  { title: 'Podcast', href: '/podcast' },
 ]
 
 interface NavigationProps {

@@ -9,6 +9,9 @@ import { TestimonialCard } from '@/components/visual/TestimonialCard'
 import { GradientBox } from '@/components/visual/GradientBox'
 import { Target, Settings, Laptop, Building2 } from 'lucide-react'
 
+// Force dynamic rendering
+export const dynamic = 'force-dynamic'
+
 export const metadata = {
   title: 'Style Guide',
   robots: {

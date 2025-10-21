@@ -8,6 +8,9 @@ import {
 } from '@/components/marketing'
 import type { ServiceItem, Stat, Testimonial } from '@/components/marketing'
 
+// Force dynamic rendering
+export const dynamic = 'force-dynamic'
+
 export const metadata: Metadata = {
   title: 'DUO Soluciones Empresariales | Consultoría Estratégica y Transformación Digital',
   description:

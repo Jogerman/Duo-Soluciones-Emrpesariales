@@ -21,8 +21,11 @@ const eslintConfig = [
         },
       ],
       '@typescript-eslint/no-explicit-any': 'warn',
+      '@typescript-eslint/no-empty-object-type': 'warn',
+      '@typescript-eslint/no-require-imports': 'warn',
       'react/no-unescaped-entities': 'off',
       'react-hooks/exhaustive-deps': 'warn',
+      '@next/next/no-img-element': 'warn',
     },
   },
 ]

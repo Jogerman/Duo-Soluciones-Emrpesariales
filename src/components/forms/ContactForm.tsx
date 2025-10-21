@@ -36,7 +36,7 @@ const contactFormSchema = z.object({
     .min(10, 'El mensaje debe tener al menos 10 caracteres')
     .max(2000, 'El mensaje no puede exceder 2000 caracteres')
     .trim(),
-  honeypot: z.string().default(''), // Should be empty
+  honeypot: z.string().optional(), // Should be empty (spam protection)
 })
 
 type ContactFormData = z.infer<typeof contactFormSchema>
@@ -57,9 +57,6 @@ export function ContactForm({ className }: ContactFormProps) {
     formState: { errors },
   } = useForm<ContactFormData>({
     resolver: zodResolver(contactFormSchema),
-    defaultValues: {
-      honeypot: '', // Honeypot field for spam protection
-    },
   })
 
   const onSubmit = async (data: ContactFormData) => {
@@ -210,12 +207,7 @@ export function ContactForm({ className }: ContactFormProps) {
               <label htmlFor="phone" className="block text-sm font-medium text-gray-700 mb-2">
                 Teléfono
               </label>
-              <Input
-                id="phone"
-                type="tel"
-                placeholder="+1 (809) 555-1234"
-                {...register('phone')}
-              />
+              <Input id="phone" type="tel" placeholder="+1 (809) 555-1234" {...register('phone')} />
             </div>
           </div>
 
