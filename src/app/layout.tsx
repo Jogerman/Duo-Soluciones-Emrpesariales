@@ -21,6 +21,10 @@ export const metadata: Metadata = {
   },
   description:
     'Consultora especializada en desarrollo organizacional, mejora de procesos, implementación ERP y gobernanza corporativa en República Dominicana. Transformamos desafíos organizacionales en oportunidades sostenibles.',
+  icons: {
+    icon: '/icon.png',
+    apple: '/apple-icon.png',
+  },
   keywords: [
     'desarrollo organizacional',
     'mejora de procesos',
