@@ -1,0 +1,77 @@
+# Dependencies
+node_modules
+npm-debug.log
+
+# Next.js
+.next
+out
+*.tsbuildinfo
+next-env.d.ts
+
+# Testing
+coverage
+.nyc_output
+*.lcov
+
+# Environment variables
+.env
+.env*.local
+.env.local
+.env.development.local
+.env.test.local
+.env.production.local
+
+# IDE
+.vscode
+.idea
+*.swp
+*.swo
+*~
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Git
+.git
+.gitignore
+
+# CI/CD
+.github
+
+# Documentation (keep in production)
+# README.md
+# CHANGELOG.md
+
+# Build artifacts
+dist
+build
+
+# Logs
+logs
+*.log
+
+# Misc
+.vercel
+.railway
+
+# Database
+drizzle
+*.sqlite
+*.db
+
+# Media
+media
+
+# Windows artifacts
+nul
+
+# Playwright
+playwright-report
+test-results
+
+# Miscellaneous development files
+*.local
+.cache
+temp
+tmp
