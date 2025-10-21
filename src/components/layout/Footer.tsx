@@ -7,19 +7,19 @@ const footerSections = [
   {
     title: 'Servicios',
     links: [
-      { title: 'Desarrollo Organizacional', href: '/servicios/desarrollo-organizacional' },
-      { title: 'Mejora de Procesos', href: '/servicios/mejora-procesos' },
-      { title: 'Implementación ERP', href: '/servicios/implementacion-erp' },
-      { title: 'Gobernanza Corporativa', href: '/servicios/gobernanza-corporativa' },
+      { title: 'Desarrollo Organizacional', href: '/services/desarrollo-organizacional' },
+      { title: 'Mejora de Procesos', href: '/services/mejora-procesos' },
+      { title: 'Implementación ERP', href: '/services/implementacion-erp' },
+      { title: 'Gobernanza Corporativa', href: '/services/gobernanza-corporativa' },
     ],
   },
   {
     title: 'Empresa',
     links: [
-      { title: 'Nosotros', href: '/nosotros' },
-      { title: 'Equipo', href: '/equipo' },
+      { title: 'Nosotros', href: '/about' },
       { title: 'Clientes', href: '/clientes' },
       { title: 'Blog', href: '/blog' },
+      { title: 'Podcast', href: '/podcast' },
     ],
   },
   {

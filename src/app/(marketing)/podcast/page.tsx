@@ -1,4 +1,5 @@
-import type { Metadata } from 'next'
+'use client'
+
 import { Container } from '@/components/ui/Container'
 import {
   PodcastHero,
@@ -7,31 +8,6 @@ import {
   PodcastSubscribe,
 } from '@/components/marketing/podcast'
 import { getAllPodcastEpisodes, getLatestPodcastEpisode } from '@/lib/mock-data/podcast-episodes'
-
-export const dynamic = 'force-dynamic'
-
-export const metadata: Metadata = {
-  title: 'Podcast DUO | Conversaciones sobre Transformación Empresarial',
-  description:
-    'Escucha entrevistas con líderes empresariales, expertos en gestión y casos de éxito en desarrollo organizacional. Nuevos episodios cada viernes.',
-  keywords: [
-    'podcast empresarial',
-    'transformación empresarial',
-    'liderazgo',
-    'gestión',
-    'consultoría',
-    'desarrollo organizacional',
-    'PYMES',
-    'estrategia',
-  ],
-  openGraph: {
-    title: 'Podcast DUO | Conversaciones sobre Transformación Empresarial',
-    description:
-      'Escucha entrevistas con líderes empresariales y expertos en gestión. Estrategias prácticas para transformar tu negocio.',
-    type: 'website',
-    locale: 'es_ES',
-  },
-}
 
 /**
  * Podcast Listing Page
