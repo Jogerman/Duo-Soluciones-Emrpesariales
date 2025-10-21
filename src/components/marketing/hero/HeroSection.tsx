@@ -83,7 +83,7 @@ export function HeroSection({
               {/* Subtle CTA at bottom - optional */}
               {primaryCTA && (
                 <div className="mt-8">
-                  <Button asChild size="lg" variant="secondary" className="backdrop-blur-sm bg-white/95 hover:bg-white">
+                  <Button asChild size="lg" variant="primary" className="backdrop-blur-sm shadow-xl">
                     <Link href={primaryCTA.href} className="group">
                       {primaryCTA.text}
                       <ArrowRight className="ml-2 h-5 w-5 transition-transform group-hover:translate-x-1" />
