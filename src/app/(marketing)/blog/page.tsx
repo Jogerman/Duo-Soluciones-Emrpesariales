@@ -126,9 +126,9 @@ export default function BlogPage() {
                 <h2 className="text-2xl font-bold text-neutral-900">
                   {filters.category || filters.search
                     ? `${filteredPosts.length} ${
-                        filteredPosts.length === 1 ? 'art�culo encontrado' : 'art�culos encontrados'
+                        filteredPosts.length === 1 ? 'artículo encontrado' : 'artículos encontrados'
                       }`
-                    : 'Todos los art�culos'}
+                    : 'Todos los artículos'}
                 </h2>
               </div>
 
@@ -154,17 +154,17 @@ export default function BlogPage() {
         <Container>
           <div className="max-w-3xl mx-auto text-center">
             <h2 className="text-3xl md:text-4xl font-bold mb-4">
-              �Necesitas ayuda con tu proyecto?
+              ¿Necesitas ayuda con tu proyecto?
             </h2>
             <p className="text-xl text-white/90 mb-8">
-              Nuestro equipo de expertos est� listo para acompa�arte en tu proceso de transformaci�n
+              Nuestro equipo de expertos está listo para acompañarte en tu proceso de transformación
               empresarial.
             </p>
             <a
               href="/contact"
               className="inline-flex items-center justify-center px-8 py-3 rounded-md bg-white text-primary-600 font-semibold hover:bg-neutral-100 transition-colors"
             >
-              Cont�ctanos
+              Contáctanos
             </a>
           </div>
         </Container>
