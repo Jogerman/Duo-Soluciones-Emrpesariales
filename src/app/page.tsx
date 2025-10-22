@@ -117,7 +117,7 @@ const services: ServiceItem[] = [
     ],
     icon: 'building2',
     image:
-      'https://images.unsplash.com/photo-1450101215322-bf5cd27642fc?w=600&h=400&fit=crop&auto=format&q=80',
+      'https://images.unsplash.com/photo-1573164713714-d95e436ab8d6?w=600&h=400&fit=crop&auto=format&q=80',
   },
 ]
 
