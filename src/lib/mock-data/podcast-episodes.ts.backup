@@ -7,32 +7,32 @@ import { podcastGuests, getPodcastGuestsByIds } from './podcast-guests'
 export const podcastEpisodes: PodcastEpisode[] = [
   {
     id: 'p1',
-    title: 'De PYME Familiar a Corporación: El Viaje de Transformación',
+    title: 'De PYME Familiar a Corporaci�n: El Viaje de Transformaci�n',
     slug: 'pyme-familiar-a-corporacion',
     description:
-      'Conversamos con Roberto Sónchez sobre su experiencia transformando una empresa familiar de 20 empleados a una corporación de 200+ colaboradores.',
+      'Conversamos con Roberto S�nchez sobre su experiencia transformando una empresa familiar de 20 empleados a una corporaci�n de 200+ colaboradores.',
     content: `
-En este episodio conversamos con Roberto Sónchez, CEO de TechCorp Latam, sobre su viaje transformando una PYME familiar en una corporación profesional.
+En este episodio conversamos con Roberto S�nchez, CEO de TechCorp Latam, sobre su viaje transformando una PYME familiar en una corporaci�n profesional.
 
 ## Temas Principales
 
-- Desafóos de profesionalizar una empresa familiar
-- Cómo implementar gobierno corporativo sin perder la cultura
-- Transición de fundador-operador a CEO estratógico
-- Atracción de talento profesional en empresas familiares
-- Preparación para rondas de inversión
+- Desaf�os de profesionalizar una empresa familiar
+- C�mo implementar gobierno corporativo sin perder la cultura
+- Transici�n de fundador-operador a CEO estrat�gico
+- Atracci�n de talento profesional en empresas familiares
+- Preparaci�n para rondas de inversi�n
 
 ## Momentos Destacados
 
 **[05:30]** El momento en que Roberto se dio cuenta que necesitaba ayuda externa
 
-**[12:15]** Implementación de su primer consejo consultivo
+**[12:15]** Implementaci�n de su primer consejo consultivo
 
 **[18:45]** La resistencia inicial de la familia al cambio
 
-**[28:30]** Cómo atraer talento top a una empresa familiar
+**[28:30]** C�mo atraer talento top a una empresa familiar
 
-**[35:20]** Preparación para levantar Serie A
+**[35:20]** Preparaci�n para levantar Serie A
 
 **[42:10]** Lecciones aprendidas y consejos para otros emprendedores
 
@@ -40,15 +40,15 @@ En este episodio conversamos con Roberto Sónchez, CEO de TechCorp Latam, sobre 
 
 - Libro: "The Founder's Dilemmas" de Noam Wasserman
 - Framework: EOS (Entrepreneurial Operating System)
-- Herramienta: OKRs para alineación estratógica
+- Herramienta: OKRs para alineaci�n estrat�gica
 
 ## Conclusiones Clave
 
-1. La profesionalización no significa perder la cultura, significa fortalecerla
+1. La profesionalizaci�n no significa perder la cultura, significa fortalecerla
 2. Los consejeros externos aportan perspectiva invaluable
 3. La familia debe estar alineada antes de traer inversores
 4. El founder debe evolucionar de operador a estratega
-5. Invertir en talento es la mejor inversión que puedes hacer
+5. Invertir en talento es la mejor inversi�n que puedes hacer
     `,
     coverImage: '/images/podcast/ep1-pyme-corporacion.jpg',
     audioUrl: 'https://anchor.fm/duo-soluciones/episodes/ep1',
@@ -58,38 +58,38 @@ En este episodio conversamos con Roberto Sónchez, CEO de TechCorp Latam, sobre 
     publishedAt: '2025-01-18T10:00:00Z',
     season: 1,
     episode: 8,
-    hosts: [authors[0]], // Maróa Gonzólez
-    guests: [podcastGuests[0]], // Roberto Sónchez
+    hosts: [authors[0]], // Mar�a Gonz�lez
+    guests: [podcastGuests[0]], // Roberto S�nchez
     transcript: `
-[00:00] Maróa Gonzólez: Bienvenidos a un nuevo episodio del Podcast DUO, donde exploramos estrategias prócticas para transformar tu negocio. Soy Maróa Gonzólez, y hoy tenemos un invitado muy especial...
+[00:00] Mar�a Gonz�lez: Bienvenidos a un nuevo episodio del Podcast DUO, donde exploramos estrategias pr�cticas para transformar tu negocio. Soy Mar�a Gonz�lez, y hoy tenemos un invitado muy especial...
 
-[00:15] Maróa: Roberto, bienvenido al podcast. Cuóntanos un poco sobre tu trayectoria.
+[00:15] Mar�a: Roberto, bienvenido al podcast. Cu�ntanos un poco sobre tu trayectoria.
 
-[00:22] Roberto Sónchez: Gracias Maróa por la invitación. Mi historia comienza hace 15 aóos cuando mi padre me invitó a unirme al negocio familiar...
+[00:22] Roberto S�nchez: Gracias Mar�a por la invitaci�n. Mi historia comienza hace 15 a�os cuando mi padre me invit� a unirme al negocio familiar...
 
-[continóa transcript completo aquó...]
+[contin�a transcript completo aqu�...]
     `,
     showNotes: `
 ## Show Notes
 
-Conversación con Roberto Sónchez, CEO de TechCorp Latam, sobre transformación de PYME familiar a corporación.
+Conversaci�n con Roberto S�nchez, CEO de TechCorp Latam, sobre transformaci�n de PYME familiar a corporaci�n.
 
 ### Timeline
 
-- 00:00 - Introducción
+- 00:00 - Introducci�n
 - 02:30 - Background de Roberto
 - 05:30 - El punto de quiebre
 - 12:15 - Primer consejo consultivo
 - 18:45 - Resistencia al cambio
-- 25:00 - Implementación de gobierno corporativo
-- 28:30 - Atracción de talento
-- 35:20 - Preparación para inversión
+- 25:00 - Implementaci�n de gobierno corporativo
+- 28:30 - Atracci�n de talento
+- 35:20 - Preparaci�n para inversi�n
 - 42:10 - Consejos para emprendedores
 - 45:00 - Cierre y recursos
 
 ### Guest Bio
 
-Roberto Sónchez es CEO de TechCorp Latam, una empresa que pasó de ser una PYME familiar de 20 empleados a una corporación de 200+ colaboradores con presencia en 5 paóses. Roberto tiene un MBA de INCAE y es mentor de emprendedores en programas de aceleración.
+Roberto S�nchez es CEO de TechCorp Latam, una empresa que pas� de ser una PYME familiar de 20 empleados a una corporaci�n de 200+ colaboradores con presencia en 5 pa�ses. Roberto tiene un MBA de INCAE y es mentor de emprendedores en programas de aceleraci�n.
 
 ### Contacto
 
@@ -108,24 +108,24 @@ Roberto Sónchez es CEO de TechCorp Latam, una empresa que pasó de ser una PYME
         description: 'Sistema operativo para empresas en crecimiento',
       },
       {
-        title: 'Guóa de OKRs para PYMES',
+        title: 'Gu�a de OKRs para PYMES',
         url: '/blog/okrs-para-pymes',
-        description: 'Artóculo sobre implementación de OKRs',
+        description: 'Art�culo sobre implementaci�n de OKRs',
       },
     ],
-    tags: getTagsByIds(['1', '2', '13', '15']), // Estrategia, Cambio Organizacional, Gestión del Cambio, PYMES
+    tags: getTagsByIds(['1', '2', '13', '15']), // Estrategia, Cambio Organizacional, Gesti�n del Cambio, PYMES
     category: categories[0], // Desarrollo Organizacional
     featured: true,
     seo: {
-      metaTitle: 'De PYME Familiar a Corporación - Podcast DUO Ep. 8',
+      metaTitle: 'De PYME Familiar a Corporaci�n - Podcast DUO Ep. 8',
       metaDescription:
-        'Roberto Sónchez comparte su experiencia transformando una empresa familiar en corporación profesional.',
+        'Roberto S�nchez comparte su experiencia transformando una empresa familiar en corporaci�n profesional.',
       keywords: [
         'empresa familiar',
-        'profesionalización',
+        'profesionalizaci�n',
         'gobierno corporativo',
         'PYME',
-        'transformación',
+        'transformaci�n',
       ],
     },
   },
@@ -134,43 +134,43 @@ Roberto Sónchez es CEO de TechCorp Latam, una empresa que pasó de ser una PYME
     title: 'Lean Manufacturing en la Era Digital',
     slug: 'lean-manufacturing-era-digital',
     description:
-      'Patricia Morales, Directora de Operaciones de IndustriaXYZ, nos cuenta cómo implementó Lean en una planta de manufactura integrando tecnologóas 4.0.',
+      'Patricia Morales, Directora de Operaciones de IndustriaXYZ, nos cuenta c�mo implement� Lean en una planta de manufactura integrando tecnolog�as 4.0.',
     content: `
-Patricia Morales, con 20 aóos de experiencia en manufactura, comparte su experiencia implementando Lean Manufacturing combinado con tecnologóas de Industria 4.0.
+Patricia Morales, con 20 a�os de experiencia en manufactura, comparte su experiencia implementando Lean Manufacturing combinado con tecnolog�as de Industria 4.0.
 
 ## Temas Principales
 
 - Fundamentos de Lean Manufacturing
-- Integración de Lean con tecnologóas digitales
+- Integraci�n de Lean con tecnolog�as digitales
 - IoT y sensores en planta
-- Anólisis de datos en tiempo real
-- Gestión del cambio con operadores de planta
+- An�lisis de datos en tiempo real
+- Gesti�n del cambio con operadores de planta
 
 ## Momentos Destacados
 
 **[08:20]** Los 7 desperdicios en manufactura moderna
 
-**[15:40]** Implementación de Andon digital
+**[15:40]** Implementaci�n de Andon digital
 
 **[22:15]** Resistencia de supervisores de planta
 
-**[30:25]** ROI de la implementación Lean+Digital
+**[30:25]** ROI de la implementaci�n Lean+Digital
 
-**[38:50]** Casos de óxito concretos
+**[38:50]** Casos de �xito concretos
 
 ## Recursos Mencionados
 
 - Libro: "The Toyota Way" de Jeffrey Liker
 - Software: Tulip - No-code platform para manufactura
-- Metodologóa: Value Stream Mapping digital
+- Metodolog�a: Value Stream Mapping digital
 
 ## Conclusiones Clave
 
 1. Lean no es solo eliminar desperdicios, es crear cultura de mejora continua
-2. La tecnologóa habilita Lean, no lo reemplaza
-3. El cambio debe empezar desde el piso de producción
+2. La tecnolog�a habilita Lean, no lo reemplaza
+3. El cambio debe empezar desde el piso de producci�n
 4. Los datos en tiempo real aceleran la toma de decisiones
-5. El payback de Lean+Digital es de 12-18 meses tópicamente
+5. El payback de Lean+Digital es de 12-18 meses t�picamente
     `,
     coverImage: '/images/podcast/ep2-lean-digital.jpg',
     audioUrl: 'https://anchor.fm/duo-soluciones/episodes/ep2',
@@ -180,15 +180,15 @@ Patricia Morales, con 20 aóos de experiencia en manufactura, comparte su experi
     publishedAt: '2025-01-11T10:00:00Z',
     season: 1,
     episode: 7,
-    hosts: [authors[1]], // Carlos Rodróguez
+    hosts: [authors[1]], // Carlos Rodr�guez
     guests: [podcastGuests[1]], // Patricia Morales
     category: categories[1], // Mejora de Procesos
-    tags: getTagsByIds(['4', '6', '16', '19']), // Lean Manufacturing, Automatización, Productividad, Mejora Continua
+    tags: getTagsByIds(['4', '6', '16', '19']), // Lean Manufacturing, Automatizaci�n, Productividad, Mejora Continua
     featured: true,
     seo: {
       metaTitle: 'Lean Manufacturing en la Era Digital - Podcast DUO Ep. 7',
       metaDescription:
-        'Aprende cómo combinar Lean Manufacturing con tecnologóas digitales para maximizar eficiencia.',
+        'Aprende c�mo combinar Lean Manufacturing con tecnolog�as digitales para maximizar eficiencia.',
       keywords: ['lean manufacturing', 'industria 4.0', 'manufactura', 'mejora continua', 'IoT'],
     },
   },
@@ -197,28 +197,28 @@ Patricia Morales, con 20 aóos de experiencia en manufactura, comparte su experi
     title: 'Estrategia en Tiempos de Incertidumbre',
     slug: 'estrategia-tiempos-incertidumbre',
     description:
-      'El Dr. Fernando Garcóa, profesor de estrategia, discute cómo las empresas pueden desarrollar estrategias resilientes en entornos VUCA.',
+      'El Dr. Fernando Garc�a, profesor de estrategia, discute c�mo las empresas pueden desarrollar estrategias resilientes en entornos VUCA.',
     content: `
-Conversación con el Dr. Fernando Garcóa sobre planificación estratógica en entornos volótiles, inciertos, complejos y ambiguos (VUCA).
+Conversaci�n con el Dr. Fernando Garc�a sobre planificaci�n estrat�gica en entornos vol�tiles, inciertos, complejos y ambiguos (VUCA).
 
 ## Temas Principales
 
-- Quó significa realmente VUCA
-- Limitaciones de la planificación estratógica tradicional
+- Qu� significa realmente VUCA
+- Limitaciones de la planificaci�n estrat�gica tradicional
 - Estrategia emergente vs. deliberada
-- Portfolio de opciones estratógicas
-- Gestión de escenarios
+- Portfolio de opciones estrat�gicas
+- Gesti�n de escenarios
 - Indicadores tempranos de cambio
 
 ## Momentos Destacados
 
-**[06:45]** Por quó fallan los planes estratógicos de 5 aóos
+**[06:45]** Por qu� fallan los planes estrat�gicos de 5 a�os
 
 **[14:30]** El framework de estrategia adaptativa
 
-**[23:15]** Caso: Empresa que pivotó exitosamente en pandemia
+**[23:15]** Caso: Empresa que pivot� exitosamente en pandemia
 
-**[32:40]** Cómo construir opciones estratógicas
+**[32:40]** C�mo construir opciones estrat�gicas
 
 **[41:20]** El rol del CEO como Chief Strategy Officer
 
@@ -226,15 +226,15 @@ Conversación con el Dr. Fernando Garcóa sobre planificación estratógica en e
 
 - Libro: "Good Strategy Bad Strategy" de Richard Rumelt
 - Framework: Ansoff Matrix para opciones de crecimiento
-- Metodologóa: Scenario Planning de Shell
+- Metodolog�a: Scenario Planning de Shell
 
 ## Conclusiones Clave
 
-1. La estrategia debe ser dinómica, no estótica
-2. Construye opciones, no planes rógidos
-3. Los escenarios te preparan para móltiples futuros
-4. La ejecución rópida gana a la planificación perfecta
-5. Monitorea seóales dóbiles de cambio constantemente
+1. La estrategia debe ser din�mica, no est�tica
+2. Construye opciones, no planes r�gidos
+3. Los escenarios te preparan para m�ltiples futuros
+4. La ejecuci�n r�pida gana a la planificaci�n perfecta
+5. Monitorea se�ales d�biles de cambio constantemente
     `,
     coverImage: '/images/podcast/ep3-estrategia-vuca.jpg',
     audioUrl: 'https://anchor.fm/duo-soluciones/episodes/ep3',
@@ -244,47 +244,47 @@ Conversación con el Dr. Fernando Garcóa sobre planificación estratógica en e
     publishedAt: '2025-01-04T10:00:00Z',
     season: 1,
     episode: 6,
-    hosts: [authors[0]], // Maróa Gonzólez
-    guests: [podcastGuests[2]], // Dr. Fernando Garcóa
+    hosts: [authors[0]], // Mar�a Gonz�lez
+    guests: [podcastGuests[2]], // Dr. Fernando Garc�a
     category: categories[0], // Desarrollo Organizacional
-    tags: getTagsByIds(['1', '14', '20']), // Estrategia, Innovación, Transformación
+    tags: getTagsByIds(['1', '14', '20']), // Estrategia, Innovaci�n, Transformaci�n
     featured: true,
     seo: {
       metaTitle: 'Estrategia en Tiempos de Incertidumbre - Podcast DUO Ep. 6',
       metaDescription:
-        'Aprende a desarrollar estrategias resilientes en entornos VUCA con el Dr. Fernando Garcóa.',
-      keywords: ['estrategia', 'VUCA', 'planificación estratógica', 'resiliencia', 'adaptación'],
+        'Aprende a desarrollar estrategias resilientes en entornos VUCA con el Dr. Fernando Garc�a.',
+      keywords: ['estrategia', 'VUCA', 'planificaci�n estrat�gica', 'resiliencia', 'adaptaci�n'],
     },
   },
   {
     id: 'p4',
-    title: 'Reestructuración Financiera: Salvar tu Empresa de la Crisis',
+    title: 'Reestructuraci�n Financiera: Salvar tu Empresa de la Crisis',
     slug: 'reestructuracion-financiera-crisis',
     description:
-      'Laura Jimónez, CFO experta, comparte estrategias para reestructurar financieramente empresas en crisis y recuperar rentabilidad.',
+      'Laura Jim�nez, CFO experta, comparte estrategias para reestructurar financieramente empresas en crisis y recuperar rentabilidad.',
     content: `
-Laura Jimónez, CFO con amplia experiencia en turnarounds, nos guóa a travós del proceso de reestructuración financiera.
+Laura Jim�nez, CFO con amplia experiencia en turnarounds, nos gu�a a trav�s del proceso de reestructuraci�n financiera.
 
 ## Temas Principales
 
-- Seóales tempranas de problemas financieros
-- Diagnóstico financiero rópido
-- Gestión de flujo de caja en crisis
-- Negociación con acreedores
-- Reestructuración de deuda
+- Se�ales tempranas de problemas financieros
+- Diagn�stico financiero r�pido
+- Gesti�n de flujo de caja en crisis
+- Negociaci�n con acreedores
+- Reestructuraci�n de deuda
 - Plan de viabilidad financiera
 
 ## Momentos Destacados
 
-**[07:15]** Las 5 seóales de alerta financiera
+**[07:15]** Las 5 se�ales de alerta financiera
 
-**[15:30]** Cómo gestionar el pónico del equipo directivo
+**[15:30]** C�mo gestionar el p�nico del equipo directivo
 
-**[24:10]** Negociación exitosa con banco principal
+**[24:10]** Negociaci�n exitosa con banco principal
 
 **[33:45]** Recortes inteligentes vs. recortes desesperados
 
-**[42:00]** Historia de recuperación en 18 meses
+**[42:00]** Historia de recuperaci�n en 18 meses
 
 ## Recursos Mencionados
 
@@ -294,11 +294,11 @@ Laura Jimónez, CFO con amplia experiencia en turnarounds, nos guóa a travós d
 
 ## Conclusiones Clave
 
-1. Actuar temprano es la diferencia entre reestructuración y liquidación
-2. El cash flow es mós importante que la rentabilidad en crisis
-3. La comunicación transparente con stakeholders es crótica
-4. Los recortes deben ser estratógicos, no horizontales
-5. Toda reestructuración requiere plan de crecimiento post-crisis
+1. Actuar temprano es la diferencia entre reestructuraci�n y liquidaci�n
+2. El cash flow es m�s importante que la rentabilidad en crisis
+3. La comunicaci�n transparente con stakeholders es cr�tica
+4. Los recortes deben ser estrat�gicos, no horizontales
+5. Toda reestructuraci�n requiere plan de crecimiento post-crisis
     `,
     coverImage: '/images/podcast/ep4-reestructuracion.jpg',
     audioUrl: 'https://anchor.fm/duo-soluciones/episodes/ep4',
@@ -306,16 +306,16 @@ Laura Jimónez, CFO con amplia experiencia en turnarounds, nos guóa a travós d
     publishedAt: '2024-12-28T10:00:00Z',
     season: 1,
     episode: 5,
-    hosts: [authors[2]], // Ana Martónez
-    guests: [podcastGuests[3]], // Laura Jimónez
+    hosts: [authors[2]], // Ana Mart�nez
+    guests: [podcastGuests[3]], // Laura Jim�nez
     category: categories[3], // Gobernanza Corporativa
-    tags: getTagsByIds(['1', '10', '15']), // Estrategia, Gestión de Riesgos, PYMES
+    tags: getTagsByIds(['1', '10', '15']), // Estrategia, Gesti�n de Riesgos, PYMES
     featured: false,
     seo: {
-      metaTitle: 'Reestructuración Financiera en Crisis - Podcast DUO Ep. 5',
+      metaTitle: 'Reestructuraci�n Financiera en Crisis - Podcast DUO Ep. 5',
       metaDescription:
         'Estrategias probadas para reestructurar financieramente tu empresa y superar crisis.',
-      keywords: ['reestructuración', 'crisis financiera', 'turnaround', 'CFO', 'flujo de caja'],
+      keywords: ['reestructuraci�n', 'crisis financiera', 'turnaround', 'CFO', 'flujo de caja'],
     },
   },
   {
@@ -323,43 +323,43 @@ Laura Jimónez, CFO con amplia experiencia en turnarounds, nos guóa a travós d
     title: 'Escalando un SaaS: De 0 a $1M ARR',
     slug: 'escalando-saas-0-1m-arr',
     description:
-      'Miguel óngel Torres comparte su experiencia llevando su startup SaaS de cero a un millón de dólares en ingresos recurrentes.',
+      'Miguel �ngel Torres comparte su experiencia llevando su startup SaaS de cero a un mill�n de d�lares en ingresos recurrentes.',
     content: `
-Conversación con Miguel óngel Torres, fundador de CloudSolutions, sobre cómo escalar un negocio SaaS B2B desde cero.
+Conversaci�n con Miguel �ngel Torres, fundador de CloudSolutions, sobre c�mo escalar un negocio SaaS B2B desde cero.
 
 ## Temas Principales
 
-- Validación del problema y solución
-- Primeros 10 clientes: cómo conseguirlos
+- Validaci�n del problema y soluci�n
+- Primeros 10 clientes: c�mo conseguirlos
 - Pricing y modelos de negocio SaaS
 - Product-led growth vs. sales-led growth
-- Mótricas clave: MRR, CAC, LTV, Churn
+- M�tricas clave: MRR, CAC, LTV, Churn
 - Levantamiento de capital vs. bootstrap
 
 ## Momentos Destacados
 
-**[09:30]** El pivote que cambió todo
+**[09:30]** El pivote que cambi� todo
 
 **[17:20]** Conseguir los primeros 10 clientes pagando
 
 **[26:45]** Pricing: los 3 experimentos que corrimos
 
-**[35:10]** Cuóndo contratar tu primer vendedor
+**[35:10]** Cu�ndo contratar tu primer vendedor
 
-**[44:30]** Series A: preparación y pitch
+**[44:30]** Series A: preparaci�n y pitch
 
 ## Recursos Mencionados
 
 - Libro: "Traction" de Gabriel Weinberg
 - Framework: Sean Ellis test para product-market fit
-- Herramienta: ChartMogul para mótricas SaaS
+- Herramienta: ChartMogul para m�tricas SaaS
 
 ## Conclusiones Clave
 
-1. Product-market fit es lo ónico que importa al inicio
+1. Product-market fit es lo �nico que importa al inicio
 2. Tus primeros 10 clientes deben ser hands-on
-3. Precio bajo no acelera adopción, la retrasa
-4. Enfócate en 1-2 canales de adquisición, no 10
+3. Precio bajo no acelera adopci�n, la retrasa
+4. Enf�cate en 1-2 canales de adquisici�n, no 10
 5. Unit economics deben funcionar antes de escalar
     `,
     coverImage: '/images/podcast/ep5-saas-scaling.jpg',
@@ -368,47 +368,47 @@ Conversación con Miguel óngel Torres, fundador de CloudSolutions, sobre cómo 
     publishedAt: '2024-12-21T10:00:00Z',
     season: 1,
     episode: 4,
-    hosts: [authors[3]], // Diego Fernóndez
-    guests: [podcastGuests[4]], // Miguel óngel Torres
-    category: categories[5], // Transformación Digital
-    tags: getTagsByIds(['14', '20', '3']), // Innovación, Transformación, KPIs
+    hosts: [authors[3]], // Diego Fern�ndez
+    guests: [podcastGuests[4]], // Miguel �ngel Torres
+    category: categories[5], // Transformaci�n Digital
+    tags: getTagsByIds(['14', '20', '3']), // Innovaci�n, Transformaci�n, KPIs
     featured: false,
     seo: {
       metaTitle: 'Escalando un SaaS de 0 a $1M ARR - Podcast DUO Ep. 4',
       metaDescription:
-        'Aprende cómo escalar un negocio SaaS B2B desde cero con Miguel óngel Torres.',
-      keywords: ['SaaS', 'startup', 'escalamiento', 'product-market fit', 'mótricas'],
+        'Aprende c�mo escalar un negocio SaaS B2B desde cero con Miguel �ngel Torres.',
+      keywords: ['SaaS', 'startup', 'escalamiento', 'product-market fit', 'm�tricas'],
     },
   },
   {
     id: 'p6',
-    title: 'Gestión del Talento en la Nueva Normalidad',
+    title: 'Gesti�n del Talento en la Nueva Normalidad',
     slug: 'gestion-talento-nueva-normalidad',
     description:
-      'Sandra Ramórez, Directora de RRHH, explora estrategias modernas de gestión de talento en modelos hóbridos y remotos.',
+      'Sandra Ram�rez, Directora de RRHH, explora estrategias modernas de gesti�n de talento en modelos h�bridos y remotos.',
     content: `
-Sandra Ramórez comparte estrategias para atraer, retener y desarrollar talento en el contexto post-pandemia.
+Sandra Ram�rez comparte estrategias para atraer, retener y desarrollar talento en el contexto post-pandemia.
 
 ## Temas Principales
 
-- Trabajo remoto vs. hóbrido: quó funciona
-- Atracción de talento millennial y Gen Z
+- Trabajo remoto vs. h�brido: qu� funciona
+- Atracci�n de talento millennial y Gen Z
 - Programas de desarrollo acelerado
 - Cultura organizacional en entornos distribuidos
-- Evaluación de desempeóo moderna
-- Compensación total: mós alló del salario
+- Evaluaci�n de desempe�o moderna
+- Compensaci�n total: m�s all� del salario
 
 ## Momentos Destacados
 
-**[10:15]** Por quó perdimos 30% del equipo en 6 meses
+**[10:15]** Por qu� perdimos 30% del equipo en 6 meses
 
-**[19:30]** Rediseóo del modelo de trabajo hóbrido
+**[19:30]** Redise�o del modelo de trabajo h�brido
 
 **[28:40]** Employee Value Proposition que funciona
 
 **[37:20]** Programa de desarrollo fast-track
 
-**[46:15]** Retención: quó realmente funciona
+**[46:15]** Retenci�n: qu� realmente funciona
 
 ## Recursos Mencionados
 
@@ -419,7 +419,7 @@ Sandra Ramórez comparte estrategias para atraer, retener y desarrollar talento 
 ## Conclusiones Clave
 
 1. Flexibilidad es el nuevo beneficio #1
-2. Los jóvenes talentos buscan propósito, no solo salario
+2. Los j�venes talentos buscan prop�sito, no solo salario
 3. El desarrollo de carrera debe ser personalizado
 4. La cultura se construye intencionalmente en remoto
 5. Los managers son la clave del engagement
@@ -430,60 +430,60 @@ Sandra Ramórez comparte estrategias para atraer, retener y desarrollar talento 
     publishedAt: '2024-12-14T10:00:00Z',
     season: 1,
     episode: 3,
-    hosts: [authors[0]], // Maróa Gonzólez
-    guests: [podcastGuests[5]], // Sandra Ramórez
+    hosts: [authors[0]], // Mar�a Gonz�lez
+    guests: [podcastGuests[5]], // Sandra Ram�rez
     category: categories[4], // Liderazgo
-    tags: getTagsByIds(['12', '13', '2']), // Cultura Organizacional, Gestión del Cambio, Cambio Organizacional
+    tags: getTagsByIds(['12', '13', '2']), // Cultura Organizacional, Gesti�n del Cambio, Cambio Organizacional
     featured: false,
     seo: {
-      metaTitle: 'Gestión del Talento en la Nueva Normalidad - Podcast DUO Ep. 3',
+      metaTitle: 'Gesti�n del Talento en la Nueva Normalidad - Podcast DUO Ep. 3',
       metaDescription:
-        'Estrategias modernas para atraer y retener talento en entornos hóbridos y remotos.',
-      keywords: ['gestión talento', 'RRHH', 'trabajo remoto', 'hóbrido', 'retención'],
+        'Estrategias modernas para atraer y retener talento en entornos h�bridos y remotos.',
+      keywords: ['gesti�n talento', 'RRHH', 'trabajo remoto', 'h�brido', 'retenci�n'],
     },
   },
   {
     id: 'p7',
-    title: 'Implementación de Odoo: Lecciones de 50+ Proyectos',
+    title: 'Implementaci�n de Odoo: Lecciones de 50+ Proyectos',
     slug: 'implementacion-odoo-lecciones',
     description:
-      'Diego Fernóndez comparte las lecciones aprendidas implementando Odoo ERP en mós de 50 empresas de diversos tamaóos e industrias.',
+      'Diego Fern�ndez comparte las lecciones aprendidas implementando Odoo ERP en m�s de 50 empresas de diversos tama�os e industrias.',
     content: `
-Diego comparte sus aprendizajes implementando Odoo ERP en PYMES de manufactura, distribución, servicios y retail.
+Diego comparte sus aprendizajes implementando Odoo ERP en PYMES de manufactura, distribuci�n, servicios y retail.
 
 ## Temas Principales
 
-- Por quó Odoo es ideal para PYMES
-- Errores comunes en implementación
-- Módulos core vs. personalizaciones
-- Gestión del cambio con usuarios
-- Migración de datos sin dolor
+- Por qu� Odoo es ideal para PYMES
+- Errores comunes en implementaci�n
+- M�dulos core vs. personalizaciones
+- Gesti�n del cambio con usuarios
+- Migraci�n de datos sin dolor
 - Soporte post go-live
 
 ## Momentos Destacados
 
-**[08:40]** Los 3 errores mós comunes (y costosos)
+**[08:40]** Los 3 errores m�s comunes (y costosos)
 
 **[16:25]** Odoo vs. SAP vs. soluciones locales
 
-**[25:30]** Caso: implementación en 12 semanas
+**[25:30]** Caso: implementaci�n en 12 semanas
 
-**[34:15]** Cuóndo personalizar y cuóndo adaptarse
+**[34:15]** Cu�ndo personalizar y cu�ndo adaptarse
 
-**[43:00]** ROI real: casos con nómeros
+**[43:00]** ROI real: casos con n�meros
 
 ## Recursos Mencionados
 
 - Demo: Odoo online demo
 - Comunidad: Odoo Community Association
-- Certificación: Odoo Functional Consultant
+- Certificaci�n: Odoo Functional Consultant
 
 ## Conclusiones Clave
 
-1. La implementación es 30% tecnologóa, 70% cambio organizacional
-2. Empezar con módulos estóndar, personalizar despuós
-3. La limpieza de datos es crótica
-4. Los super-users son tu mejor inversión
+1. La implementaci�n es 30% tecnolog�a, 70% cambio organizacional
+2. Empezar con m�dulos est�ndar, personalizar despu�s
+3. La limpieza de datos es cr�tica
+4. Los super-users son tu mejor inversi�n
 5. El go-live no es el final, es el inicio
     `,
     coverImage: '/images/podcast/ep7-odoo.jpg',
@@ -492,16 +492,16 @@ Diego comparte sus aprendizajes implementando Odoo ERP en PYMES de manufactura, 
     publishedAt: '2024-12-07T10:00:00Z',
     season: 1,
     episode: 2,
-    hosts: [authors[3]], // Diego Fernóndez
+    hosts: [authors[3]], // Diego Fern�ndez
     guests: [],
     category: categories[2], // Sistemas ERP
-    tags: getTagsByIds(['7', '9', '13', '15']), // Odoo, Implementación ERP, Gestión del Cambio, PYMES
+    tags: getTagsByIds(['7', '9', '13', '15']), // Odoo, Implementaci�n ERP, Gesti�n del Cambio, PYMES
     featured: false,
     seo: {
-      metaTitle: 'Implementación de Odoo: Lecciones Aprendidas - Podcast DUO Ep. 2',
+      metaTitle: 'Implementaci�n de Odoo: Lecciones Aprendidas - Podcast DUO Ep. 2',
       metaDescription:
-        'Aprende de 50+ implementaciones de Odoo ERP. Errores comunes, mejores prócticas y casos reales.',
-      keywords: ['Odoo', 'ERP', 'implementación', 'PYMES', 'software empresarial'],
+        'Aprende de 50+ implementaciones de Odoo ERP. Errores comunes, mejores pr�cticas y casos reales.',
+      keywords: ['Odoo', 'ERP', 'implementaci�n', 'PYMES', 'software empresarial'],
     },
   },
   {
@@ -509,47 +509,47 @@ Diego comparte sus aprendizajes implementando Odoo ERP en PYMES de manufactura, 
     title: 'Bienvenidos al Podcast DUO - Episodio de Lanzamiento',
     slug: 'bienvenidos-podcast-duo-lanzamiento',
     description:
-      'En nuestro episodio inaugural, el equipo de DUO presenta el podcast, comparte su visión y adelanta los temas que exploraremos en la primera temporada.',
+      'En nuestro episodio inaugural, el equipo de DUO presenta el podcast, comparte su visi�n y adelanta los temas que exploraremos en la primera temporada.',
     content: `
-Episodio inaugural del Podcast DUO donde presentamos el show, el equipo y nuestra misión.
+Episodio inaugural del Podcast DUO donde presentamos el show, el equipo y nuestra misi�n.
 
 ## Temas Principales
 
-- Quiónes somos y por quó este podcast
-- Nuestra visión sobre consultoróa empresarial
-- Filosofóa DUO: próctica sobre teoróa
+- Qui�nes somos y por qu� este podcast
+- Nuestra visi�n sobre consultor�a empresarial
+- Filosof�a DUO: pr�ctica sobre teor�a
 - Temas que cubriremos en temporada 1
-- Cómo puedes participar
+- C�mo puedes participar
 
 ## Momentos Destacados
 
 **[03:30]** La historia de DUO Soluciones
 
-**[08:45]** Por quó la consultoróa tradicional estó rota
+**[08:45]** Por qu� la consultor�a tradicional est� rota
 
-**[14:20]** Nuestro enfoque: hands-on y próctico
+**[14:20]** Nuestro enfoque: hands-on y pr�ctico
 
 **[21:30]** Preview de episodios temporada 1
 
-**[27:15]** Invitación a la audiencia
+**[27:15]** Invitaci�n a la audiencia
 
 ## Lo que Viene
 
-En los próximos episodios exploraremos:
+En los pr�ximos episodios exploraremos:
 - Implementaciones ERP exitosas
-- Gestión del talento moderna
+- Gesti�n del talento moderna
 - Escalamiento de startups
 - Reestructuraciones financieras
 - Lean Manufacturing digital
 - Estrategia en tiempos de incertidumbre
-- Y mucho mós...
+- Y mucho m�s...
 
 ## Conclusiones Clave
 
-1. Este es un podcast próctico, no acadómico
+1. Este es un podcast pr�ctico, no acad�mico
 2. Traeremos invitados con experiencia real
-3. Compartiremos casos, nómeros y lecciones
-4. Tu feedback guiaró el contenido
+3. Compartiremos casos, n�meros y lecciones
+4. Tu feedback guiar� el contenido
 5. Publicamos cada viernes
     `,
     coverImage: '/images/podcast/ep8-lanzamiento.jpg',
@@ -561,13 +561,13 @@ En los próximos episodios exploraremos:
     hosts: [authors[0], authors[1], authors[2], authors[3]], // Todo el equipo
     guests: [],
     category: categories[0], // Desarrollo Organizacional
-    tags: getTagsByIds(['1', '14']), // Estrategia, Innovación
+    tags: getTagsByIds(['1', '14']), // Estrategia, Innovaci�n
     featured: false,
     seo: {
       metaTitle: 'Bienvenidos al Podcast DUO - Episodio de Lanzamiento',
       metaDescription:
-        'Conoce el Podcast DUO, tu fuente de estrategias prócticas para transformar tu negocio.',
-      keywords: ['podcast empresarial', 'consultoróa', 'negocios', 'PYMES', 'DUO'],
+        'Conoce el Podcast DUO, tu fuente de estrategias pr�cticas para transformar tu negocio.',
+      keywords: ['podcast empresarial', 'consultor�a', 'negocios', 'PYMES', 'DUO'],
     },
   },
 ]
