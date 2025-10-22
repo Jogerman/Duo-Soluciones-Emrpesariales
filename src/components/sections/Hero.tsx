@@ -56,7 +56,7 @@ export function Hero() {
             {/* CTAs */}
             <div className="flex flex-col gap-4 sm:flex-row">
               <Button asChild size="lg">
-                <Link href="/contacto">
+                <Link href="/contact">
                   Contáctanos
                   <ArrowRight className="ml-2 h-4 w-4" />
                 </Link>

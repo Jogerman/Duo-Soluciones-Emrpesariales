@@ -38,11 +38,15 @@ export function PodcastEpisodeCard({ episode, featured = false }: PodcastEpisode
             src={episode.coverImage}
             alt=""
             fill
+            sizes="(max-width: 768px) 100vw, (max-width: 1024px) 50vw, 33vw"
             className="object-cover transition-transform duration-300 group-hover:scale-105"
           />
 
           {/* Play Button Overlay */}
-          <div className="absolute inset-0 flex items-center justify-center bg-black/0 transition-all duration-300 group-hover:bg-black/40" aria-hidden="true">
+          <div
+            className="absolute inset-0 flex items-center justify-center bg-black/0 transition-all duration-300 group-hover:bg-black/40"
+            aria-hidden="true"
+          >
             <div className="translate-y-4 opacity-0 transition-all duration-300 group-hover:translate-y-0 group-hover:opacity-100">
               <div className="flex h-16 w-16 items-center justify-center rounded-full bg-[#1DB954] shadow-lg transition-transform hover:scale-110">
                 <Play className="h-8 w-8 fill-white text-white" />
@@ -127,12 +131,23 @@ export function PodcastEpisodeCard({ episode, featured = false }: PodcastEpisode
                     className="relative h-8 w-8 overflow-hidden rounded-full border-2 border-white bg-neutral-200"
                     title={guest.name}
                   >
-                    <Image src={guest.avatar} alt={guest.name} fill className="object-cover" />
+                    <Image
+                      src={guest.avatar}
+                      alt={guest.name}
+                      fill
+                      sizes="32px"
+                      className="object-cover"
+                    />
                   </div>
                 ))}
               </div>
               {remainingGuests > 0 && (
-                <span className="text-xs text-neutral-500" aria-label={`${remainingGuests} invitado${remainingGuests > 1 ? 's' : ''} adicional${remainingGuests > 1 ? 'es' : ''}`}>+{remainingGuests} más</span>
+                <span
+                  className="text-xs text-neutral-500"
+                  aria-label={`${remainingGuests} invitado${remainingGuests > 1 ? 's' : ''} adicional${remainingGuests > 1 ? 'es' : ''}`}
+                >
+                  +{remainingGuests} más
+                </span>
               )}
             </div>
           )}

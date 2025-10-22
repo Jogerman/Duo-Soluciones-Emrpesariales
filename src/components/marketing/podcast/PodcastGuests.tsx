@@ -33,7 +33,13 @@ export function PodcastGuests({ guests }: PodcastGuestsProps) {
               {/* Avatar and Basic Info */}
               <div className="mb-4 flex items-start gap-4">
                 <div className="relative h-16 w-16 shrink-0 overflow-hidden rounded-full bg-neutral-100">
-                  <Image src={guest.avatar} alt={guest.name} fill className="object-cover" />
+                  <Image
+                    src={guest.avatar}
+                    alt={guest.name}
+                    fill
+                    sizes="64px"
+                    className="object-cover"
+                  />
                 </div>
 
                 <div className="min-w-0 flex-1">

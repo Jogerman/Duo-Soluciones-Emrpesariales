@@ -1,0 +1,6 @@
+<svg width="800" height="800" xmlns="http://www.w3.org/2000/svg">
+  <rect width="800" height="800" fill="#f59e0b"/>
+  <text x="400" y="400" font-family="Arial, sans-serif" font-size="48" font-weight="bold" fill="white" text-anchor="middle">Reestructuración</text>
+  <circle cx="400" cy="250" r="80" fill="white" opacity="0.2"/>
+  <rect x="320" y="500" width="160" height="8" fill="white" opacity="0.3" rx="4"/>
+</svg>

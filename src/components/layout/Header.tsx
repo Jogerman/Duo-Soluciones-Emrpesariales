@@ -44,7 +44,7 @@ export function Header() {
           <div className="hidden md:flex md:items-center md:gap-6">
             <Navigation />
             <Button asChild size="md">
-              <Link href="/contacto">Contáctanos</Link>
+              <Link href="/contact">Contáctanos</Link>
             </Button>
           </div>
 
@@ -76,7 +76,7 @@ export function Header() {
               </div>
               <Navigation mobile />
               <Button asChild size="md" className="w-full">
-                <Link href="/contacto">Contáctanos</Link>
+                <Link href="/contact">Contáctanos</Link>
               </Button>
             </div>
           </div>

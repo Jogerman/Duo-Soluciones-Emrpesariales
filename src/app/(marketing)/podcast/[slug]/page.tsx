@@ -379,7 +379,7 @@ export default function PodcastEpisodePage({ params }: PodcastEpisodePageProps) 
                 Contáctanos por email
               </a>
               <Link
-                href="/contacto"
+                href="/contact"
                 className="inline-flex items-center justify-center rounded-lg border-2 border-white px-8 py-3 font-medium text-white transition-colors hover:bg-white/10"
               >
                 Formulario de contacto
