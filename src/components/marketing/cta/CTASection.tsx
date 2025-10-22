@@ -101,7 +101,9 @@ export function CTASection({
                   size="lg"
                   variant="outline"
                   className={
-                    variant !== 'outline' ? 'border-white/30 text-white hover:bg-white/10' : ''
+                    variant !== 'outline'
+                      ? 'border-white bg-white text-primary-700 hover:bg-primary-50'
+                      : ''
                   }
                 >
                   <Link href={secondaryCTA.href}>{secondaryCTA.text}</Link>
