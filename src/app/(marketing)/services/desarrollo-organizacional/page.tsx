@@ -309,26 +309,23 @@ export default function DesarrolloOrganizacionalPage() {
                 <div className="space-y-6">
                   <div>
                     <h3 className="text-sm font-semibold text-gray-500 uppercase tracking-wide mb-2">
-                      Duración
-                    </h3>
-                    <p className="text-2xl font-bold text-primary-700">3-6 meses</p>
-                  </div>
-                  <div>
-                    <h3 className="text-sm font-semibold text-gray-500 uppercase tracking-wide mb-2">
                       Tamaño del Equipo
                     </h3>
                     <p className="text-2xl font-bold text-primary-700">2-4 consultores</p>
                   </div>
                   <div>
                     <h3 className="text-sm font-semibold text-gray-500 uppercase tracking-wide mb-2">
-                      Inversión
+                      Alcance
                     </h3>
-                    <p className="text-2xl font-bold text-primary-700">Desde USD $25,000</p>
+                    <p className="text-gray-700">
+                      Proyecto personalizado según tamaño de la organización y objetivos
+                      estratégicos
+                    </p>
                   </div>
                   <div className="pt-4 border-t border-primary-200">
                     <p className="text-sm text-gray-600">
-                      * La inversión final varía según el tamaño de la organización, alcance del
-                      proyecto y complejidad.
+                      * Cada proyecto es único. Solicita una cotización personalizada basada en tus
+                      necesidades específicas
                     </p>
                   </div>
                 </div>
@@ -363,8 +360,8 @@ export default function DesarrolloOrganizacionalPage() {
             </Card>
             <Card className="text-center">
               <CardContent className="p-8">
-                <div className="text-4xl font-bold text-primary-700 mb-2">200-300%</div>
-                <p className="text-gray-600">ROI típico en 12-18 meses</p>
+                <div className="text-4xl font-bold text-primary-700 mb-2">ROI</div>
+                <p className="text-gray-600">Retorno de inversión comprobado</p>
               </CardContent>
             </Card>
           </div>

@@ -51,12 +51,12 @@ export const metadata: Metadata = {
 const benefits = [
   {
     icon: DollarSign,
-    title: 'Reducción de Costos (15-40%)',
+    title: 'Reducción de Costos Operativos',
     description: 'Eliminación de desperdicios y actividades que no agregan valor',
   },
   {
     icon: Clock,
-    title: 'Mejora en Tiempos (20-50%)',
+    title: 'Mejora en Tiempos de Ciclo',
     description: 'Reducción significativa en tiempos de ciclo y entrega',
   },
   {
@@ -355,25 +355,22 @@ export default function MejoraProcesosPage() {
                 <div className="space-y-6">
                   <div>
                     <h3 className="text-sm font-semibold text-gray-500 uppercase tracking-wide mb-2">
-                      Duración
-                    </h3>
-                    <p className="text-2xl font-bold text-primary-700">2-4 meses por proceso</p>
-                  </div>
-                  <div>
-                    <h3 className="text-sm font-semibold text-gray-500 uppercase tracking-wide mb-2">
                       Tamaño del Equipo
                     </h3>
                     <p className="text-2xl font-bold text-primary-700">2-3 consultores</p>
                   </div>
                   <div>
                     <h3 className="text-sm font-semibold text-gray-500 uppercase tracking-wide mb-2">
-                      Inversión
+                      Alcance
                     </h3>
-                    <p className="text-2xl font-bold text-primary-700">Desde USD $18,000</p>
+                    <p className="text-gray-700">
+                      Proyecto personalizado según complejidad de procesos y objetivos específicos
+                    </p>
                   </div>
                   <div className="pt-4 border-t border-primary-200">
                     <p className="text-sm text-gray-600">
-                      * ROI típico de 300-500% en los primeros 12 meses
+                      * Cada proyecto es único. Solicita una cotización personalizada con ROI
+                      proyectado
                     </p>
                   </div>
                 </div>
@@ -414,8 +411,8 @@ export default function MejoraProcesosPage() {
             </Card>
             <Card className="text-center">
               <CardContent className="p-8">
-                <div className="text-4xl font-bold text-primary-700 mb-2">300-500%</div>
-                <p className="text-gray-600">ROI en 12 meses</p>
+                <div className="text-4xl font-bold text-primary-700 mb-2">ROI</div>
+                <p className="text-gray-600">Retorno de inversión comprobado</p>
               </CardContent>
             </Card>
           </div>

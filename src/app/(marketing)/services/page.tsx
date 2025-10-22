@@ -111,7 +111,7 @@ const faqs = [
   {
     question: '¿Cuánto tiempo toma un proyecto típico?',
     answer:
-      'La duración varía según el servicio: Desarrollo Organizacional (3-6 meses), Mejora de Procesos (2-4 meses), Implementación ERP (4-9 meses), Gobernanza Corporativa (3-5 meses). Cada proyecto se personaliza según las necesidades específicas de tu empresa.',
+      'La duración varía significativamente según la complejidad, alcance y necesidades específicas de cada proyecto. Cada empresa es única y requiere soluciones personalizadas. Durante la consulta inicial, analizamos tu situación para proporcionar un timeline realista adaptado a tus objetivos.',
   },
   {
     question: '¿Trabajan con empresas de todos los tamaños?',
@@ -126,7 +126,7 @@ const faqs = [
   {
     question: '¿Ofrecen soporte post-implementación?',
     answer:
-      'Absolutamente. Todos nuestros proyectos incluyen soporte post-implementación que varía de 3-6 meses. Además, ofrecemos contratos de soporte continuo y servicios de mejora continua para asegurar resultados sostenibles.',
+      'Absolutamente. Todos nuestros proyectos incluyen soporte post-implementación extendido. Además, ofrecemos contratos de soporte continuo y servicios de mejora continua para asegurar resultados sostenibles a largo plazo.',
   },
   {
     question: '¿Pueden trabajar de forma remota o híbrida?',
@@ -186,39 +186,27 @@ export default function ServicesPage() {
               </thead>
               <tbody className="divide-y divide-gray-200">
                 <tr className="hover:bg-gray-50">
-                  <td className="px-6 py-4 text-sm font-medium text-gray-900">Duración</td>
-                  <td className="px-6 py-4 text-sm text-gray-700">3-6 meses</td>
-                  <td className="px-6 py-4 text-sm text-gray-700">2-4 meses</td>
-                  <td className="px-6 py-4 text-sm text-gray-700">4-9 meses</td>
-                  <td className="px-6 py-4 text-sm text-gray-700">3-5 meses</td>
-                </tr>
-                <tr className="hover:bg-gray-50">
-                  <td className="px-6 py-4 text-sm font-medium text-gray-900">Inversión</td>
-                  <td className="px-6 py-4 text-sm text-gray-700">Desde $25K</td>
-                  <td className="px-6 py-4 text-sm text-gray-700">Desde $18K</td>
-                  <td className="px-6 py-4 text-sm text-gray-700">Desde $50K</td>
-                  <td className="px-6 py-4 text-sm text-gray-700">Desde $20K</td>
-                </tr>
-                <tr className="hover:bg-gray-50">
-                  <td className="px-6 py-4 text-sm font-medium text-gray-900">ROI Típico</td>
-                  <td className="px-6 py-4 text-sm text-gray-700">200-300%</td>
-                  <td className="px-6 py-4 text-sm text-gray-700">300-500%</td>
-                  <td className="px-6 py-4 text-sm text-gray-700">150-250%</td>
-                  <td className="px-6 py-4 text-sm text-gray-700">Risk reduction</td>
-                </tr>
-                <tr className="hover:bg-gray-50">
                   <td className="px-6 py-4 text-sm font-medium text-gray-900">Tamaño Equipo</td>
-                  <td className="px-6 py-4 text-sm text-gray-700">2-4</td>
-                  <td className="px-6 py-4 text-sm text-gray-700">2-3</td>
-                  <td className="px-6 py-4 text-sm text-gray-700">3-6</td>
-                  <td className="px-6 py-4 text-sm text-gray-700">2-3</td>
+                  <td className="px-6 py-4 text-sm text-gray-700">2-4 consultores</td>
+                  <td className="px-6 py-4 text-sm text-gray-700">2-3 consultores</td>
+                  <td className="px-6 py-4 text-sm text-gray-700">3-6 consultores</td>
+                  <td className="px-6 py-4 text-sm text-gray-700">2-3 consultores</td>
+                </tr>
+                <tr className="hover:bg-gray-50">
+                  <td className="px-6 py-4 text-sm font-medium text-gray-900">Alcance</td>
+                  <td className="px-6 py-4 text-sm text-gray-700">Personalizado</td>
+                  <td className="px-6 py-4 text-sm text-gray-700">Personalizado</td>
+                  <td className="px-6 py-4 text-sm text-gray-700">Personalizado</td>
+                  <td className="px-6 py-4 text-sm text-gray-700">Personalizado</td>
                 </tr>
                 <tr className="hover:bg-gray-50">
                   <td className="px-6 py-4 text-sm font-medium text-gray-900">Ideal Para</td>
-                  <td className="px-6 py-4 text-sm text-gray-700">Restructuring</td>
-                  <td className="px-6 py-4 text-sm text-gray-700">Cost reduction</td>
-                  <td className="px-6 py-4 text-sm text-gray-700">Digital transformation</td>
-                  <td className="px-6 py-4 text-sm text-gray-700">Compliance</td>
+                  <td className="px-6 py-4 text-sm text-gray-700">
+                    Restructuración organizacional
+                  </td>
+                  <td className="px-6 py-4 text-sm text-gray-700">Reducción de costos</td>
+                  <td className="px-6 py-4 text-sm text-gray-700">Transformación digital</td>
+                  <td className="px-6 py-4 text-sm text-gray-700">Cumplimiento normativo</td>
                 </tr>
               </tbody>
             </table>

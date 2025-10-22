@@ -385,26 +385,22 @@ export default function GobernanzaCorporativaPage() {
                 <div className="space-y-6">
                   <div>
                     <h3 className="text-sm font-semibold text-gray-500 uppercase tracking-wide mb-2">
-                      Duración
-                    </h3>
-                    <p className="text-2xl font-bold text-primary-700">3-5 meses</p>
-                  </div>
-                  <div>
-                    <h3 className="text-sm font-semibold text-gray-500 uppercase tracking-wide mb-2">
                       Tamaño del Equipo
                     </h3>
                     <p className="text-2xl font-bold text-primary-700">2-3 consultores</p>
                   </div>
                   <div>
                     <h3 className="text-sm font-semibold text-gray-500 uppercase tracking-wide mb-2">
-                      Inversión
+                      Alcance
                     </h3>
-                    <p className="text-2xl font-bold text-primary-700">Desde USD $20,000</p>
+                    <p className="text-gray-700">
+                      Proyecto personalizado según tamaño y complejidad de la estructura corporativa
+                    </p>
                   </div>
                   <div className="pt-4 border-t border-primary-200">
                     <p className="text-sm text-gray-600">
-                      * Incluye diseño de marco de gobierno, políticas, capacitación de junta y
-                      soporte inicial
+                      * Cada proyecto es único. Solicita una cotización personalizada que incluye
+                      diseño de marco de gobierno, políticas, capacitación de junta y soporte
                     </p>
                   </div>
                 </div>

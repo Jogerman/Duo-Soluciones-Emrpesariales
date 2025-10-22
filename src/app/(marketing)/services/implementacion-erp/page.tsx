@@ -77,8 +77,8 @@ const benefits = [
   },
   {
     icon: Cloud,
-    title: 'ROI en 12-18 Meses',
-    description: 'Retorno de inversión comprobado en implementaciones',
+    title: 'ROI Comprobado',
+    description: 'Retorno de inversión demostrado en implementaciones exitosas',
   },
 ]
 
@@ -146,7 +146,7 @@ const deliverables = [
   'Integraciones con sistemas legacy',
   'Documentación técnica y funcional',
   'Capacitación de usuarios end-to-end',
-  'Soporte post-go-live (3-6 meses)',
+  'Soporte post-go-live extendido',
 ]
 
 const methodology = [
@@ -383,26 +383,22 @@ export default function ImplementacionERPPage() {
                 <div className="space-y-6">
                   <div>
                     <h3 className="text-sm font-semibold text-gray-500 uppercase tracking-wide mb-2">
-                      Duración
-                    </h3>
-                    <p className="text-2xl font-bold text-primary-700">4-9 meses</p>
-                  </div>
-                  <div>
-                    <h3 className="text-sm font-semibold text-gray-500 uppercase tracking-wide mb-2">
                       Tamaño del Equipo
                     </h3>
                     <p className="text-2xl font-bold text-primary-700">3-6 consultores</p>
                   </div>
                   <div>
                     <h3 className="text-sm font-semibold text-gray-500 uppercase tracking-wide mb-2">
-                      Inversión
+                      Alcance
                     </h3>
-                    <p className="text-2xl font-bold text-primary-700">Desde USD $50,000</p>
+                    <p className="text-gray-700">
+                      Proyecto personalizado según las necesidades específicas de tu empresa
+                    </p>
                   </div>
                   <div className="pt-4 border-t border-primary-200">
                     <p className="text-sm text-gray-600">
-                      * Incluye licencias Microsoft, configuración, integraciones, capacitación y
-                      soporte inicial
+                      * Cada proyecto es único. Solicita una cotización personalizada que incluye
+                      licencias Microsoft, configuración, integraciones, capacitación y soporte
                     </p>
                   </div>
                 </div>
@@ -443,8 +439,8 @@ export default function ImplementacionERPPage() {
             </Card>
             <Card className="text-center">
               <CardContent className="p-8">
-                <div className="text-4xl font-bold text-primary-700 mb-2">12-18</div>
-                <p className="text-gray-600">Meses para ROI típico</p>
+                <div className="text-4xl font-bold text-primary-700 mb-2">ROI</div>
+                <p className="text-gray-600">Retorno de inversión comprobado</p>
               </CardContent>
             </Card>
           </div>
