@@ -21,6 +21,7 @@
 ## ✅ Sprint 1: Foundation & Setup (COMPLETADO 100%)
 
 ### Entregables Completados
+
 - ✅ Repositorio Git configurado
 - ✅ Next.js 15.5.6 + TypeScript 5.9.3
 - ✅ TailwindCSS 3.4.16 + Shadcn/ui
@@ -255,12 +256,14 @@
 **Problema**: Caracteres especiales españoles (á, é, í, ó, ú, ñ) mostrando como �
 
 #### Fix 1: Blog Page
+
 - **Commit**: `c141cd2`
 - **Archivos**: `blog-posts.ts` (~300 líneas corregidas)
 - **Método**: Global replace con `replace_all: true`
 - **Resultado**: 100% caracteres correctos en 12 blog posts
 
 #### Fix 2: Podcast Page
+
 - **Commit**: `066c59c`
 - **Archivos**:
   - `podcast-episodes.ts` (642 líneas)
@@ -372,26 +375,31 @@ src/
 ## 🎯 Estado de Sprints
 
 ### Sprint 1: Foundation ✅
+
 **Estado**: 100% COMPLETADO
 **Story Points**: 38/38
 **Fecha**: Oct 19, 2025
 
 ### Sprint 2: Core Pages ✅
+
 **Estado**: 100% COMPLETADO
 **Story Points**: 40/40
 **Fecha**: Oct 20, 2025
 
 ### Sprint 3: Content & Blog ✅
+
 **Estado**: 100% COMPLETADO
 **Story Points**: 40/40
 **Fecha**: Oct 21, 2025
 
 ### Sprint 4: Advanced Features ⏳
+
 **Estado**: PENDIENTE
 **Story Points**: 0/20
 **Estimado**: Oct 22-23, 2025
 
 **Tareas pendientes**:
+
 - Newsletter signup
 - Social sharing avanzado
 - Comments system (opcional)
@@ -399,11 +407,13 @@ src/
 - Content recommendations AI
 
 ### Sprint 5: Polish & Launch ⏳
+
 **Estado**: PENDIENTE
 **Story Points**: 0/18
 **Estimado**: Oct 24-25, 2025
 
 **Tareas pendientes**:
+
 - Cross-browser testing
 - Mobile testing (5+ devices)
 - Lighthouse audit (4 categorías)
@@ -445,6 +455,7 @@ Actual: 6 días completados (60%)
 ## ✅ Pre-Production Checklist
 
 ### Completado
+
 - [x] UTF-8 encoding correcto en todo el sitio
 - [x] Componentes UI consistentes
 - [x] Design system aplicado uniformemente
@@ -460,6 +471,7 @@ Actual: 6 días completados (60%)
 - [x] Contact form API working
 
 ### Pendiente
+
 - [ ] Cross-browser testing (Chrome, Firefox, Safari, Edge)
 - [ ] Mobile responsive testing (5+ devices)
 - [ ] Lighthouse audit (Performance, SEO, Accessibility, Best Practices)
@@ -484,6 +496,7 @@ Actual: 6 días completados (60%)
 **CMS**: Payload 3.60.0 (configurado, no activo)
 
 **Documentación**:
+
 - `/Setup_Docs/` - Planning y ejecución
 - `/docs/` - Technical documentation
 - `CHANGELOG-OCT21.md` - Cambios del día

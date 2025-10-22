@@ -1,6 +1,7 @@
 # Newsletter System - Usage Examples
 
 ## Table of Contents
+
 1. [Homepage Footer Integration](#homepage-footer-integration)
 2. [Blog Sidebar Integration](#blog-sidebar-integration)
 3. [Landing Page CTA](#landing-page-cta)
@@ -24,18 +25,12 @@ export default function Footer() {
           {/* Company Info */}
           <div>
             <h3 className="text-xl font-bold mb-4">DUO Soluciones</h3>
-            <p className="text-neutral-400">
-              Transformamos desafíos en oportunidades sostenibles
-            </p>
+            <p className="text-neutral-400">Transformamos desafíos en oportunidades sostenibles</p>
           </div>
 
           {/* Newsletter Signup */}
           <div className="lg:col-span-2">
-            <NewsletterSignup
-              source="footer"
-              showDescription={true}
-              className="max-w-2xl"
-            />
+            <NewsletterSignup source="footer" showDescription={true} className="max-w-2xl" />
           </div>
         </div>
       </div>
@@ -90,8 +85,8 @@ export default function ServiceCTA() {
             Mantente Actualizado con las Últimas Tendencias
           </h2>
           <p className="body-lg text-white/90 mb-8">
-            Suscríbete para recibir insights exclusivos sobre desarrollo organizacional,
-            mejora de procesos y transformación digital.
+            Suscríbete para recibir insights exclusivos sobre desarrollo organizacional, mejora de
+            procesos y transformación digital.
           </p>
 
           {/* Newsletter Form - Inline on desktop */}
@@ -161,7 +156,8 @@ export function NewsletterModal() {
               No te pierdas nuestros mejores contenidos
             </h2>
             <p className="text-lg text-neutral-600">
-              Únete a +500 profesionales que reciben insights exclusivos sobre desarrollo organizacional
+              Únete a +500 profesionales que reciben insights exclusivos sobre desarrollo
+              organizacional
             </p>
           </div>
 
@@ -208,9 +204,7 @@ export default function BlogPostNewsletter() {
 
           {/* Form */}
           <div className="flex-1">
-            <h3 className="text-xl font-bold text-neutral-900 mb-2">
-              ¿Te gustó este artículo?
-            </h3>
+            <h3 className="text-xl font-bold text-neutral-900 mb-2">¿Te gustó este artículo?</h3>
             <p className="text-neutral-600 mb-4">
               Recibe contenido similar directamente en tu inbox cada semana.
             </p>
@@ -303,11 +297,11 @@ export function StickyNewsletterBar() {
 
 ```typescript
 interface NewsletterSignupProps {
-  source?: string        // Tracking identifier (default: 'homepage')
-  className?: string     // Custom CSS classes
-  inline?: boolean       // Horizontal layout (default: false)
-  placeholder?: string   // Email input placeholder (default: 'tu@email.com')
-  buttonText?: string    // Submit button text (default: 'Suscribirse')
+  source?: string // Tracking identifier (default: 'homepage')
+  className?: string // Custom CSS classes
+  inline?: boolean // Horizontal layout (default: false)
+  placeholder?: string // Email input placeholder (default: 'tu@email.com')
+  buttonText?: string // Submit button text (default: 'Suscribirse')
   showDescription?: boolean // Show form description (default: true)
 }
 ```
@@ -317,6 +311,7 @@ interface NewsletterSignupProps {
 ## Best Practices
 
 ### 1. Source Tracking
+
 Always use descriptive source values to track where subscriptions come from:
 
 ```tsx
@@ -331,16 +326,18 @@ Always use descriptive source values to track where subscriptions come from:
 ```
 
 ### 2. Mobile Optimization
+
 Use inline layout on desktop, stacked on mobile:
 
 ```tsx
 <NewsletterSignup
-  inline={false}  // Stack on mobile
-  className="lg:inline"  // Inline on desktop via CSS
+  inline={false} // Stack on mobile
+  className="lg:inline" // Inline on desktop via CSS
 />
 ```
 
 ### 3. Context-Appropriate Copy
+
 Customize the button text based on context:
 
 ```tsx
@@ -358,6 +355,7 @@ Customize the button text based on context:
 ```
 
 ### 4. A/B Testing
+
 Test different placements and copy:
 
 ```tsx
@@ -384,7 +382,7 @@ if (typeof window !== 'undefined' && window.gtag) {
   window.gtag('event', 'newsletter_signup', {
     method: source,
     event_category: 'engagement',
-    event_label: source
+    event_label: source,
   })
 }
 ```
@@ -394,6 +392,7 @@ if (typeof window !== 'undefined' && window.gtag) {
 ## Testing Locally
 
 1. Start the development server:
+
 ```bash
 npm run dev
 ```
@@ -418,16 +417,19 @@ npm run dev
 ## Common Issues
 
 ### Form not submitting
+
 - Check that Resend API key is configured
 - Verify database connection
 - Check browser console for errors
 
 ### Email not received
+
 - Check spam folder
 - Verify Resend domain is verified
 - Check Resend dashboard for delivery status
 
 ### Styling issues
+
 - Ensure Tailwind CSS is properly configured
 - Check for CSS conflicts
 - Verify all UI components are imported
@@ -437,6 +439,7 @@ npm run dev
 ## Need Help?
 
 Review:
+
 - [NEWSLETTER_SYSTEM.md](./NEWSLETTER_SYSTEM.md) - Complete system documentation
 - [Setup_Docs/CLAUDE.md](./Setup_Docs/CLAUDE.md) - Project coding standards
 - Resend Dashboard - Email delivery logs

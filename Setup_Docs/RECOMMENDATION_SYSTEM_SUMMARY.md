@@ -11,6 +11,7 @@
 ## 1. Files Created
 
 ### Core Algorithm
+
 - **`src/lib/algorithms/content-recommendations.ts`** (358 lines)
   - Multi-factor recommendation scoring system
   - Support for blog posts and podcast episodes
@@ -18,6 +19,7 @@
   - Trending content calculation
 
 ### Utilities
+
 - **`src/lib/utils/personalization.ts`** (235 lines)
   - View history tracking (localStorage)
   - Privacy-friendly (no external tracking)
@@ -31,6 +33,7 @@
   - Analytics statistics and reports
 
 ### React Components
+
 - **`src/components/marketing/recommendations/RecommendedContent.tsx`** (208 lines)
   - "You might also like" section
   - Responsive grid layout (3 cols desktop, 2 tablet, 1 mobile)
@@ -51,6 +54,7 @@
   - Barrel export for all recommendation components
 
 ### Documentation
+
 - **`src/components/marketing/recommendations/README.md`** (650+ lines)
   - Complete API documentation
   - Usage examples
@@ -65,14 +69,14 @@
 
 The recommendation engine uses a weighted scoring algorithm that considers 6 key factors:
 
-| Factor | Weight | Description |
-|--------|--------|-------------|
-| **Same Category** | 3.0 | Content in the same category (e.g., "Sistemas ERP") |
-| **Shared Tags** | 2.0/tag | Each matching tag adds 2.0 points |
-| **Same Author** | 1.5 | Content by the same author/host |
-| **Similar Duration** | 1.0 | Similar reading time (±3 min) or podcast duration (±10 min) |
-| **Recent Popularity** | 2.0 | Published within last 30 days |
-| **User History** | 1.0 | User has viewed similar content before |
+| Factor                | Weight  | Description                                                 |
+| --------------------- | ------- | ----------------------------------------------------------- |
+| **Same Category**     | 3.0     | Content in the same category (e.g., "Sistemas ERP")         |
+| **Shared Tags**       | 2.0/tag | Each matching tag adds 2.0 points                           |
+| **Same Author**       | 1.5     | Content by the same author/host                             |
+| **Similar Duration**  | 1.0     | Similar reading time (±3 min) or podcast duration (±10 min) |
+| **Recent Popularity** | 2.0     | Published within last 30 days                               |
+| **User History**      | 1.0     | User has viewed similar content before                      |
 
 ### Example Calculation
 
@@ -99,6 +103,7 @@ Total Score: 12.5
 ### Trending Algorithm
 
 Trending content is calculated using:
+
 ```
 score = (views or plays) / days_since_published
 
@@ -238,22 +243,27 @@ export function BlogPostClient({ post }) {
 ## 4. Issues Encountered
 
 ### Issue 1: TypeScript Union Type Constraints
+
 **Problem:** TypeScript couldn't infer the correct type when passing either `blogPosts` or `podcastEpisodes` to `getRecommendations`.
 
 **Solution:** Added type assertion with proper comment:
+
 ```tsx
 const pool = isBlog ? blogPosts : (podcastEpisodes as typeof blogPosts)
 ```
 
 ### Issue 2: ESLint Warnings
+
 **Problem:** Unused variables and type assertions triggered ESLint warnings.
 
 **Solution:**
+
 - Added proper ESLint disable comments for intentionally unused utility functions
 - Improved type annotations to avoid explicit `any`
 - Removed unused variables
 
 ### No Critical Issues
+
 All components passed TypeScript compilation and ESLint checks with only minor warnings.
 
 ---
@@ -281,7 +291,7 @@ describe('Content Recommendations', () => {
   it('should respect diversity rules', () => {
     const source = blogPosts[0]
     const recommendations = getRecommendations(source, blogPosts.slice(1), [], {
-      maxPerAuthor: 2
+      maxPerAuthor: 2,
     })
 
     const authorCounts = new Map()
@@ -374,12 +384,14 @@ Expected performance on typical hardware:
 ### Scalability
 
 Current implementation handles:
+
 - Up to 100 blog posts efficiently
 - Up to 100 podcast episodes efficiently
 - View history of 20 items
 - Analytics log of 100 events
 
 For larger datasets (1000+ items), consider:
+
 - Server-side recommendation calculation
 - Database-backed view history
 - Real analytics service (Google Analytics, Mixpanel)

@@ -16,6 +16,7 @@ Successfully implemented a comprehensive global search system that searches acro
 ## Files Created (9 files, ~2,576 lines of code)
 
 ### Core Search Utilities
+
 1. **`src/lib/utils/search.ts`** (7.1K)
    - Weighted search algorithm implementation
    - Search across blog posts and podcast episodes
@@ -29,6 +30,7 @@ Successfully implemented a comprehensive global search system that searches acro
    - Query suggestions based on history
 
 ### API Endpoint
+
 3. **`src/app/api/search/route.ts`** (3.4K)
    - GET endpoint: `/api/search?q=query&type=all&sortBy=relevance&limit=10`
    - Query validation and error handling
@@ -36,6 +38,7 @@ Successfully implemented a comprehensive global search system that searches acro
    - Caching headers for performance
 
 ### React Components
+
 4. **`src/components/marketing/search/GlobalSearch.tsx`** (6.1K)
    - Main search input component
    - Debounced search (300ms)
@@ -59,6 +62,7 @@ Successfully implemented a comprehensive global search system that searches acro
    - Export barrel file for clean imports
 
 ### Search Results Page
+
 8. **`src/app/(marketing)/search/page.tsx`** (5.7K)
    - Client-side search results page
    - URL parameter management
@@ -70,6 +74,7 @@ Successfully implemented a comprehensive global search system that searches acro
    - Page-level layout wrapper
 
 ### Header Integration
+
 - **Updated:** `src/components/layout/Header.tsx`
   - Integrated GlobalSearch in header
   - Desktop: centered search bar
@@ -84,6 +89,7 @@ Successfully implemented a comprehensive global search system that searches acro
 The search algorithm uses a weighted scoring approach to rank results by relevance:
 
 #### Weight Distribution:
+
 - **Title Match:** Weight 3
   - Exact title match: +5 bonus
   - Title starts with query: +2 bonus
@@ -96,11 +102,13 @@ The search algorithm uses a weighted scoring approach to rank results by relevan
 - **Author Name (Blog):** Weight 1.5
 
 #### Text Normalization:
+
 - Removes accents (e.g., "María" → "maria")
 - Converts to lowercase
 - Handles Spanish character variations
 
 #### Scoring Process:
+
 1. Query is normalized and split into terms
 2. Each term is matched against content fields
 3. Matches accumulate weighted scores
@@ -110,24 +118,28 @@ The search algorithm uses a weighted scoring approach to rank results by relevan
 ### Search Features
 
 #### 1. Real-time Suggestions
+
 - Triggers after 2+ characters
 - Debounced at 300ms
 - Returns top 5 suggestions
 - Mix of blog and podcast results
 
 #### 2. Recent Searches
+
 - Stored in localStorage
 - Maximum 10 recent searches
 - Ordered by timestamp (most recent first)
 - Removable by user
 
 #### 3. Popular Searches
+
 - Tracks search frequency
 - Maximum 20 popular searches
 - Ordered by count (most popular first)
 - Auto-updates on each search
 
 #### 4. Query Suggestions
+
 - Based on partial input matching
 - Combines recent and popular searches
 - Prioritizes by popularity, then recency
@@ -140,13 +152,13 @@ The search algorithm uses a weighted scoring approach to rank results by relevan
 
 #### Query Parameters:
 
-| Parameter | Type | Default | Description |
-|-----------|------|---------|-------------|
-| `q` | string | required | Search query |
-| `type` | enum | `all` | Filter: `all`, `blog`, `podcast` |
-| `limit` | number | `10` | Results limit (max 50) |
-| `sortBy` | enum | `relevance` | Sort: `relevance`, `date` |
-| `suggestions` | boolean | `false` | Autocomplete mode |
+| Parameter     | Type    | Default     | Description                      |
+| ------------- | ------- | ----------- | -------------------------------- |
+| `q`           | string  | required    | Search query                     |
+| `type`        | enum    | `all`       | Filter: `all`, `blog`, `podcast` |
+| `limit`       | number  | `10`        | Results limit (max 50)           |
+| `sortBy`      | enum    | `relevance` | Sort: `relevance`, `date`        |
+| `suggestions` | boolean | `false`     | Autocomplete mode                |
 
 #### Example Requests:
 
@@ -231,7 +243,7 @@ import { GlobalSearch } from '@/components/marketing/search'
 ```tsx
 import { SearchResults } from '@/components/marketing/search'
 
-<SearchResults
+;<SearchResults
   query="lean manufacturing"
   results={results}
   totalResults={25}
@@ -240,9 +252,9 @@ import { SearchResults } from '@/components/marketing/search'
   sortBy="relevance"
   currentPage={1}
   totalPages={3}
-  onTypeChange={(type) => handleTypeChange(type)}
-  onSortChange={(sort) => handleSortChange(sort)}
-  onPageChange={(page) => handlePageChange(page)}
+  onTypeChange={type => handleTypeChange(type)}
+  onSortChange={sort => handleSortChange(sort)}
+  onPageChange={page => handlePageChange(page)}
 />
 ```
 
@@ -262,20 +274,20 @@ The GlobalSearch component supports full keyboard navigation:
 
 ## Acceptance Criteria
 
-| Criterion | Status |
-|-----------|--------|
-| ✅ Search bar visible in header | PASS |
-| ✅ Real-time search suggestions work | PASS |
-| ✅ Search results page displays correctly | PASS |
-| ✅ Search across blog and podcast works | PASS |
-| ✅ Debounced search implemented (300ms) | PASS |
-| ✅ Recent searches stored in localStorage | PASS |
-| ✅ Search analytics tracked | PASS |
-| ✅ Empty state handled gracefully | PASS |
-| ✅ Keyboard navigation works | PASS |
-| ✅ Mobile responsive | PASS |
-| ✅ TypeScript strict mode passing | PASS |
-| ✅ No ESLint errors | PASS |
+| Criterion                                 | Status |
+| ----------------------------------------- | ------ |
+| ✅ Search bar visible in header           | PASS   |
+| ✅ Real-time search suggestions work      | PASS   |
+| ✅ Search results page displays correctly | PASS   |
+| ✅ Search across blog and podcast works   | PASS   |
+| ✅ Debounced search implemented (300ms)   | PASS   |
+| ✅ Recent searches stored in localStorage | PASS   |
+| ✅ Search analytics tracked               | PASS   |
+| ✅ Empty state handled gracefully         | PASS   |
+| ✅ Keyboard navigation works              | PASS   |
+| ✅ Mobile responsive                      | PASS   |
+| ✅ TypeScript strict mode passing         | PASS   |
+| ✅ No ESLint errors                       | PASS   |
 
 ---
 
@@ -452,18 +464,21 @@ describe('Search Flow', () => {
 ## Future Enhancements
 
 ### Priority 1 (Quick Wins):
+
 - [ ] Add search filters in dropdown (date range, author, category)
 - [ ] Implement search query highlighting in results
 - [ ] Add "Did you mean?" suggestions for typos
 - [ ] Track analytics server-side for insights
 
 ### Priority 2 (Medium Effort):
+
 - [ ] Add search within search results (refinement)
 - [ ] Implement faceted search (filter while you search)
 - [ ] Add rich previews with excerpts in suggestions
 - [ ] Integrate with external search service (Algolia, Typesense)
 
 ### Priority 3 (Long-term):
+
 - [ ] AI-powered semantic search
 - [ ] Voice search integration
 - [ ] Search trends dashboard (admin)
@@ -477,11 +492,13 @@ describe('Search Flow', () => {
 ### Issue: Suggestions not appearing
 
 **Possible Causes:**
+
 - Debounce delay (wait 300ms)
 - API error (check console)
 - Empty query (minimum 2 characters)
 
 **Solution:**
+
 ```typescript
 // Check API endpoint
 fetch('/api/search?q=test&suggestions=true')
@@ -492,11 +509,13 @@ fetch('/api/search?q=test&suggestions=true')
 ### Issue: Recent searches not persisting
 
 **Possible Causes:**
+
 - localStorage disabled
 - Private/incognito mode
 - Browser storage quota exceeded
 
 **Solution:**
+
 ```typescript
 // Check localStorage
 console.log(localStorage.getItem('duo_recent_searches'))
@@ -509,11 +528,13 @@ console.log(localStorage.getItem('test'))
 ### Issue: Search results incorrect
 
 **Possible Causes:**
+
 - Mock data mismatch
 - Scoring algorithm issue
 - Text normalization problem
 
 **Solution:**
+
 ```typescript
 // Test search locally
 import { searchAll } from '@/lib/utils/search'
@@ -583,6 +604,7 @@ export function trackSearchClick(query: string, resultId: string) {
 ## Dependencies
 
 ### Existing Dependencies Used:
+
 - `next` (v15.5.6) - App Router, API Routes
 - `react` - Components and hooks
 - `lucide-react` - Icons (Search, Clock, TrendingUp, etc.)
@@ -595,17 +617,22 @@ export function trackSearchClick(query: string, resultId: string) {
 ## Deployment Notes
 
 ### Environment Variables:
+
 No new environment variables required.
 
 ### Build Configuration:
+
 No changes to build configuration needed.
 
 ### CDN/Caching:
+
 - API responses cached for 60s via Cache-Control headers
 - Consider adding CDN layer for `/api/search` endpoint
 
 ### Monitoring:
+
 Recommended monitoring:
+
 - API response times
 - Search query performance
 - Error rates

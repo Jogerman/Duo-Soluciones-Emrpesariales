@@ -5,10 +5,7 @@
 ### Step 1: Import Components
 
 ```tsx
-import {
-  RecommendedContent,
-  TrendingContent
-} from '@/components/marketing/recommendations'
+import { RecommendedContent, TrendingContent } from '@/components/marketing/recommendations'
 ```
 
 ### Step 2: Get Data
@@ -24,6 +21,7 @@ const podcastEpisodes = getAllPodcastEpisodes()
 ### Step 3: Add to Pages
 
 #### Blog Detail Page
+
 ```tsx
 <RecommendedContent
   sourceContent={currentBlogPost}
@@ -34,6 +32,7 @@ const podcastEpisodes = getAllPodcastEpisodes()
 ```
 
 #### Podcast Detail Page
+
 ```tsx
 <RecommendedContent
   sourceContent={currentPodcastEpisode}
@@ -44,12 +43,9 @@ const podcastEpisodes = getAllPodcastEpisodes()
 ```
 
 #### Homepage
+
 ```tsx
-<TrendingContent
-  blogPosts={blogPosts}
-  podcastEpisodes={podcastEpisodes}
-  maxResults={6}
-/>
+<TrendingContent blogPosts={blogPosts} podcastEpisodes={podcastEpisodes} maxResults={6} />
 ```
 
 ## Complete Example
@@ -63,10 +59,7 @@ import { useEffect } from 'react'
 import { notFound } from 'next/navigation'
 import { RecommendedContent } from '@/components/marketing/recommendations'
 import { trackContentView } from '@/lib/analytics/content-analytics'
-import {
-  getBlogPostBySlug,
-  getAllBlogPosts
-} from '@/lib/mock-data/blog-posts'
+import { getBlogPostBySlug, getAllBlogPosts } from '@/lib/mock-data/blog-posts'
 import { getAllPodcastEpisodes } from '@/lib/mock-data/podcast-episodes'
 
 export default function BlogPostPage({ params }: { params: { slug: string } }) {
@@ -108,6 +101,7 @@ export default function BlogPostPage({ params }: { params: { slug: string } }) {
 ## That's it!
 
 The recommendation system is now fully integrated and will:
+
 - ✅ Show personalized recommendations
 - ✅ Track user views
 - ✅ Display trending content

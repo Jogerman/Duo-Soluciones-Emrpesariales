@@ -146,10 +146,7 @@ import { NewsletterSignup } from '@/components/marketing/newsletter/NewsletterSi
 export default function Footer() {
   return (
     <footer>
-      <NewsletterSignup
-        source="footer"
-        showDescription={true}
-      />
+      <NewsletterSignup source="footer" showDescription={true} />
     </footer>
   )
 }
@@ -385,6 +382,7 @@ src/
 ## Support
 
 For issues or questions:
+
 - Review this documentation
 - Check Setup_Docs/CLAUDE.md for project patterns
 - Review existing API endpoints for similar patterns
