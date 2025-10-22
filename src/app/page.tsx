@@ -67,6 +67,8 @@ const services: ServiceItem[] = [
       'Gestión del cambio organizacional',
     ],
     icon: 'target',
+    image:
+      'https://images.unsplash.com/photo-1542744173-8e7e53415bb0?w=600&h=400&fit=crop&auto=format&q=80',
     featured: true,
   },
   {
@@ -82,6 +84,8 @@ const services: ServiceItem[] = [
       'Reducción de costos operativos',
     ],
     icon: 'settings',
+    image:
+      'https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?w=600&h=400&fit=crop&auto=format&q=80',
   },
   {
     id: '3',
@@ -96,6 +100,8 @@ const services: ServiceItem[] = [
       'Capacitación y soporte',
     ],
     icon: 'laptop',
+    image:
+      'https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=600&h=400&fit=crop&auto=format&q=80',
   },
   {
     id: '4',
@@ -110,6 +116,8 @@ const services: ServiceItem[] = [
       'Juntas directivas efectivas',
     ],
     icon: 'building2',
+    image:
+      'https://images.unsplash.com/photo-1450101215322-bf5cd27642fc?w=600&h=400&fit=crop&auto=format&q=80',
   },
 ]
 

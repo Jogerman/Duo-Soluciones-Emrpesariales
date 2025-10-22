@@ -5,6 +5,7 @@ import { Button } from '@/components/ui/Button'
 import { Container } from '@/components/ui/Container'
 import { ArrowRight, CheckCircle } from 'lucide-react'
 import Link from 'next/link'
+import Image from 'next/image'
 import * as Icons from 'lucide-react'
 import type { LucideIcon } from 'lucide-react'
 
@@ -15,6 +16,7 @@ export interface ServiceItem {
   slug: string
   benefits: string[]
   icon?: string | LucideIcon // Support both string and component
+  image?: string // Service card image URL
   featured?: boolean
 }
 
@@ -85,14 +87,33 @@ function ServiceCard({ service, showBenefits = true }: ServiceCardProps) {
 
   return (
     <Card
-      className={`group h-full transition-all duration-300 hover:shadow-xl ${
+      className={`group h-full overflow-hidden transition-all duration-300 hover:shadow-xl ${
         service.featured
           ? 'border-primary-300 bg-primary-50/30 ring-2 ring-primary-200'
           : 'hover:border-primary-200'
       }`}
     >
+      {/* Service Image */}
+      {service.image && (
+        <div className="relative h-48 w-full overflow-hidden">
+          <Image
+            src={service.image}
+            alt={service.title}
+            fill
+            className="object-cover transition-transform duration-300 group-hover:scale-105"
+          />
+          {service.featured && (
+            <div className="absolute right-4 top-4">
+              <span className="inline-flex items-center rounded-full bg-primary-600 px-3 py-1 text-xs font-semibold text-white shadow-lg">
+                Destacado
+              </span>
+            </div>
+          )}
+        </div>
+      )}
+
       <CardHeader>
-        {/* Icon and Featured Badge */}
+        {/* Icon and Featured Badge (only shown if no image) */}
         <div className="flex items-start justify-between">
           {Icon && (
             <div
@@ -106,7 +127,7 @@ function ServiceCard({ service, showBenefits = true }: ServiceCardProps) {
             </div>
           )}
 
-          {service.featured && (
+          {service.featured && !service.image && (
             <span className="inline-flex items-center rounded-full bg-primary-600 px-3 py-1 text-xs font-semibold text-white">
               Destacado
             </span>
