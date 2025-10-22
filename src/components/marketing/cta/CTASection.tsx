@@ -74,7 +74,9 @@ export function CTASection({
 
           {/* Content */}
           <div className="relative z-10 mx-auto max-w-3xl text-center">
-            <h2 className={`text-3xl font-bold tracking-tight sm:text-4xl ${textColorClasses[variant]}`}>
+            <h2
+              className={`text-3xl font-bold tracking-tight sm:text-4xl ${textColorClasses[variant]}`}
+            >
               {title}
             </h2>
 
@@ -84,12 +86,7 @@ export function CTASection({
 
             <div className="mt-8 flex flex-col items-center justify-center gap-4 sm:flex-row">
               {/* Primary CTA */}
-              <Button
-                asChild
-                size="lg"
-                variant={variant === 'outline' ? 'primary' : 'secondary'}
-                className="group"
-              >
+              <Button asChild size="lg" variant="primary" className="group">
                 <Link href={primaryCTA.href}>
                   {primaryCTA.icon && getIcon(primaryCTA.icon)}
                   <span className="mx-2">{primaryCTA.text}</span>
@@ -104,9 +101,7 @@ export function CTASection({
                   size="lg"
                   variant="outline"
                   className={
-                    variant !== 'outline'
-                      ? 'border-white/30 text-white hover:bg-white/10'
-                      : ''
+                    variant !== 'outline' ? 'border-white/30 text-white hover:bg-white/10' : ''
                   }
                 >
                   <Link href={secondaryCTA.href}>{secondaryCTA.text}</Link>
