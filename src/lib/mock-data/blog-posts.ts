@@ -116,7 +116,8 @@ La implementación de un ERP es un proyecto desafiante pero transformador. Con l
 
 ¿Estás considerando implementar un ERP? En DUO te acompañamos en todo el proceso, desde la selección hasta el go-live y más allá.
     `,
-    coverImage: '/images/blog/erp-implementation.jpg',
+    coverImage:
+      'https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=1200&h=800&fit=crop&auto=format&q=80',
     author: authors[3], // Diego Fernández
     category: categories[2], // Sistemas ERP
     tags: getTagsByIds(['7', '9', '15', '13']), // Odoo, Implementación ERP, PYMES, Gestión del Cambio
@@ -272,7 +273,8 @@ La clave está en adaptar las herramientas al contexto de servicios, manteniendo
 
 ¿Tu empresa de servicios tiene procesos ineficientes? Contáctanos para una evaluación inicial gratuita.
     `,
-    coverImage: '/images/blog/lean-six-sigma.jpg',
+    coverImage:
+      'https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?w=1200&h=800&fit=crop&auto=format&q=80',
     author: authors[1], // Carlos Rodríguez
     category: categories[1], // Mejora de Procesos
     tags: getTagsByIds(['4', '5', '16', '19']), // Lean Manufacturing, Six Sigma, Productividad, Mejora Continua
@@ -481,7 +483,8 @@ No existe una estructura perfecta, pero sí una estructura adecuada para tu cont
 
 ¿Tu estructura organizacional está habilitando o limitando tu estrategia? Conversemos.
     `,
-    coverImage: '/images/blog/organizational-design.jpg',
+    coverImage:
+      'https://images.unsplash.com/photo-1542744173-8e7e53415bb0?w=1200&h=800&fit=crop&auto=format&q=80',
     author: authors[0], // María González
     category: categories[0], // Desarrollo Organizacional
     tags: getTagsByIds(['1', '2', '12', '20']), // Estrategia, Cambio Organizacional, Cultura Organizacional, Transformación
@@ -738,7 +741,8 @@ La pregunta no es si implementar gobierno corporativo, sino cuándo comenzar. Y 
 
 ¿Necesitas ayuda para profesionalizar el gobierno de tu PYME? Agenda una consultoría inicial.
     `,
-    coverImage: '/images/blog/corporate-governance.jpg',
+    coverImage:
+      'https://images.unsplash.com/photo-1450101215322-bf5cd27642fc?w=1200&h=800&fit=crop&auto=format&q=80',
     author: authors[2], // Ana Martínez
     category: categories[3], // Gobernanza Corporativa
     tags: getTagsByIds(['1', '10', '11', '15']), // Estrategia, Gestión de Riesgos, Cumplimiento, PYMES
@@ -1087,7 +1091,8 @@ El momento de empezar es ahora. No necesitas el sistema perfecto, necesitas un s
 
 ¿Necesitas ayuda para definir e implementar KPIs en tu empresa? Contáctanos.
     `,
-    coverImage: '/images/blog/kpis-dashboard.jpg',
+    coverImage:
+      'https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=1200&h=800&fit=crop&auto=format&q=80',
     author: authors[1], // Carlos Rodríguez
     category: categories[1], // Mejora de Procesos
     tags: getTagsByIds(['3', '17', '18', '16']), // KPIs, Indicadores, Análisis de Datos, Productividad
@@ -1527,7 +1532,8 @@ La pregunta no es si invertir en cultura, sino cuándo empezar. Y la respuesta e
 
 ¿Tu cultura está habilitando o limitando tu crecimiento? Conversemos.
     `,
-    coverImage: '/images/blog/organizational-culture.jpg',
+    coverImage:
+      'https://images.unsplash.com/photo-1522202176988-66273c2fd55f?w=1200&h=800&fit=crop&auto=format&q=80',
     author: authors[0], // María González
     category: categories[4], // Liderazgo
     tags: getTagsByIds(['12', '2', '14', '13']), // Cultura Organizacional, Cambio Organizacional, Innovación, Gestión del Cambio

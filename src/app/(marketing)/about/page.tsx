@@ -87,6 +87,8 @@ const teamMembers: TeamMember[] = [
     id: '1',
     name: 'Dr. Carlos Méndez',
     role: 'Founder & CEO',
+    image:
+      'https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=400&h=400&fit=crop&auto=format&q=80',
     bio: 'PhD en Administración de Empresas con 20+ años de experiencia en consultoría estratégica. Especializado en transformación organizacional y desarrollo de liderazgo. Profesor invitado en INTEC y PUCMM.',
     specialties: [
       'Estrategia corporativa',
@@ -99,6 +101,8 @@ const teamMembers: TeamMember[] = [
     id: '2',
     name: 'Ing. Patricia Santana',
     role: 'CTO & Microsoft Dynamics Lead',
+    image:
+      'https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?w=400&h=400&fit=crop&auto=format&q=80',
     bio: 'Ingeniera de Sistemas con 15+ años implementando soluciones Microsoft. MVP de Microsoft en Business Applications. Ha liderado más de 100 implementaciones exitosas en toda la región.',
     specialties: [
       'MS Dynamics 365',
@@ -111,6 +115,8 @@ const teamMembers: TeamMember[] = [
     id: '3',
     name: 'Lic. Roberto Fernández',
     role: 'Director de Consultoría Estratégica',
+    image:
+      'https://images.unsplash.com/photo-1519085360753-af0119f7cbe7?w=400&h=400&fit=crop&auto=format&q=80',
     bio: 'MBA con concentración en Operaciones y Estrategia. 18 años de experiencia en mejora de procesos y excelencia operacional. Certificado Lean Six Sigma Black Belt y SAFe Agilist.',
     specialties: [
       'Mejora de procesos',
@@ -123,6 +129,8 @@ const teamMembers: TeamMember[] = [
     id: '4',
     name: 'Dra. Laura Jiménez',
     role: 'Directora de Gobernanza y Compliance',
+    image:
+      'https://images.unsplash.com/photo-1580489944761-15a19d654956?w=400&h=400&fit=crop&auto=format&q=80',
     bio: 'Abogada corporativa y CPA con maestría en Gobernanza Corporativa. 12 años asesorando juntas directivas en República Dominicana y Puerto Rico.',
     specialties: [
       'Gobernanza corporativa',
