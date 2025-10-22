@@ -4,6 +4,7 @@ import { useState } from 'react'
 import { Container } from '@/components/ui/Container'
 import { Button } from '@/components/ui/Button'
 import { ChevronLeft, ChevronRight, Star, Quote } from 'lucide-react'
+import Image from 'next/image'
 
 export interface Testimonial {
   id: string
@@ -83,11 +84,16 @@ export function TestimonialsCarousel({
               {/* Client Info */}
               <div className="mt-8 flex flex-col items-center">
                 {currentTestimonial.image && (
-                  <img
-                    src={currentTestimonial.image}
-                    alt={currentTestimonial.clientName}
-                    className="h-16 w-16 rounded-full object-cover ring-4 ring-primary-100"
-                  />
+                  <div className="relative h-16 w-16 ring-4 ring-primary-100 rounded-full overflow-hidden">
+                    <Image
+                      src={currentTestimonial.image}
+                      alt={`${currentTestimonial.clientName}, ${currentTestimonial.role} at ${currentTestimonial.company}`}
+                      fill
+                      sizes="64px"
+                      className="object-cover"
+                      loading="lazy"
+                    />
+                  </div>
                 )}
                 <div className={`text-center ${currentTestimonial.image ? 'mt-4' : ''}`}>
                   <p className="font-semibold text-gray-900">{currentTestimonial.clientName}</p>

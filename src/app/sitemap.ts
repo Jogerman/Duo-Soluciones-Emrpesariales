@@ -123,6 +123,14 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
       changeFrequency: 'monthly',
       priority: 0.6,
     },
+
+    // Search page (Sprint 4)
+    {
+      url: `${SITE_URL}/search`,
+      lastModified: currentDate,
+      changeFrequency: 'weekly',
+      priority: 0.6,
+    },
   ]
 
   // ============================================================================

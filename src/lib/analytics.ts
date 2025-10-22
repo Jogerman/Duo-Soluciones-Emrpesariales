@@ -230,6 +230,106 @@ export function trackContentEngagement(
 }
 
 // ============================================================================
+// CUSTOM EVENTS - SPRINT 5 WAVE 2
+// ============================================================================
+
+/**
+ * Track newsletter signup
+ *
+ * @example
+ * ```ts
+ * trackNewsletterSignup('footer_form')
+ * trackNewsletterSignup('blog_inline')
+ * ```
+ */
+export function trackNewsletterSignup(method: string = 'footer_form'): void {
+  trackEvent('newsletter_signup', {
+    category: 'engagement',
+    label: 'Newsletter Signup',
+    method,
+  })
+}
+
+/**
+ * Track search queries
+ *
+ * @example
+ * ```ts
+ * trackSearch('desarrollo organizacional')
+ * trackSearch('ERP implementation', { results_count: 5 })
+ * ```
+ */
+export function trackSearch(searchTerm: string, params?: { results_count?: number; category?: string }): void {
+  trackEvent('search', {
+    category: 'engagement',
+    label: searchTerm,
+    search_term: searchTerm,
+    ...params,
+  })
+}
+
+/**
+ * Track social shares
+ *
+ * @example
+ * ```ts
+ * trackShare('linkedin', 'blog', 'post-slug-123')
+ * trackShare('twitter', 'podcast', 'episode-5')
+ * ```
+ */
+export function trackShare(
+  platform: 'linkedin' | 'twitter' | 'facebook' | 'whatsapp' | 'email',
+  contentType: 'blog' | 'podcast' | 'service' | 'page',
+  contentId: string
+): void {
+  trackEvent('share', {
+    category: 'engagement',
+    label: `Share on ${platform}`,
+    method: platform,
+    content_type: contentType,
+    content_id: contentId,
+  })
+}
+
+/**
+ * Track recommendation/related content clicks
+ *
+ * @example
+ * ```ts
+ * trackRecommendationClick('blog-post-123', 'blog')
+ * trackRecommendationClick('episode-5', 'podcast')
+ * ```
+ */
+export function trackRecommendationClick(
+  contentId: string,
+  contentType: 'blog' | 'podcast' | 'service'
+): void {
+  trackEvent('recommendation_click', {
+    category: 'engagement',
+    label: `Recommendation: ${contentId}`,
+    content_id: contentId,
+    content_type: contentType,
+  })
+}
+
+/**
+ * Track contact form submissions
+ *
+ * @example
+ * ```ts
+ * trackContactFormSubmit()
+ * trackContactFormSubmit({ service_interest: 'Desarrollo Organizacional' })
+ * ```
+ */
+export function trackContactFormSubmit(params?: { service_interest?: string; source?: string }): void {
+  trackEvent('contact_form_submit', {
+    category: 'lead',
+    label: 'Contact Form Submission',
+    ...params,
+  })
+}
+
+// ============================================================================
 // SCROLL TRACKING UTILITY
 // ============================================================================
 
@@ -408,6 +508,13 @@ export const analytics = {
   trackConversion,
   trackServiceInquiry,
   trackContentEngagement,
+
+  // Custom Sprint 5 events
+  trackNewsletterSignup,
+  trackSearch,
+  trackShare,
+  trackRecommendationClick,
+  trackContactFormSubmit,
 
   // Scroll tracking
   initScrollTracking,

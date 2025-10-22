@@ -5,6 +5,7 @@ import { Card, CardContent, CardHeader } from '@/components/ui/Card'
 import { Badge } from '@/components/ui/Badge'
 import { Linkedin, Mail } from 'lucide-react'
 import Link from 'next/link'
+import Image from 'next/image'
 
 export interface TeamMember {
   id: string
@@ -67,10 +68,13 @@ function TeamMemberCard({ member }: TeamMemberCardProps) {
         {/* Member Photo */}
         <div className="relative aspect-square overflow-hidden bg-gradient-to-br from-primary-100 to-primary-200">
           {member.image ? (
-            <img
+            <Image
               src={member.image}
-              alt={member.name}
-              className="h-full w-full object-cover transition-transform duration-300 group-hover:scale-105"
+              alt={`Photo of ${member.name}, ${member.role}`}
+              fill
+              sizes="(max-width: 768px) 100vw, (max-width: 1024px) 50vw, 33vw"
+              className="object-cover transition-transform duration-300 group-hover:scale-105"
+              loading="lazy"
             />
           ) : (
             <div className="flex h-full w-full items-center justify-center">

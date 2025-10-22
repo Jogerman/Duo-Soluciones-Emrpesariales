@@ -52,6 +52,16 @@ export function Navigation({ mobile = false }: NavigationProps) {
   const pathname = usePathname()
   const [openDropdown, setOpenDropdown] = React.useState<string | null>(null)
 
+  // Handle dropdown keyboard navigation
+  const handleDropdownKeyDown = (e: React.KeyboardEvent, title: string) => {
+    if (e.key === 'Enter' || e.key === ' ') {
+      e.preventDefault()
+      setOpenDropdown(openDropdown === title ? null : title)
+    } else if (e.key === 'Escape') {
+      setOpenDropdown(null)
+    }
+  }
+
   if (mobile) {
     return (
       <nav className="flex flex-col space-y-4">
@@ -111,11 +121,22 @@ export function Navigation({ mobile = false }: NavigationProps) {
         <div key={item.title} className="relative group">
           {item.children ? (
             <>
-              <button className="flex items-center gap-1 text-sm font-medium text-neutral-900 hover:text-primary-600">
+              <button
+                className="flex items-center gap-1 text-sm font-medium text-neutral-900 hover:text-primary-600"
+                onClick={() => setOpenDropdown(openDropdown === item.title ? null : item.title)}
+                onKeyDown={(e) => handleDropdownKeyDown(e, item.title)}
+                aria-expanded={openDropdown === item.title}
+                aria-haspopup="true"
+              >
                 {item.title}
-                <ChevronDown className="h-4 w-4" />
+                <ChevronDown className="h-4 w-4" aria-hidden="true" />
               </button>
-              <div className="absolute left-0 top-full mt-2 w-64 rounded-lg border border-neutral-200 bg-white shadow-lg opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all">
+              <div
+                className={cn(
+                  "absolute left-0 top-full mt-2 w-64 rounded-lg border border-neutral-200 bg-white shadow-lg transition-all",
+                  openDropdown === item.title ? "opacity-100 visible" : "opacity-0 invisible group-hover:opacity-100 group-hover:visible"
+                )}
+              >
                 <div className="p-2">
                   {item.children.map(child => (
                     <Link

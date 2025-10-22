@@ -1,6 +1,12 @@
-# Railway Deployment Checklist
+# Production Deployment Checklist
 
-Quick reference checklist for deploying DUO Soluciones Empresariales to Railway.
+**DUO Soluciones Empresariales - Vercel Deployment**
+
+Quick reference checklist for deploying to production on Vercel.
+
+**Version:** 1.0.0
+**Last Updated:** October 2025
+**Sprint:** Sprint 5 - Wave 2
 
 ## Pre-Deployment Setup
 
@@ -23,10 +29,9 @@ Quick reference checklist for deploying DUO Soluciones Empresariales to Railway.
 ### 3. Configuration Files
 
 - [ ] `next.config.ts` has `output: 'standalone'`
-- [ ] `railway.toml` exists and configured
-- [ ] `.railwayignore` created
-- [ ] `railway.env.example` reviewed
+- [ ] `.env.production.example` reviewed and up to date
 - [ ] `.env.local` NOT committed (verify `.gitignore`)
+- [ ] All documentation reviewed and updated
 
 ### 4. External Services Setup
 
@@ -54,22 +59,23 @@ Quick reference checklist for deploying DUO Soluciones Empresariales to Railway.
 
 ---
 
-## Railway Setup
+## Vercel Setup
 
 ### 1. Account & Project
 
-- [ ] Railway account created/logged in
-- [ ] GitHub account connected to Railway
-- [ ] New project created in Railway
-- [ ] Repository connected to Railway project
-- [ ] Service created (auto-detected as Next.js)
+- [ ] Vercel account created/logged in
+- [ ] GitHub account connected to Vercel
+- [ ] New project created in Vercel
+- [ ] Repository imported to Vercel project
+- [ ] Framework preset detected (Next.js)
 
 ### 2. Build Configuration
 
 - [ ] Build command verified: `npm run build`
-- [ ] Start command verified: `npm run start`
-- [ ] Node version: 20.x or higher (auto-detected)
-- [ ] Root directory correct (default: `/`)
+- [ ] Output directory: `.next` (auto-detected)
+- [ ] Install command: `npm install`
+- [ ] Node version: 20.x (recommended)
+- [ ] Root directory correct (default: `./`)
 
 ### 3. Environment Variables
 

@@ -2,11 +2,12 @@ import { Metadata } from 'next'
 import { notFound } from 'next/navigation'
 import { Container } from '@/components/ui/Container'
 import { BlogPostHero } from '@/components/marketing/blog/BlogPostHero'
-import { BlogPostContent } from '@/components/marketing/blog/BlogPostContent'
 import { BlogPostMeta } from '@/components/marketing/blog/BlogPostMeta'
 import { RelatedPosts } from '@/components/marketing/blog/RelatedPosts'
+import { ShareButtonsSection, ShareButtonsSticky } from '@/components/marketing/social'
 import { blogPosts, getBlogPostBySlug } from '@/lib/mock-data/blog-posts'
 import { getRelatedPosts } from '@/lib/utils/blog'
+import { BlogPostContentWrapper } from '@/components/marketing/blog/BlogPostContentWrapper'
 
 export const dynamic = 'force-dynamic'
 
@@ -90,13 +91,41 @@ export default async function BlogPostPage({ params }: BlogPostPageProps) {
       {/* Hero Section */}
       <BlogPostHero post={post} />
 
+      {/* Sticky Share Buttons (Desktop) */}
+      <ShareButtonsSticky
+        content={{
+          id: post.id,
+          type: 'blog',
+          title: post.title,
+          excerpt: post.excerpt,
+          category: post.category.name,
+          tags: post.tags.map(tag => tag.name),
+        }}
+      />
+
       {/* Main Content */}
       <article className="py-16">
         <Container>
           <div className="grid grid-cols-1 lg:grid-cols-12 gap-12">
             {/* Article Content */}
             <div className="lg:col-span-8">
-              <BlogPostContent content={post.content} />
+              <BlogPostContentWrapper content={post.content} />
+
+              {/* Share Buttons Section (After Content) */}
+              <div className="mt-12">
+                <ShareButtonsSection
+                  content={{
+                    id: post.id,
+                    type: 'blog',
+                    title: post.title,
+                    excerpt: post.excerpt,
+                    category: post.category.name,
+                    tags: post.tags.map(tag => tag.name),
+                  }}
+                  title="¿Te gustó este artículo?"
+                  subtitle="Compártelo con tu equipo y colegas"
+                />
+              </div>
             </div>
 
             {/* Sidebar */}

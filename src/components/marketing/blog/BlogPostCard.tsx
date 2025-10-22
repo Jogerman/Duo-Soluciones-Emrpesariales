@@ -32,7 +32,7 @@ export function BlogPostCard({ post, featured = false }: BlogPostCardProps) {
         >
           <Image
             src={post.coverImage}
-            alt={post.title}
+            alt=""
             fill
             className="object-cover transition-transform duration-300 group-hover:scale-105"
             sizes={
@@ -88,7 +88,7 @@ export function BlogPostCard({ post, featured = false }: BlogPostCardProps) {
                 <div className="relative w-8 h-8 rounded-full overflow-hidden bg-neutral-200">
                   <Image
                     src={post.author.avatar}
-                    alt={post.author.name}
+                    alt=""
                     fill
                     className="object-cover"
                     sizes="32px"
@@ -97,11 +97,11 @@ export function BlogPostCard({ post, featured = false }: BlogPostCardProps) {
                 <div className="flex flex-col">
                   <span className="text-sm font-medium text-neutral-900">{post.author.name}</span>
                   <div className="flex items-center gap-2 text-xs text-neutral-500">
-                    <span>{formatDateShort(post.publishedAt)}</span>
-                    <span>"</span>
+                    <time dateTime={post.publishedAt}>{formatDateShort(post.publishedAt)}</time>
+                    <span aria-hidden="true">•</span>
                     <div className="flex items-center gap-1">
-                      <Clock className="w-3 h-3" />
-                      <span>{post.readingTime} min</span>
+                      <Clock className="w-3 h-3" aria-hidden="true" />
+                      <span>{post.readingTime} min de lectura</span>
                     </div>
                   </div>
                 </div>
@@ -113,9 +113,10 @@ export function BlogPostCard({ post, featured = false }: BlogPostCardProps) {
               variant="ghost"
               size="sm"
               className="group-hover:text-primary-600 group-hover:translate-x-1 transition-transform"
+              aria-label={`Leer artículo: ${post.title}`}
             >
-              <span className="sr-only">Leer más</span>
-              <ArrowRight className="w-4 h-4" />
+              <span className="sr-only">Leer artículo completo</span>
+              <ArrowRight className="w-4 h-4" aria-hidden="true" />
             </Button>
           </div>
         </div>

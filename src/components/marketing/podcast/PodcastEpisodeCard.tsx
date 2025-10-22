@@ -36,13 +36,13 @@ export function PodcastEpisodeCard({ episode, featured = false }: PodcastEpisode
         <div className="relative aspect-square overflow-hidden bg-neutral-100">
           <Image
             src={episode.coverImage}
-            alt={episode.title}
+            alt=""
             fill
             className="object-cover transition-transform duration-300 group-hover:scale-105"
           />
 
           {/* Play Button Overlay */}
-          <div className="absolute inset-0 flex items-center justify-center bg-black/0 transition-all duration-300 group-hover:bg-black/40">
+          <div className="absolute inset-0 flex items-center justify-center bg-black/0 transition-all duration-300 group-hover:bg-black/40" aria-hidden="true">
             <div className="translate-y-4 opacity-0 transition-all duration-300 group-hover:translate-y-0 group-hover:opacity-100">
               <div className="flex h-16 w-16 items-center justify-center rounded-full bg-[#1DB954] shadow-lg transition-transform hover:scale-110">
                 <Play className="h-8 w-8 fill-white text-white" />
@@ -95,20 +95,20 @@ export function PodcastEpisodeCard({ episode, featured = false }: PodcastEpisode
           <div className="mb-4 flex flex-wrap items-center gap-3 text-xs text-neutral-500">
             {/* Duration */}
             <div className="flex items-center gap-1">
-              <Clock className="h-4 w-4" />
+              <Clock className="h-4 w-4" aria-hidden="true" />
               <span>{formatDuration(episode.duration)}</span>
             </div>
 
             {/* Date */}
             <div className="flex items-center gap-1">
-              <Calendar className="h-4 w-4" />
-              <span>{formatPodcastDate(episode.publishedAt)}</span>
+              <Calendar className="h-4 w-4" aria-hidden="true" />
+              <time dateTime={episode.publishedAt}>{formatPodcastDate(episode.publishedAt)}</time>
             </div>
 
             {/* Guests Count */}
             {episode.guests && episode.guests.length > 0 && (
               <div className="flex items-center gap-1">
-                <Users className="h-4 w-4" />
+                <Users className="h-4 w-4" aria-hidden="true" />
                 <span>
                   {episode.guests.length} invitado{episode.guests.length > 1 ? 's' : ''}
                 </span>
@@ -119,18 +119,20 @@ export function PodcastEpisodeCard({ episode, featured = false }: PodcastEpisode
           {/* Guest Avatars */}
           {displayGuests.length > 0 && (
             <div className="mb-4 flex items-center gap-2">
-              <div className="flex -space-x-2">
+              <div className="flex -space-x-2" role="list" aria-label="Invitados del episodio">
                 {displayGuests.map(guest => (
                   <div
                     key={guest.id}
+                    role="listitem"
                     className="relative h-8 w-8 overflow-hidden rounded-full border-2 border-white bg-neutral-200"
+                    title={guest.name}
                   >
                     <Image src={guest.avatar} alt={guest.name} fill className="object-cover" />
                   </div>
                 ))}
               </div>
               {remainingGuests > 0 && (
-                <span className="text-xs text-neutral-500">+{remainingGuests} más</span>
+                <span className="text-xs text-neutral-500" aria-label={`${remainingGuests} invitado${remainingGuests > 1 ? 's' : ''} adicional${remainingGuests > 1 ? 'es' : ''}`}>+{remainingGuests} más</span>
               )}
             </div>
           )}
@@ -140,8 +142,9 @@ export function PodcastEpisodeCard({ episode, featured = false }: PodcastEpisode
             variant="outline"
             size="sm"
             className="w-full group-hover:border-[#1DB954] group-hover:text-[#1DB954]"
+            aria-label={`Escuchar episodio: ${episode.title}`}
           >
-            <Play className="h-4 w-4" />
+            <Play className="h-4 w-4" aria-hidden="true" />
             Escuchar episodio
           </Button>
         </div>

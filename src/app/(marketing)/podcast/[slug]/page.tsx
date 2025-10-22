@@ -15,6 +15,7 @@ import {
   PodcastGuests,
   PodcastEpisodeCard,
 } from '@/components/marketing/podcast'
+import { ShareButtonsSection, ShareButtonsSticky } from '@/components/marketing/social'
 import {
   getAllPodcastEpisodes,
   getPodcastEpisodeBySlug,
@@ -94,6 +95,18 @@ export default function PodcastEpisodePage({ params }: PodcastEpisodePageProps) 
 
   return (
     <div className="min-h-screen bg-neutral-50">
+      {/* Sticky Share Buttons (Desktop) */}
+      <ShareButtonsSticky
+        content={{
+          id: episode.id,
+          type: 'podcast',
+          title: episode.title,
+          excerpt: episode.description,
+          category: episode.category.name,
+          tags: episode.tags.map(tag => tag.name),
+        }}
+      />
+
       {/* Hero Section */}
       <section className="border-b border-neutral-200 bg-white py-12 md:py-16">
         <Container>
@@ -193,34 +206,11 @@ export default function PodcastEpisodePage({ params }: PodcastEpisodePageProps) 
 
             <PodcastPlayer spotifyUrl={episode.spotifyUrl} title={episode.title} />
 
-            <div className="mt-8 grid gap-6 md:grid-cols-2">
+            <div className="mt-8">
               <PodcastSubscribe
                 spotifyUrl={episode.spotifyUrl}
                 applePodcastsUrl={episode.applePodcastsUrl}
               />
-
-              <div className="rounded-xl bg-white/10 p-6 backdrop-blur-sm">
-                <h3 className="mb-2 font-semibold text-white">¿Te gustó este episodio?</h3>
-                <p className="mb-4 text-sm text-neutral-300">
-                  Comparte con tu equipo y déjanos una reseña en tu plataforma favorita
-                </p>
-                <Button
-                  variant="outline"
-                  size="sm"
-                  className="w-full border-white text-white hover:bg-white hover:text-neutral-900"
-                  onClick={() => {
-                    if (navigator.share) {
-                      navigator.share({
-                        title: episode.title,
-                        text: episode.description,
-                        url: window.location.href,
-                      })
-                    }
-                  }}
-                >
-                  Compartir episodio
-                </Button>
-              </div>
             </div>
           </div>
         </Container>
@@ -289,6 +279,20 @@ export default function PodcastEpisodePage({ params }: PodcastEpisodePageProps) 
                   <PodcastResources resources={episode.resources} />
                 </div>
               )}
+
+              {/* Share Buttons Section (After Content) */}
+              <ShareButtonsSection
+                content={{
+                  id: episode.id,
+                  type: 'podcast',
+                  title: episode.title,
+                  excerpt: episode.description,
+                  category: episode.category.name,
+                  tags: episode.tags.map(tag => tag.name),
+                }}
+                title="¿Te gustó este episodio?"
+                subtitle="Compártelo con tu equipo y déjanos una reseña en tu plataforma favorita"
+              />
             </div>
 
             {/* Right Column - Sidebar (4 cols) */}

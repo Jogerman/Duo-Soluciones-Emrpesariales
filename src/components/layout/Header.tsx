@@ -7,6 +7,7 @@ import { Menu, X } from 'lucide-react'
 import { Container } from '@/components/ui/Container'
 import { Button } from '@/components/ui/Button'
 import { Navigation } from './Navigation'
+import { GlobalSearch } from '@/components/marketing/search/GlobalSearch'
 
 /**
  * Header component - Main navigation header
@@ -18,7 +19,7 @@ export function Header() {
   return (
     <header className="sticky top-0 z-50 w-full border-b border-neutral-200 bg-white/95 backdrop-blur supports-[backdrop-filter]:bg-white/60">
       <Container>
-        <div className="flex h-16 items-center justify-between">
+        <div className="flex h-16 items-center justify-between gap-4">
           {/* Logo */}
           <Link href="/" className="flex items-center gap-3">
             <Image
@@ -29,13 +30,18 @@ export function Header() {
               className="h-10 w-10"
               priority
             />
-            <span className="hidden text-lg font-semibold text-neutral-900 sm:inline-block">
+            <span className="hidden text-lg font-semibold text-neutral-900 lg:inline-block">
               Duo Soluciones Empresariales
             </span>
           </Link>
 
+          {/* Desktop Search */}
+          <div className="hidden flex-1 max-w-md md:block">
+            <GlobalSearch />
+          </div>
+
           {/* Desktop Navigation */}
-          <div className="hidden md:flex md:items-center md:gap-8">
+          <div className="hidden md:flex md:items-center md:gap-6">
             <Navigation />
             <Button asChild size="md">
               <Link href="/contacto">Contáctanos</Link>
@@ -47,8 +53,11 @@ export function Header() {
             type="button"
             className="inline-flex items-center justify-center rounded-md p-2 text-neutral-700 hover:bg-neutral-100 md:hidden"
             onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
+            aria-expanded={mobileMenuOpen}
+            aria-controls="mobile-menu"
+            aria-label={mobileMenuOpen ? 'Cerrar menú' : 'Abrir menú'}
           >
-            <span className="sr-only">Abrir menú</span>
+            <span className="sr-only">{mobileMenuOpen ? 'Cerrar' : 'Abrir'} menú</span>
             {mobileMenuOpen ? (
               <X className="h-6 w-6" aria-hidden="true" />
             ) : (
@@ -59,8 +68,12 @@ export function Header() {
 
         {/* Mobile menu */}
         {mobileMenuOpen && (
-          <div className="border-t border-neutral-200 py-4 md:hidden">
+          <div id="mobile-menu" className="border-t border-neutral-200 py-4 md:hidden">
             <div className="flex flex-col space-y-4">
+              {/* Mobile Search */}
+              <div className="px-2">
+                <GlobalSearch />
+              </div>
               <Navigation mobile />
               <Button asChild size="md" className="w-full">
                 <Link href="/contacto">Contáctanos</Link>
