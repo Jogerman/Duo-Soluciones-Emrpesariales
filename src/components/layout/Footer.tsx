@@ -1,5 +1,6 @@
 import * as React from 'react'
 import Link from 'next/link'
+import Image from 'next/image'
 import { Mail, Phone, MapPin, Linkedin, Facebook, Instagram } from 'lucide-react'
 import { Container } from '@/components/ui/Container'
 
@@ -127,8 +128,14 @@ export function Footer() {
           <div className="flex flex-col items-center justify-between gap-4 text-sm text-neutral-600 md:flex-row">
             <p>&copy; {currentYear} DUO Soluciones Empresariales. Todos los derechos reservados.</p>
             <div className="flex items-center gap-2">
-              <div className="h-8 w-8 rounded-md bg-gradient-to-br from-primary-600 to-secondary-700 flex items-center justify-center">
-                <span className="text-xs font-bold text-white">DUO</span>
+              <div className="relative h-8 w-8">
+                <Image
+                  src="/logo-icon.png"
+                  alt="DUO Logo"
+                  fill
+                  className="object-contain"
+                  sizes="32px"
+                />
               </div>
               <span className="text-xs text-neutral-500">
                 Transformamos desafíos en oportunidades
