@@ -185,6 +185,15 @@ const testimonials: Testimonial[] = [
 ]
 
 export default function HomePage() {
+  // Hero carousel images
+  const heroImages = [
+    '/images/hero/background-1.jpg',
+    '/images/hero/background-2.jpg',
+    '/images/hero/background-3.jpg',
+    '/images/hero/background-4.png',
+    '/images/hero/background-5.jpg',
+  ]
+
   return (
     <main className="min-h-screen">
       {/* Hero Section */}
@@ -192,6 +201,8 @@ export default function HomePage() {
         title="Transformamos Desafíos en Oportunidades Sostenibles"
         subtitle=""
         variant="photo-focus"
+        heroImages={heroImages}
+        carouselInterval={5000}
         primaryCTA={{
           text: 'Conocer Más',
           href: '/services',

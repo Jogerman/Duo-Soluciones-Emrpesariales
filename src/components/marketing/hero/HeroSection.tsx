@@ -5,6 +5,7 @@ import { Container } from '@/components/ui/Container'
 import { ArrowRight, Calendar } from 'lucide-react'
 import Link from 'next/link'
 import Image from 'next/image'
+import { HeroCarousel } from './HeroCarousel'
 
 interface HeroSectionProps {
   title: string
@@ -19,6 +20,8 @@ interface HeroSectionProps {
     href: string
   }
   variant?: 'gradient' | 'solid' | 'minimal' | 'photo-focus'
+  heroImages?: string[]
+  carouselInterval?: number
 }
 
 export function HeroSection({
@@ -28,6 +31,8 @@ export function HeroSection({
   primaryCTA = { text: 'Agenda una Consulta', href: '/contact' },
   secondaryCTA = { text: 'Conoce Nuestros Servicios', href: '/services' },
   variant = 'gradient',
+  heroImages,
+  carouselInterval = 5000,
 }: HeroSectionProps) {
   const gradientClasses = {
     gradient: 'bg-gradient-to-br from-primary-600 via-primary-700 to-primary-900',
@@ -44,34 +49,44 @@ export function HeroSection({
   }
 
   return (
-    <section className={`relative overflow-hidden ${gradientClasses[variant]} ${variant === 'photo-focus' ? 'min-h-[80vh] lg:min-h-[90vh]' : 'py-20 lg:py-32'}`}>
-      {/* Background Image - only for gradient/solid/photo-focus variants */}
+    <section
+      className={`relative overflow-hidden ${gradientClasses[variant]} ${variant === 'photo-focus' ? 'min-h-[80vh] lg:min-h-[90vh]' : 'py-20 lg:py-32'}`}
+    >
+      {/* Background Image or Carousel - only for gradient/solid/photo-focus variants */}
       {variant !== 'minimal' && (
         <>
-          <div className="absolute inset-0">
-            <Image
-              src="/hero-background.jpg"
-              alt="DUO Soluciones Background"
-              fill
-              priority
-              className="object-cover object-center"
-              quality={85}
-            />
-            {/* Overlay - different for photo-focus variant */}
-            {variant === 'photo-focus' ? (
-              // Subtle gradient only at bottom for text readability
-              <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-black/10 to-transparent" />
-            ) : (
-              // Original heavy blue overlay for gradient/solid variants
-              <div className="absolute inset-0 bg-gradient-to-br from-primary-900/85 via-primary-800/80 to-secondary-900/85" />
-            )}
-          </div>
+          {heroImages && heroImages.length > 0 ? (
+            <HeroCarousel images={heroImages} interval={carouselInterval} variant={variant} />
+          ) : (
+            <div className="absolute inset-0">
+              <Image
+                src="/hero-background.jpg"
+                alt="DUO Soluciones Background"
+                fill
+                priority
+                className="object-cover object-center"
+                quality={85}
+              />
+              {/* Overlay - different for photo-focus variant */}
+              {variant === 'photo-focus' ? (
+                // Subtle gradient only at bottom for text readability
+                <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-black/10 to-transparent" />
+              ) : (
+                // Original heavy blue overlay for gradient/solid variants
+                <div className="absolute inset-0 bg-gradient-to-br from-primary-900/85 via-primary-800/80 to-secondary-900/85" />
+              )}
+            </div>
+          )}
         </>
       )}
 
       {/* Content */}
-      <Container className={`relative z-10 ${variant === 'photo-focus' ? 'flex h-full min-h-[80vh] lg:min-h-[90vh] items-end pb-12 lg:pb-16' : ''}`}>
-        <div className={`mx-auto ${variant === 'photo-focus' ? 'max-w-3xl text-center' : 'max-w-4xl text-center'}`}>
+      <Container
+        className={`relative z-10 ${variant === 'photo-focus' ? 'flex h-full min-h-[80vh] lg:min-h-[90vh] items-end pb-12 lg:pb-16' : ''}`}
+      >
+        <div
+          className={`mx-auto ${variant === 'photo-focus' ? 'max-w-3xl text-center' : 'max-w-4xl text-center'}`}
+        >
           {/* Photo-focus variant: Minimal content */}
           {variant === 'photo-focus' ? (
             <>
@@ -83,7 +98,12 @@ export function HeroSection({
               {/* Subtle CTA at bottom - optional */}
               {primaryCTA && (
                 <div className="mt-8">
-                  <Button asChild size="lg" variant="primary" className="backdrop-blur-sm shadow-xl">
+                  <Button
+                    asChild
+                    size="lg"
+                    variant="primary"
+                    className="backdrop-blur-sm shadow-xl"
+                  >
                     <Link href={primaryCTA.href} className="group">
                       {primaryCTA.text}
                       <ArrowRight className="ml-2 h-5 w-5 transition-transform group-hover:translate-x-1" />
