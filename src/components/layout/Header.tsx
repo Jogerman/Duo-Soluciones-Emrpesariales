@@ -21,18 +21,15 @@ export function Header() {
       <Container>
         <div className="flex h-16 items-center justify-between gap-4">
           {/* Logo */}
-          <Link href="/" className="flex items-center gap-3">
+          <Link href="/" className="flex items-center">
             <Image
-              src="/logo-icon.png"
-              alt="DUO Logo"
-              width={40}
-              height={40}
-              className="h-10 w-10"
+              src="/logo-duo-soluciones.png"
+              alt="DUO Soluciones Empresariales"
+              width={200}
+              height={50}
+              className="h-10 w-auto"
               priority
             />
-            <span className="hidden text-lg font-semibold text-neutral-900 lg:inline-block">
-              Duo Soluciones Empresariales
-            </span>
           </Link>
 
           {/* Desktop Search */}

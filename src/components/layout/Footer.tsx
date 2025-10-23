@@ -128,18 +128,15 @@ export function Footer() {
           <div className="flex flex-col items-center justify-between gap-4 text-sm text-neutral-600 md:flex-row">
             <p>&copy; {currentYear} DUO Soluciones Empresariales. Todos los derechos reservados.</p>
             <div className="flex items-center gap-2">
-              <div className="relative h-8 w-8">
+              <div className="relative h-8 w-32">
                 <Image
-                  src="/logo-icon.png"
-                  alt="DUO Logo"
+                  src="/logo-duo-soluciones.png"
+                  alt="DUO Soluciones Empresariales"
                   fill
                   className="object-contain"
-                  sizes="32px"
+                  sizes="128px"
                 />
               </div>
-              <span className="text-xs text-neutral-500">
-                Transformamos desafíos en oportunidades
-              </span>
             </div>
           </div>
         </div>
