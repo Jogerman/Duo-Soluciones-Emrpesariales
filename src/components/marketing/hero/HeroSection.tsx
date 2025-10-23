@@ -82,7 +82,7 @@ export function HeroSection({
 
       {/* Content */}
       <Container
-        className={`relative z-10 ${variant === 'photo-focus' ? 'flex h-full min-h-[80vh] lg:min-h-[90vh] items-end pb-12 lg:pb-16' : ''}`}
+        className={`relative z-20 ${variant === 'photo-focus' ? 'flex h-full min-h-[80vh] lg:min-h-[90vh] items-end pb-12 lg:pb-16' : ''}`}
       >
         <div
           className={`mx-auto ${variant === 'photo-focus' ? 'max-w-3xl text-center' : 'max-w-4xl text-center'}`}
