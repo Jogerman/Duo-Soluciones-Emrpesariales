@@ -242,46 +242,32 @@ export const testimonials: Testimonial[] = [
   {
     id: '1',
     quote:
-      'DUO Soluciones transformó nuestra operación bancaria. La implementación de Dynamics 365 superó nuestras expectativas, reduciendo tiempos de proceso en 40% y mejorando significativamente la experiencia de nuestros clientes.',
-    author: 'Lic. María Rodríguez',
-    role: 'Vicepresidenta de Operaciones',
-    company: 'Banco Popular Dominicano',
-    companyLogo: '/clients/banco-popular.svg',
+      'En el caso particular de DUO en Ochoa Hermanos, vivimos una experiencia de mucho profesionalismo, donde todos nuestros procedimientos fueron mejorados y documentados y realmente las líneas de autoridad fueron clarificadas, los diferentes estamentos jerárquicos fueron claramente definidos y realmente deficiencias o carencias que la empresa arrastraba de décadas, en cuestión de meses fueron corregidas, la experiencia nos permitió actualizar nuestra empresa al siglo XXI.',
+    author: 'Julián Ochoa',
+    role: 'Presidente',
+    company: 'Ochoa Hermanos',
     rating: 5,
     featured: true,
   },
   {
     id: '2',
     quote:
-      'El equipo de DUO nos ayudó a implementar Lean Six Sigma en nuestra planta. En 6 meses redujimos desperdicios en 35% y aumentamos productividad en 28%. Su conocimiento y profesionalismo son excepcionales.',
-    author: 'Ing. Carlos Mejía',
-    role: 'Director de Operaciones',
-    company: 'Cervecería Nacional Dominicana',
-    companyLogo: '/clients/cerveceria-nacional.svg',
+      'El apoyo brindado por DUO Soluciones Empresariales, ha sido fundamental para que nuestra institución adopte y consolide buenas prácticas en gobierno corporativo. Gracias a su acompañamiento experto, hemos logrado además, fortalecer nuestros procesos internos, diseñar una estructura organizacional adecuada y fomentar una cultura de responsabilidad y ética en todos los niveles.',
+    author: 'Dra. Natalia García',
+    role: 'Neumóloga - Consejo de Administración',
+    company: 'Unión Médica del Norte',
     rating: 5,
     featured: true,
   },
   {
     id: '3',
     quote:
-      'La transformación digital que logramos con DUO ha sido impresionante. Sus dashboards en Power BI nos dan visibilidad en tiempo real de todo el negocio. Ahora tomamos decisiones basadas en datos, no en intuición.',
-    author: 'Dr. Roberto Santana',
-    role: 'Director General',
-    company: 'Centro Médico Dominicano',
-    companyLogo: '/clients/centro-medico.svg',
+      'La asesoría de DUO, bajo la dirección del Lic. Miguel Rodríguez Viña, representó un proceso transformador para HEMA, fortaleciendo su estructura de gobernanza y definiendo con claridad meridiana la relación entre dirección médica, dirección general y el Consejo de Administración. Gracias a su acompañamiento, el hospital consolidó una cultura institucional basada en ética, transparencia y participación, articulando la excelencia médica con una visión empresarial sostenible.',
+    author: 'Dr. Guillermo Angeles Fernández',
+    role: 'Pediatra y Alergólogo - Consejo de Administración',
+    company: 'HEMA - Hospital de Especialización Médica Avanzada',
     rating: 5,
     featured: true,
-  },
-  {
-    id: '4',
-    quote:
-      'Excelente trabajo en gobernanza corporativa. DUO nos ayudó a estructurar nuestra junta directiva y establecer procesos de compliance que cumplen con regulaciones internacionales. Altamente recomendados.',
-    author: 'Dra. Ana López',
-    role: 'CEO',
-    company: 'Seguros Banreservas',
-    companyLogo: '/clients/seguros-banreservas.svg',
-    rating: 5,
-    featured: false,
   },
 ]
 

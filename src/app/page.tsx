@@ -158,28 +158,28 @@ const testimonials: Testimonial[] = [
   {
     id: '1',
     content:
-      'DUO Soluciones transformó completamente nuestra operación. Su enfoque estratégico y metodología probada nos permitió reducir costos en 30% mientras mejorábamos la satisfacción del cliente. Un verdadero socio de confianza.',
-    clientName: 'María Fernández',
-    role: 'CEO',
-    company: 'Grupo Empresarial del Caribe',
+      'En el caso particular de DUO en Ochoa Hermanos, vivimos una experiencia de mucho profesionalismo, donde todos nuestros procedimientos fueron mejorados y documentados y realmente las líneas de autoridad fueron clarificadas, los diferentes estamentos jerárquicos fueron claramente definidos y realmente deficiencias o carencias que la empresa arrastraba de décadas, en cuestión de meses fueron corregidas, la experiencia nos permitió actualizar nuestra empresa al siglo XXI.',
+    clientName: 'Julián Ochoa',
+    role: 'Presidente',
+    company: 'Ochoa Hermanos',
     rating: 5,
   },
   {
     id: '2',
     content:
-      'La implementación de MS Dynamics 365 con DUO fue impecable. Cumplieron cada milestone a tiempo y dentro del presupuesto. Ahora tenemos visibilidad real-time de toda nuestra operación. Altamente recomendados.',
-    clientName: 'Roberto Martínez',
-    role: 'Director de Operaciones',
-    company: 'Industrias Manufactureras RD',
+      'El apoyo brindado por DUO Soluciones Empresariales, ha sido fundamental para que nuestra institución adopte y consolide buenas prácticas en gobierno corporativo. Gracias a su acompañamiento experto, hemos logrado además, fortalecer nuestros procesos internos, diseñar una estructura organizacional adecuada y fomentar una cultura de responsabilidad y ética en todos los niveles.',
+    clientName: 'Dra. Natalia García',
+    role: 'Neumóloga - Consejo de Administración',
+    company: 'Unión Médica del Norte',
     rating: 5,
   },
   {
     id: '3',
     content:
-      'Su expertise en gobernanza corporativa nos ayudó a establecer controles robustos y cumplir con regulaciones internacionales. El equipo de DUO es profesional, conocedor y siempre disponible. Excelente inversión.',
-    clientName: 'Ana Rodríguez',
-    role: 'CFO',
-    company: 'Servicios Financieros Premium',
+      'La asesoría de DUO, bajo la dirección del Lic. Miguel Rodríguez Viña, representó un proceso transformador para HEMA, fortaleciendo su estructura de gobernanza y definiendo con claridad meridiana la relación entre dirección médica, dirección general y el Consejo de Administración. Gracias a su acompañamiento, el hospital consolidó una cultura institucional basada en ética, transparencia y participación, articulando la excelencia médica con una visión empresarial sostenible.',
+    clientName: 'Dr. Guillermo Angeles Fernández',
+    role: 'Pediatra y Alergólogo - Consejo de Administración',
+    company: 'HEMA - Hospital de Especialización Médica Avanzada',
     rating: 5,
   },
 ]
