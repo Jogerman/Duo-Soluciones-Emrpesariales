@@ -80,20 +80,20 @@ export function Footer() {
               </li>
               <li className="flex items-start gap-2 text-sm text-neutral-600">
                 <Phone className="mt-0.5 h-4 w-4 flex-shrink-0" />
-                <a href="tel:+18095551234" className="hover:text-primary-600">
-                  +1 (809) 555-1234
+                <a href="tel:+18298835383" className="hover:text-primary-600">
+                  829-883-5383
                 </a>
               </li>
               <li className="flex items-start gap-2 text-sm text-neutral-600">
                 <MapPin className="mt-0.5 h-4 w-4 flex-shrink-0" />
-                <span>Santo Domingo, República Dominicana</span>
+                <span>Santiago / Santo Domingo, RD</span>
               </li>
             </ul>
 
             {/* Social media */}
             <div className="mt-6 flex gap-4">
               <a
-                href="https://linkedin.com"
+                href="https://www.linkedin.com/company/duo-soluciones-empresariales/"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="text-neutral-600 hover:text-primary-600"

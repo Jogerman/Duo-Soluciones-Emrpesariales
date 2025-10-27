@@ -52,20 +52,20 @@ const contactInfo = [
   {
     icon: Phone,
     label: 'Teléfono',
-    value: '+1 (809) 555-0100',
-    href: 'tel:+18095550100',
+    value: '829-883-5383 / 829-826-0899',
+    href: 'tel:+18298835383',
   },
   {
     icon: Mail,
     label: 'Email',
-    value: 'info@duo-soluciones.com',
-    href: 'mailto:info@duo-soluciones.com',
+    value: 'info@duosoluciones.com.do',
+    href: 'mailto:info@duosoluciones.com.do',
   },
   {
     icon: MessageCircle,
     label: 'WhatsApp',
-    value: '+1 (809) 555-0100',
-    href: 'https://wa.me/18095550100?text=Hola,%20me%20gustaría%20obtener%20más%20información%20sobre%20los%20servicios%20de%20DUO%20Soluciones.%20¿Podrían%20ayudarme?',
+    value: '829-883-5383',
+    href: 'https://wa.me/18298835383?text=Hola,%20me%20gustaría%20obtener%20más%20información%20sobre%20los%20servicios%20de%20DUO%20Soluciones.%20¿Podrían%20ayudarme?',
   },
 ]
 
@@ -79,7 +79,7 @@ const socialLinks = [
   {
     name: 'LinkedIn',
     icon: Linkedin,
-    href: 'https://linkedin.com/company/duo-soluciones',
+    href: 'https://www.linkedin.com/company/duo-soluciones-empresariales/',
     color: 'hover:text-blue-700',
   },
   {
@@ -171,13 +171,13 @@ export default function ContactPage() {
                         </div>
                       </div>
                       <div>
-                        <p className="text-sm font-medium text-gray-500 mb-1">Oficina</p>
+                        <p className="text-sm font-medium text-gray-500 mb-1">Oficinas</p>
                         <p className="text-sm text-gray-900 leading-relaxed">
-                          Torre Empresarial, Piso 12
+                          Santiago de los Caballeros
                           <br />
-                          Av. Winston Churchill #1099
+                          Santo Domingo
                           <br />
-                          Santo Domingo, República Dominicana
+                          República Dominicana
                         </p>
                       </div>
                     </div>
@@ -221,7 +221,7 @@ export default function ContactPage() {
                   </p>
                   <Button asChild className="w-full bg-green-600 hover:bg-green-700">
                     <a
-                      href="https://wa.me/18095550100?text=Hola,%20me%20gustaría%20obtener%20más%20información%20sobre%20los%20servicios%20de%20DUO%20Soluciones.%20¿Podrían%20ayudarme?"
+                      href="https://wa.me/18298835383?text=Hola,%20me%20gustaría%20obtener%20más%20información%20sobre%20los%20servicios%20de%20DUO%20Soluciones.%20¿Podrían%20ayudarme?"
                       target="_blank"
                       rel="noopener noreferrer"
                     >
@@ -273,15 +273,17 @@ export default function ContactPage() {
                 <div className="aspect-video bg-gradient-to-br from-primary-100 to-primary-200 flex items-center justify-center">
                   <div className="text-center">
                     <MapPin className="mx-auto h-16 w-16 text-primary-600 mb-4" />
-                    <h3 className="text-xl font-bold text-gray-900 mb-2">Nuestra Ubicación</h3>
+                    <h3 className="text-xl font-bold text-gray-900 mb-2">Nuestras Ubicaciones</h3>
                     <p className="text-gray-600">
-                      Torre Empresarial, Piso 12
+                      Santiago de los Caballeros
                       <br />
-                      Av. Winston Churchill #1099, Santo Domingo
+                      Santo Domingo
+                      <br />
+                      República Dominicana
                     </p>
                     <Button asChild variant="outline" className="mt-4">
                       <a
-                        href="https://maps.google.com/?q=Torre+Empresarial+Santo+Domingo"
+                        href="https://maps.google.com/?q=Santiago+de+los+Caballeros+Republica+Dominicana"
                         target="_blank"
                         rel="noopener noreferrer"
                       >
