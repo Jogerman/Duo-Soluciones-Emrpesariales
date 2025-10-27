@@ -204,8 +204,33 @@ export default function DesarrolloOrganizacionalPage() {
         </Container>
       </section>
 
+      {/* What We Do Section */}
+      <section id="que-hacemos" className="py-16 lg:py-24">
+        <Container>
+          <div className="mx-auto max-w-3xl text-center mb-12">
+            <h2 className="text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl">
+              Qué Hacemos
+            </h2>
+            <p className="mt-4 text-lg text-gray-600">
+              Un enfoque integral para transformar tu organización
+            </p>
+          </div>
+
+          <div className="grid gap-6 lg:grid-cols-2">
+            {services.map((service, index) => (
+              <Card key={index} className="transition-all duration-300 hover:shadow-lg">
+                <CardContent className="p-8">
+                  <h3 className="text-xl font-bold text-gray-900 mb-3">{service.title}</h3>
+                  <p className="text-gray-600 leading-relaxed">{service.description}</p>
+                </CardContent>
+              </Card>
+            ))}
+          </div>
+        </Container>
+      </section>
+
       {/* Benefits Section */}
-      <section className="py-16 lg:py-24">
+      <section className="bg-gradient-to-br from-gray-50 to-white py-16 lg:py-24">
         <Container>
           <div className="mx-auto max-w-3xl text-center mb-12">
             <h2 className="text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl">
@@ -232,62 +257,6 @@ export default function DesarrolloOrganizacionalPage() {
                 </Card>
               )
             })}
-          </div>
-        </Container>
-      </section>
-
-      {/* What We Do Section */}
-      <section id="que-hacemos" className="bg-gradient-to-br from-gray-50 to-white py-16 lg:py-24">
-        <Container>
-          <div className="mx-auto max-w-3xl text-center mb-12">
-            <h2 className="text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl">
-              Qué Hacemos
-            </h2>
-            <p className="mt-4 text-lg text-gray-600">
-              Un enfoque integral para transformar tu organización
-            </p>
-          </div>
-
-          <div className="grid gap-6 lg:grid-cols-2">
-            {services.map((service, index) => (
-              <Card key={index} className="transition-all duration-300 hover:shadow-lg">
-                <CardContent className="p-8">
-                  <h3 className="text-xl font-bold text-gray-900 mb-3">{service.title}</h3>
-                  <p className="text-gray-600 leading-relaxed">{service.description}</p>
-                </CardContent>
-              </Card>
-            ))}
-          </div>
-        </Container>
-      </section>
-
-      {/* Methodology Section */}
-      <section className="py-16 lg:py-24">
-        <Container>
-          <div className="mx-auto max-w-3xl text-center mb-12">
-            <h2 className="text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl">
-              Nuestra Metodología
-            </h2>
-            <p className="mt-4 text-lg text-gray-600">
-              Un proceso probado para asegurar resultados sostenibles
-            </p>
-          </div>
-
-          <div className="grid gap-8 md:grid-cols-2 lg:grid-cols-4">
-            {methodology.map((phase, index) => (
-              <div key={index} className="relative">
-                <div className="text-center">
-                  <div className="mx-auto mb-4 flex h-16 w-16 items-center justify-center rounded-full bg-primary-600 text-white">
-                    <span className="text-2xl font-bold">{phase.step}</span>
-                  </div>
-                  <h3 className="text-lg font-semibold text-gray-900 mb-2">{phase.title}</h3>
-                  <p className="text-gray-600 text-sm">{phase.description}</p>
-                </div>
-                {index < methodology.length - 1 && (
-                  <div className="hidden lg:block absolute top-8 left-[calc(50%+2rem)] w-[calc(100%-4rem)] h-0.5 bg-primary-200" />
-                )}
-              </div>
-            ))}
           </div>
         </Container>
       </section>
