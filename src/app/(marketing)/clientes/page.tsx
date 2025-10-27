@@ -1,5 +1,6 @@
 import type { Metadata } from 'next'
 import Link from 'next/link'
+import Image from 'next/image'
 import { Container } from '@/components/ui/Container'
 import { Card, CardContent } from '@/components/ui/Card'
 import { Badge } from '@/components/ui/Badge'
@@ -82,8 +83,22 @@ export default function ClientesPage() {
   return (
     <main className="min-h-screen">
       {/* Hero Section */}
-      <section className="bg-gradient-to-br from-primary-600 via-primary-700 to-primary-900 py-16 lg:py-24">
-        <Container>
+      <section className="relative bg-gradient-to-br from-primary-600 via-primary-700 to-primary-900 py-16 lg:py-24 overflow-hidden">
+        {/* Background Image */}
+        <div className="absolute inset-0">
+          <Image
+            src="/images/pages/clientes.jpg"
+            alt="Nuestros Clientes"
+            fill
+            priority
+            className="object-cover object-center"
+            quality={85}
+          />
+          {/* Overlay */}
+          <div className="absolute inset-0 bg-gradient-to-br from-primary-900/85 via-primary-800/80 to-secondary-900/85" />
+        </div>
+
+        <Container className="relative z-10">
           <div className="mx-auto max-w-4xl text-center">
             <h1 className="text-4xl font-bold tracking-tight text-white sm:text-5xl lg:text-6xl">
               Nuestros Clientes
