@@ -187,11 +187,12 @@ const testimonials: Testimonial[] = [
 export default function HomePage() {
   // Hero carousel images
   const heroImages = [
-    '/images/hero/background-5.jpg',
     '/images/hero/background-1.jpg',
     '/images/hero/background-2.jpg',
     '/images/hero/background-3.jpg',
-    '/images/hero/background-4.png',
+    '/images/hero/background-4.jpg',
+    '/images/hero/background-5.jpg',
+    '/images/hero/background-6.jpg',
   ]
 
   return (
