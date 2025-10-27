@@ -9,6 +9,7 @@ import { BlogPagination } from '@/components/marketing/blog/BlogPagination'
 import { blogPosts, getFeaturedBlogPosts } from '@/lib/mock-data/blog-posts'
 import { categories } from '@/lib/mock-data/categories'
 import { BookOpen } from 'lucide-react'
+import Image from 'next/image'
 
 const POSTS_PER_PAGE = 12
 
@@ -61,8 +62,22 @@ export default function BlogPage() {
   return (
     <div className="min-h-screen">
       {/* Hero Section */}
-      <section className="bg-gradient-to-br from-primary-600 via-primary-700 to-primary-900 text-white py-16 lg:py-24">
-        <Container>
+      <section className="relative bg-gradient-to-br from-primary-600 via-primary-700 to-primary-900 text-white py-16 lg:py-24 overflow-hidden">
+        {/* Background Image */}
+        <div className="absolute inset-0">
+          <Image
+            src="/images/pages/blog.jpg"
+            alt="Blog"
+            fill
+            priority
+            className="object-cover object-center"
+            quality={85}
+          />
+          {/* Overlay */}
+          <div className="absolute inset-0 bg-gradient-to-br from-primary-900/85 via-primary-800/80 to-secondary-900/85" />
+        </div>
+
+        <Container className="relative z-10">
           <div className="max-w-3xl">
             <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-white/10 backdrop-blur-sm mb-6">
               <BookOpen className="w-5 h-5" />
