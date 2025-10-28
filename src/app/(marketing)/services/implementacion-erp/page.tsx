@@ -25,12 +25,11 @@ export const dynamic = 'force-dynamic'
 export const metadata: Metadata = {
   title: 'Implementación ERP | MS Dynamics 365 & Power BI | DUO Soluciones',
   description:
-    'Implementación Microsoft Dynamics 365 y Power BI. Integra tus sistemas, automatiza operaciones y obtén insights en tiempo real. Microsoft Gold Partner.',
+    'Implementación Microsoft Dynamics 365 y Power BI. Integra tus sistemas, automatiza operaciones y obtén insights en tiempo real.',
   keywords: [
     'MS Dynamics 365',
     'Power BI',
     'implementación ERP',
-    'Microsoft Gold Partner',
     'Dynamics Finance',
     'Dynamics Supply Chain',
     'Power Platform',
@@ -217,9 +216,6 @@ export default function ImplementacionERPPage() {
               </Link>
             </div>
             <div className="flex items-center gap-3 mb-4">
-              <Badge className="bg-yellow-500 text-black hover:bg-yellow-400">
-                Microsoft Gold Partner
-              </Badge>
               <Badge className="bg-white text-primary-700 hover:bg-primary-50">
                 200+ Implementaciones
               </Badge>
