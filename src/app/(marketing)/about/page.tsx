@@ -1,6 +1,6 @@
 import type { Metadata } from 'next'
-import { Timeline, TeamGrid } from '@/components/marketing'
-import type { TimelineItem, TeamMember } from '@/components/marketing'
+import { TeamGrid } from '@/components/marketing'
+import type { TeamMember } from '@/components/marketing'
 import { Container } from '@/components/ui/Container'
 import { Card, CardContent } from '@/components/ui/Card'
 import { Badge } from '@/components/ui/Badge'
@@ -47,40 +47,6 @@ export const metadata: Metadata = {
     creator: '@duosoluciones',
   },
 }
-
-// Timeline data
-const timelineItems: TimelineItem[] = [
-  {
-    year: '2010',
-    title: 'Los Inicios',
-    description:
-      'DUO Soluciones nace con la visión de transformar el panorama empresarial dominicano a través de consultoría estratégica de clase mundial.',
-  },
-  {
-    year: '2013',
-    title: 'Expansión Regional',
-    description:
-      'Expandimos operaciones al Caribe, trabajando con empresas líderes en Puerto Rico, Jamaica y Trinidad & Tobago.',
-  },
-  {
-    year: '2016',
-    title: 'Partnership Microsoft',
-    description:
-      'Nos convertimos en Microsoft Gold Partner, especializándonos en implementaciones de Dynamics 365 y Power Platform.',
-  },
-  {
-    year: '2020',
-    title: 'Certificaciones Internacionales',
-    description:
-      'Obtenemos certificaciones Lean Six Sigma Black Belt y metodologías ágiles (SAFe, Scrum).',
-  },
-  {
-    year: '2024',
-    title: 'Líder del Mercado',
-    description:
-      'Reconocidos como la consultora #1 en transformación digital empresarial en República Dominicana con más de 200 proyectos exitosos.',
-  },
-]
 
 // Team members data
 const teamMembers: TeamMember[] = [
@@ -224,9 +190,6 @@ export default function AboutPage() {
           </div>
         </Container>
       </section>
-
-      {/* Timeline Section */}
-      <Timeline items={timelineItems} />
 
       {/* Mission, Vision, Values Section */}
       <section className="py-16 lg:py-24">
