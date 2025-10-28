@@ -567,7 +567,7 @@ export const getAllBlogPosts = (): BlogPost[] => {
 export const getFeaturedBlogPosts = (): BlogPost[] => {
   return blogPosts
     .filter(post => post.featured)
-    .sort((a, b) => new Date(b.publishedAt).getTime() - new Date(a.publishedAt).getTime()))
+    .sort((a, b) => new Date(b.publishedAt).getTime() - new Date(a.publishedAt).getTime())
 }
 
 export const getBlogPostBySlug = (slug: string): BlogPost | undefined => {
