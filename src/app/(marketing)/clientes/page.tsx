@@ -34,7 +34,7 @@ export const dynamic = 'force-dynamic'
 export const metadata: Metadata = {
   title: 'Nuestros Clientes | Portfolio de Empresas | DUO Soluciones',
   description:
-    'Más de 50 empresas en República Dominicana confían en DUO Soluciones. Conoce nuestros clientes y casos de éxito en banca, salud, manufactura y más.',
+    'Más de 20 empresas en República Dominicana confían en DUO Soluciones. Conoce nuestros clientes y casos de éxito en banca, salud, manufactura y más.',
   keywords: [
     'clientes DUO Soluciones',
     'portfolio consultoría',
@@ -47,7 +47,7 @@ export const metadata: Metadata = {
   openGraph: {
     title: 'Nuestros Clientes | DUO Soluciones',
     description:
-      'Más de 50 empresas transformadas. Conoce nuestros clientes y casos de éxito en República Dominicana.',
+      'Más de 20 empresas transformadas. Conoce nuestros clientes y casos de éxito en República Dominicana.',
     url: 'https://duo-soluciones.com/clientes',
     siteName: 'DUO Soluciones Empresariales',
     type: 'website',
@@ -63,7 +63,7 @@ export const metadata: Metadata = {
   twitter: {
     card: 'summary_large_image',
     title: 'Nuestros Clientes | DUO Soluciones',
-    description: 'Más de 50 empresas transformadas con soluciones probadas',
+    description: 'Más de 20 empresas transformadas con soluciones probadas',
     images: ['/images/og-clientes.jpg'],
     creator: '@duosoluciones',
   },
@@ -104,7 +104,7 @@ export default function ClientesPage() {
               Nuestros Clientes
             </h1>
             <p className="mt-6 text-lg leading-8 text-primary-100 sm:text-xl">
-              Más de 50 empresas líderes en República Dominicana y el Caribe confían en DUO
+              Más de 20 empresas líderes en República Dominicana y el Caribe confían en DUO
               Soluciones para transformar sus organizaciones
             </p>
             <p className="mt-4 text-base leading-7 text-primary-200">
@@ -381,7 +381,7 @@ export default function ClientesPage() {
       {/* CTA Section */}
       <CTASection
         title="¿Listo para Transformar tu Organización?"
-        subtitle="Únete a más de 50 empresas líderes que han confiado en DUO Soluciones para alcanzar sus objetivos estratégicos."
+        subtitle="Únete a más de 20 empresas líderes que han confiado en DUO Soluciones para alcanzar sus objetivos estratégicos."
         variant="gradient"
         primaryCTA={{
           text: 'Agenda una Consulta Gratuita',

@@ -3,7 +3,7 @@
  * Portfolio of companies we've worked with in República Dominicana and the Caribbean
  */
 
-export type IndustryType = 'Banca' | 'Salud' | 'Manufactura' | 'Retail' | 'Tecnología' | 'Gobierno'
+export type IndustryType = 'Banca' | 'Salud' | 'Manufactura' | 'Retail' | 'Tecnología'
 
 export interface Client {
   id: string
@@ -47,8 +47,8 @@ export interface CaseStudy {
 
 // Client stats
 export const clientStats = {
-  totalClients: 50,
-  projectsCompleted: 200,
+  totalClients: 20,
+  projectsCompleted: 25,
   yearsExperience: 15,
   satisfactionRate: 98,
 }
@@ -118,14 +118,6 @@ export const clients: Client[] = [
     industry: 'Manufactura',
     description: 'Excelencia operacional y reducción de desperdicios',
     featured: false,
-  },
-  {
-    id: '9',
-    name: 'Ministerio de Salud Pública',
-    logo: '/clients/ministerio-salud.svg',
-    industry: 'Gobierno',
-    description: 'Diseño organizacional y mejora de procesos',
-    featured: true,
   },
   {
     id: '10',
@@ -227,14 +219,6 @@ export const industries: Industry[] = [
     clientCount: 4,
     icon: 'laptop',
   },
-  {
-    id: 'gobierno',
-    name: 'Gobierno',
-    description:
-      'Modernización del sector público, diseño organizacional, mejora de procesos administrativos y servicio al ciudadano.',
-    clientCount: 2,
-    icon: 'landmark',
-  },
 ]
 
 // Featured testimonials
@@ -299,20 +283,6 @@ export const caseStudies: CaseStudy[] = [
       'Reducción de 35% en desperdicios, aumento de 28% en productividad, ahorro anual de $2.4M',
     resultMetric: '35% reducción de costos',
     image: '/case-studies/cerveceria.jpg',
-    featured: true,
-  },
-  {
-    id: '3',
-    clientName: 'Ministerio de Salud Pública',
-    industry: 'Gobierno',
-    challenge:
-      'Estructura organizacional obsoleta con procesos burocráticos que retrasaban servicios al ciudadano',
-    solution:
-      'Rediseño organizacional completo, mapeo de 45 procesos críticos y programa de gestión del cambio',
-    result:
-      'Reducción de 50% en tiempos de respuesta, mejora de 60% en satisfacción ciudadana, estructura más ágil',
-    resultMetric: '50% más eficiente',
-    image: '/case-studies/ministerio.jpg',
     featured: true,
   },
 ]
