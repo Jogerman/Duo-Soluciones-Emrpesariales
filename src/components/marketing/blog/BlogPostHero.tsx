@@ -74,22 +74,24 @@ export function BlogPostHero({ post }: BlogPostHeroProps) {
 
         {/* Meta Information */}
         <div className="flex flex-wrap items-center gap-6 text-white/90">
-          {/* Author */}
-          <div className="flex items-center gap-3">
-            <div className="relative w-12 h-12 rounded-full overflow-hidden ring-2 ring-white/30">
-              <Image
-                src={post.author.avatar}
-                alt={post.author.name}
-                fill
-                className="object-cover"
-                sizes="48px"
-              />
+          {/* Author - Only show if exists */}
+          {post.author && (
+            <div className="flex items-center gap-3">
+              <div className="relative w-12 h-12 rounded-full overflow-hidden ring-2 ring-white/30">
+                <Image
+                  src={post.author.avatar}
+                  alt={post.author.name}
+                  fill
+                  className="object-cover"
+                  sizes="48px"
+                />
+              </div>
+              <div className="flex flex-col">
+                <span className="font-semibold text-white">{post.author.name}</span>
+                <span className="text-sm text-white/70">{post.author.role}</span>
+              </div>
             </div>
-            <div className="flex flex-col">
-              <span className="font-semibold text-white">{post.author.name}</span>
-              <span className="text-sm text-white/70">{post.author.role}</span>
-            </div>
-          </div>
+          )}
 
           {/* Date & Reading Time */}
           <div className="flex items-center gap-4 text-sm">
@@ -97,7 +99,7 @@ export function BlogPostHero({ post }: BlogPostHeroProps) {
               <Calendar className="w-4 h-4" />
               <time dateTime={post.publishedAt}>{formatDate(post.publishedAt)}</time>
             </div>
-            <span className="text-white/50">"</span>
+            <span className="text-white/50">•</span>
             <div className="flex items-center gap-2">
               <Clock className="w-4 h-4" />
               <span>{post.readingTime} min de lectura</span>

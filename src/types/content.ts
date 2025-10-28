@@ -31,7 +31,7 @@ export interface BlogPost {
   excerpt: string
   content: string
   coverImage: string
-  author: Author
+  author?: Author
   category: Category
   tags: Tag[]
   publishedAt: string

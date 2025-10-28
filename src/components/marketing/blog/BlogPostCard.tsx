@@ -83,26 +83,14 @@ export function BlogPostCard({ post, featured = false }: BlogPostCardProps) {
           {/* Meta Information */}
           <div className="flex items-center justify-between pt-4 border-t border-neutral-200">
             <div className="flex items-center gap-3">
-              {/* Author */}
-              <div className="flex items-center gap-2">
-                <div className="relative w-8 h-8 rounded-full overflow-hidden bg-neutral-200">
-                  <Image
-                    src={post.author.avatar}
-                    alt=""
-                    fill
-                    className="object-cover"
-                    sizes="32px"
-                  />
-                </div>
-                <div className="flex flex-col">
-                  <span className="text-sm font-medium text-neutral-900">{post.author.name}</span>
-                  <div className="flex items-center gap-2 text-xs text-neutral-500">
-                    <time dateTime={post.publishedAt}>{formatDateShort(post.publishedAt)}</time>
-                    <span aria-hidden="true">•</span>
-                    <div className="flex items-center gap-1">
-                      <Clock className="w-3 h-3" aria-hidden="true" />
-                      <span>{post.readingTime} min de lectura</span>
-                    </div>
+              {/* Date and Reading Time */}
+              <div className="flex flex-col">
+                <div className="flex items-center gap-2 text-xs text-neutral-500">
+                  <time dateTime={post.publishedAt}>{formatDateShort(post.publishedAt)}</time>
+                  <span aria-hidden="true">•</span>
+                  <div className="flex items-center gap-1">
+                    <Clock className="w-3 h-3" aria-hidden="true" />
+                    <span>{post.readingTime} min de lectura</span>
                   </div>
                 </div>
               </div>

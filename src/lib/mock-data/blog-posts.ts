@@ -1,5 +1,4 @@
 import { BlogPost } from '@/types/content'
-import { authors } from './authors'
 import { categories } from './categories'
 import { tags, getTagsByIds } from './tags'
 
@@ -65,7 +64,6 @@ Las empresas que entienden esto y actúan en consecuencia no solo sobreviven, si
     `,
     coverImage:
       'https://images.unsplash.com/photo-1556761175-b413da4baf72?w=1200&h=800&fit=crop&auto=format&q=80',
-    author: authors[2], // Ana Martínez - Consultora de Gobernanza Corporativa
     category: categories[3], // Gobernanza Corporativa
     tags: getTagsByIds(['1', '10', '11', '20']), // Estrategia, Gestión de Riesgos, Cumplimiento, Transformación
     publishedAt: '2025-01-25T10:00:00Z',
@@ -170,7 +168,6 @@ Como dice el título: hay que *ver para creer*. Y con Power BI, ver y entender l
     `,
     coverImage:
       'https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=1200&h=800&fit=crop&auto=format&q=80',
-    author: authors[3], // Diego Fernández - Especialista en Transformación Digital
     category: categories[5], // Transformación Digital
     tags: getTagsByIds(['3', '17', '18', '6']), // KPIs, Indicadores, Análisis de Datos, Automatización
     publishedAt: '2025-01-20T09:00:00Z',
@@ -268,7 +265,6 @@ Este primer encuentro es solo el comienzo de un camino que incluirá:
     `,
     coverImage:
       'https://images.unsplash.com/photo-1560250097-0b93528c311a?w=1200&h=800&fit=crop&auto=format&q=80',
-    author: authors[2], // Ana Martínez - Consultora de Gobernanza Corporativa
     category: categories[3], // Gobernanza Corporativa
     tags: getTagsByIds(['1', '11', '13', '15']), // Estrategia, Cumplimiento, Gestión del Cambio, PYMES
     publishedAt: '2024-09-20T14:00:00Z',
@@ -383,7 +379,6 @@ Agradecemos a todo el equipo gerencial de Grabo Estilo por su apertura, compromi
     `,
     coverImage:
       'https://images.unsplash.com/photo-1552664730-d307ca884978?w=1200&h=800&fit=crop&auto=format&q=80',
-    author: authors[0], // María González - Directora de Consultoría
     category: categories[0], // Desarrollo Organizacional
     tags: getTagsByIds(['12', '13', '2', '20']), // Cultura Organizacional, Gestión del Cambio, Cambio Organizacional, Transformación
     publishedAt: '2024-08-28T16:00:00Z',
@@ -536,7 +531,6 @@ El 20 de septiembre realizaremos el **Primer Encuentro sobre Gobierno Corporativ
     `,
     coverImage:
       'https://images.unsplash.com/photo-1542744173-8e7e53415bb0?w=1200&h=800&fit=crop&auto=format&q=80',
-    author: authors[0], // María González - Directora de Consultoría
     category: categories[0], // Desarrollo Organizacional
     tags: getTagsByIds(['1', '2', '13', '20']), // Estrategia, Cambio Organizacional, Gestión del Cambio, Transformación
     publishedAt: '2024-08-13T10:00:00Z',

@@ -52,52 +52,54 @@ export function BlogPostMeta({ post }: BlogPostMetaProps) {
 
   return (
     <div className="space-y-8">
-      {/* Author Section */}
-      <Card className="p-6">
-        <div className="flex items-start gap-4">
-          <div className="relative w-16 h-16 rounded-full overflow-hidden flex-shrink-0">
-            <Image
-              src={post.author.avatar}
-              alt={post.author.name}
-              fill
-              className="object-cover"
-              sizes="64px"
-            />
-          </div>
-          <div className="flex-grow">
-            <h3 className="text-lg font-bold text-neutral-900 mb-1">{post.author.name}</h3>
-            <p className="text-sm text-neutral-600 mb-3">{post.author.role}</p>
-            {post.author.bio && (
-              <p className="text-sm text-neutral-700 leading-relaxed mb-4">{post.author.bio}</p>
-            )}
-            {/* Social Links */}
-            <div className="flex items-center gap-2">
-              {post.author.linkedin && (
-                <a
-                  href={post.author.linkedin}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="text-neutral-600 hover:text-primary-600 transition-colors"
-                  aria-label="LinkedIn"
-                >
-                  <Linkedin className="w-5 h-5" />
-                </a>
+      {/* Author Section - Only show if author exists */}
+      {post.author && (
+        <Card className="p-6">
+          <div className="flex items-start gap-4">
+            <div className="relative w-16 h-16 rounded-full overflow-hidden flex-shrink-0">
+              <Image
+                src={post.author.avatar}
+                alt={post.author.name}
+                fill
+                className="object-cover"
+                sizes="64px"
+              />
+            </div>
+            <div className="flex-grow">
+              <h3 className="text-lg font-bold text-neutral-900 mb-1">{post.author.name}</h3>
+              <p className="text-sm text-neutral-600 mb-3">{post.author.role}</p>
+              {post.author.bio && (
+                <p className="text-sm text-neutral-700 leading-relaxed mb-4">{post.author.bio}</p>
               )}
-              {post.author.twitter && (
-                <a
-                  href={post.author.twitter}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="text-neutral-600 hover:text-primary-600 transition-colors"
-                  aria-label="Twitter"
-                >
-                  <Twitter className="w-5 h-5" />
-                </a>
-              )}
+              {/* Social Links */}
+              <div className="flex items-center gap-2">
+                {post.author.linkedin && (
+                  <a
+                    href={post.author.linkedin}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="text-neutral-600 hover:text-primary-600 transition-colors"
+                    aria-label="LinkedIn"
+                  >
+                    <Linkedin className="w-5 h-5" />
+                  </a>
+                )}
+                {post.author.twitter && (
+                  <a
+                    href={post.author.twitter}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="text-neutral-600 hover:text-primary-600 transition-colors"
+                    aria-label="Twitter"
+                  >
+                    <Twitter className="w-5 h-5" />
+                  </a>
+                )}
+              </div>
             </div>
           </div>
-        </div>
-      </Card>
+        </Card>
+      )}
 
       {/* Share Section */}
       <Card className="p-6">

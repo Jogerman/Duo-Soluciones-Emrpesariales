@@ -41,14 +41,14 @@ export async function generateMetadata({ params }: BlogPostPageProps): Promise<M
       'DUO Soluciones',
       'consultoría empresarial',
     ],
-    authors: [{ name: post.author.name }],
+    ...(post.author && { authors: [{ name: post.author.name }] }),
     openGraph: {
       title: metaTitle,
       description: metaDescription,
       type: 'article',
       publishedTime: post.publishedAt,
       modifiedTime: post.updatedAt || post.publishedAt,
-      authors: [post.author.name],
+      ...(post.author && { authors: [post.author.name] }),
       images: [
         {
           url: post.coverImage,
@@ -63,7 +63,7 @@ export async function generateMetadata({ params }: BlogPostPageProps): Promise<M
       title: metaTitle,
       description: metaDescription,
       images: [post.coverImage],
-      creator: post.author.twitter,
+      ...(post.author?.twitter && { creator: post.author.twitter }),
     },
   }
 }

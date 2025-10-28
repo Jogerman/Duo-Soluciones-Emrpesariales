@@ -36,7 +36,7 @@ export default function BlogPage() {
         post =>
           post.title.toLowerCase().includes(searchLower) ||
           post.excerpt.toLowerCase().includes(searchLower) ||
-          post.author.name.toLowerCase().includes(searchLower) ||
+          (post.author?.name && post.author.name.toLowerCase().includes(searchLower)) ||
           post.tags.some(tag => tag.name.toLowerCase().includes(searchLower))
       )
     }
